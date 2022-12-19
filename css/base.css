@@ -1,0 +1,173 @@
+body{
+	margin: 0px;
+	font-family: cursive;
+}
+
+header{
+	background-color: gray;
+}
+
+header h1{
+	padding: 10px;
+	margin: 0px;
+	text-align: center;
+	transition: color 2s;
+}
+
+header h1:hover{
+	color: white;
+}
+
+header nav button{
+	display: none;
+}
+
+header nav{
+	background-color: black;
+	padding: 5px;
+}
+
+header nav ul {
+	text-align: center;
+	list-style: none;
+	margin:0px;
+}
+
+header nav ul a{
+	display: inline-block;
+	width: 32%;
+	padding: 2px 0px 2px 0px;
+	text-decoration: none;
+	color: white;
+	border-radius: 5px;
+}
+
+header nav ul a:hover{
+	background-color: white;
+	color: black;
+}
+
+footer{
+	display: flow;
+	position: fixed;
+	bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.status:hover{
+	cursor: pointer;
+	color:black;
+	transition: color 0.5s, background-color 0.1s;
+}
+
+.status{
+	size: 10px;
+	padding: 4px;
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: black;
+
+
+	-webkit-user-select: none; /* Safari */
+  	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
+
+
+
+.active{
+	color: green;
+	border-color: green;
+}
+.active.status:hover{
+	background-color: green;
+}
+
+
+
+
+
+
+.inactive{
+	color: red;
+	border-color: red;
+}
+.inactive.status:hover{
+	background-color: red;
+}
+
+
+.soon{
+	color: orange;
+	border-color: orange;
+}
+.soon.status:hover{
+	background-color: orange;
+}
+
+
+
+
+
+
+
+@media (max-width: 750px){
+	header nav ul a{
+		margin-left: auto;
+	}
+
+	header nav ul {
+		display: none;
+		margin: 0px;
+		padding-left: 0px;
+	}
+
+	header nav ul a{
+		display: block;
+		width: auto;
+	}
+
+	header nav{
+		text-align: right;
+		width: 7%;
+		margin-left: auto;
+	}
+
+	header nav button{
+		display: inline-block;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
