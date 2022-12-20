@@ -83,13 +83,12 @@ footer{
 
 
 
-.status:hover{
-	cursor: pointer;
+.link:hover{
 	color:black;
 	transition: color 0.5s, background-color 0.1s;
 }
 
-.status{
+.link{
 	size: 10px;
 	padding: 4px;
 	border-radius: 20px;
@@ -102,16 +101,34 @@ footer{
   	user-select: none; /* Standard syntax */
 }
 
+.link{
+	size: 10px;
+	padding: 4px;
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: black;
 
+
+	-webkit-user-select: none; /* Safari */
+  	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
 
 .active{
 	color: green;
 	border-color: green;
 }
-.active.status:hover{
+.web{
+	color: green;
+	border-color: green;
+}
+.active.link:hover{
 	background-color: green;
 }
 
+.link.web:hover{
+	cursor: pointer;
+}
 
 
 
@@ -121,7 +138,7 @@ footer{
 	color: red;
 	border-color: red;
 }
-.inactive.status:hover{
+.inactive.link:hover{
 	background-color: red;
 }
 
@@ -130,7 +147,7 @@ footer{
 	color: orange;
 	border-color: orange;
 }
-.soon.status:hover{
+.soon.link:hover{
 	background-color: orange;
 }
 
@@ -190,10 +207,4 @@ footer{
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-}
-
-
-
-.status:hover{
-	cursor: pointer;
 }
