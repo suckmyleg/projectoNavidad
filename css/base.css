@@ -11,15 +11,26 @@ header h1{
 	padding: 10px;
 	margin: 0px;
 	text-align: center;
-	transition: color 2s;
-}
-
-header h1:hover{
+	transition: color 2s, background-color 2s;
 	color: white;
+	filter: invert(100%);
 }
 
-header nav button{
+
+header h1:active{
+  background: -webkit-linear-gradient(red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#buttonDisplayer{
 	display: none;
+}
+
+#buttonDisplayer:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
 }
 
 header nav{
@@ -130,8 +141,10 @@ footer{
 
 
 @media (max-width: 750px){
+
 	header nav ul a{
 		margin-left: auto;
+		padding: 10px;
 	}
 
 	header nav ul {
@@ -146,13 +159,21 @@ footer{
 	}
 
 	header nav{
-		text-align: right;
-		width: 7%;
+		text-align: center;
+		width: auto;
 		margin-left: auto;
+		right: 0px;
+		top: 0px;
 	}
 
-	header nav button{
-		display: inline-block;
+	header{
+		width: 100%;
+	}
+
+	header nav #buttonDisplayer{
+		display: block;
+		width: auto;
+		color:white;
 	}
 
 }
@@ -171,3 +192,8 @@ footer{
   user-select: none; /* Standard syntax */
 }
 
+
+
+.status:hover{
+	cursor: pointer;
+}
