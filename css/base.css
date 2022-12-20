@@ -11,7 +11,7 @@ header h1{
 	padding: 10px;
 	margin: 0px;
 	text-align: center;
-	transition: color 2s, background-color 2s;
+	transition: color 2s, background-color 0.1s;
 	color: white;
 	filter: invert(100%);
 }

@@ -34,7 +34,7 @@ function bannerChangeColor() {
 		pageTitle.style.backgroundColor = new_color;
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}
-	setTimeout(function() {bannerChangeColor();}, 700);
+	setTimeout(function() {bannerChangeColor();}, 100);
 }
 
 function switchModoFiest() {
