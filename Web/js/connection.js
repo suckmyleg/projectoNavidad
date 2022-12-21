@@ -1,5 +1,5 @@
 
-LOCATION = "192.168.1.208";
+//LOCATION = "192.168.1.208";
 LOCATION = window.location.host.split(":")[0];
 
 // https://livecodestream.dev/post/5-ways-to-make-http-requests-in-javascript/
@@ -8,7 +8,7 @@ function make_call_str(on_load, args="")
     //create XMLHttpRequest object
     const xhr = new XMLHttpRequest();
     //open a get request with the remote server URL
-    xhr.open("GET", "http://"+LOCATION+":5000/"+args);
+    xhr.open("GET", "http://"+LOCATION+":8080/"+args);
     //send the Http request
     xhr.send();
 
@@ -42,7 +42,7 @@ function make_call_str(on_load, args="")
 function make_call_str_return(args="")
 {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://"+LOCATION+":5000/"+args);
+    xhr.open("GET", "http://"+LOCATION+":8080/"+args);
     xhr.send();
     xhr.onload = function() {
       if (xhr.status === 200) {
@@ -65,7 +65,7 @@ function safe_call(on_load, args="")
 {
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://"+LOCATION+":5000/"+args);
+    xhr.open("GET", "http://"+LOCATION+":8080/"+args);
     xhr.send();
 
     xhr.onload = function() {
@@ -94,7 +94,7 @@ function safe_call(on_load, args="")
 function reload(on_load, args="")
 {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://"+LOCATION+":5000/"+args);
+    xhr.open("GET", "http://"+LOCATION+":8080/"+args);
     xhr.send();
     xhr.onload = function() {
       if (xhr.status === 200) {
