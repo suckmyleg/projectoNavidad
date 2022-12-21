@@ -50,7 +50,7 @@
 
 
 
-@media (max-width: 600px){
+@media (max-width: 800px){
 
 	.new_date{
 		grid-row-start: 2;
@@ -61,3 +61,14 @@
 }
 
 
+
+
+@media (max-width: 600px){
+
+	.link{
+		display: block;
+		margin-bottom: 2px;
+		text-align: center;
+	}
+
+}
