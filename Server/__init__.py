@@ -43,4 +43,4 @@ def profileData():
 def suck():
 	return json.dumps(News.news.get_news())
 
-app.run(host='0.0.0.0')
+app.run(host='192.168.1.104')
