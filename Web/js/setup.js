@@ -40,7 +40,7 @@ function bannerChangeColor() {
 
 	if(MODOFIESTA){
 		pageTitle.style.backgroundColor = new_color;
-		setCookie("LASTCOLOR", new_color, 1);
+		setCookie("lastBannerColor", new_color, 1);
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}
 	setTimeout(function() {bannerChangeColor();}, 100);
