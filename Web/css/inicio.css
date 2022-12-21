@@ -50,10 +50,6 @@
 
 
 
-#content{
-	padding: 15px;
-}
-
 @media (max-width: 600px){
 
 	.new_date{
@@ -65,22 +61,3 @@
 }
 
 
-
-.disabled{
-  	-webkit-user-select: none; /* Safari */
-  	-ms-user-select: none; /* IE 10 and IE 11 */
-  	user-select: none; /* Standard syntax */
-  	filter: grayscale(100%);
-}
-
-.link.disabled:hover{
-	cursor: not-allowed;
-}
-
-.disabled:hover{
-	cursor: not-allowed;
-}
-
-.disabled.new_all_content{
-	filter: grayscale(100%);
-}
