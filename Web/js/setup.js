@@ -20,7 +20,8 @@ function getRandomColor(){
 }
 
 let isMouseOver = false;
-let modoFiesta = false;
+
+let MODOFIESTA = getCookie("MODOFIESTA");
 
 function bannerChangeColor() {
 
@@ -28,7 +29,7 @@ function bannerChangeColor() {
 
 	pageTitle = document.getElementById('page_title');
 
-	if(modoFiesta){
+	if(MODOFIESTA){
 		pageTitle.style.backgroundColor = new_color;
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}
@@ -36,7 +37,8 @@ function bannerChangeColor() {
 }
 
 function switchModoFiest() {
-	modoFiesta = !modoFiesta;
+	MODOFIESTA = !MODOFIESTA;
+	setCookie("MODOFIESTA", MODOFIESTA, 1);
 }
 
 function onMouseOverBanner() {

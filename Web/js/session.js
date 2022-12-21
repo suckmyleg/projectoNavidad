@@ -4,6 +4,7 @@ LOGGED = false;
 
 NICKNAME = false;
 
+
 if (SESSIONID){
 	safe_call(function(data){
 		if(data != false){
