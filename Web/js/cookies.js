@@ -16,3 +16,18 @@ function setCookie(name, value, days) {
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
 }
+
+function urlData(){
+    var data = {};
+
+    try{
+        for(var variable of window.location.href.split("?")[1].split("&")){
+            var variable_Data = variable.split("=");
+            data[variable_Data[0]] = variable_Data[1];
+        }
+    }
+    catch(e){
+    }
+    
+    return data;
+}

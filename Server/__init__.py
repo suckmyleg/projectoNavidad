@@ -9,7 +9,7 @@ import Profiles
 import Sessions
 import Suckcrack
 
-@app.route("/news_available")
+@app.route("/newsList")
 def news_available():
 	return json.dumps(News.news.get_news())
 
@@ -39,8 +39,15 @@ def session(iid):
 def profileData():
 	return json.dumps(News.news.get_news())
 
-@app.route("/suckcrack")
-def suck():
-	return json.dumps(News.news.get_news())
+@app.route("/suckcrackMatch<matchid>")
+def suckcrack(matchid):
+	return json.dumps(Suckcrack.p.match_data(matchid))
 
-app.run(host='192.168.1.104', port='8080')
+@app.route("/suckcrackDifficulty<matchid>")
+def suckcrack2(matchid):
+	return json.dumps(Suckcrack.p.calculate_difficulty(matchid))
+
+
+
+
+app.run()
