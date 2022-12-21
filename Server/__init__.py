@@ -16,7 +16,7 @@ def news_available():
 @app.route("/sign<nickname>")
 def sign(nickname):
 	key = Profiles.prof.add_profile(nickname)
-	return {"key":key}
+	return json.dumps({"key":key})
 
 @app.route("/log<nickname>|<key>")
 def login(nickname, key):
