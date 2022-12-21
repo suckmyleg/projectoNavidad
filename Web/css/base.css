@@ -64,6 +64,8 @@ footer{
 	display: flow;
 	position: fixed;
 	bottom: 0px;
+	background-color: white;
+	width: 100%;
 }
 
 
