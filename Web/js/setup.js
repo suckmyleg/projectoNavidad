@@ -1,7 +1,20 @@
+
+
+let isMouseOver = false;
+
+let MODOFIESTA = getCookie("MODOFIESTA");
+
+let LASTCOLOR = getCookie("lastBannerColor");
+
+
 onload = function() {
 	
 	if (false && window.location.href != "file:///C:/Users/juani/Desktop/projectoNavidad/index.html"){
 		document.getElementById("page_title").style.display = "none";
+	}
+
+	if(LASTCOLOR){
+		document.getElementById("page_title").style.backgroundColor = LASTCOLOR;
 	}
 
 	bannerChangeColor();
@@ -19,10 +32,6 @@ function getRandomColor(){
 	return `hsl(${h}deg, ${s}%, ${l}%)`;
 }
 
-let isMouseOver = false;
-
-let MODOFIESTA = getCookie("MODOFIESTA");
-
 function bannerChangeColor() {
 
 	new_color = getRandomColor();
@@ -31,6 +40,7 @@ function bannerChangeColor() {
 
 	if(MODOFIESTA){
 		pageTitle.style.backgroundColor = new_color;
+		setCookie("LASTCOLOR", new_color, 1);
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}
 	setTimeout(function() {bannerChangeColor();}, 100);
