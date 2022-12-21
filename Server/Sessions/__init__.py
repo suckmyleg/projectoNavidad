@@ -12,8 +12,11 @@ class Session:
 			if not iid in self.sessions.keys():
 				return iid
 
-	def add_session(self, iid, profile_data):
+	def add_session(self, profile_data):
+		iid = self.getUniqueId()
 		self.sessions[iid] = profile_data
+		self.save_sessions()
+		return iid
 
 	def save_sessions(self):
 		open("Content/Sessions.json", "w").write(json.dumps(self.sessions))

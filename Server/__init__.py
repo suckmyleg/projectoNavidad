@@ -13,10 +13,27 @@ import Suckcrack
 def news_available():
 	return json.dumps(News.news.get_news())
 
+@app.route("/sign<nickname>")
+def sign(nickname):
+	key = Profiles.prof.add_profile(nickname)
+	return {"key":key}
+
+@app.route("/log<nickname>|<key>")
+def login(nickname, key):
+	profile_data = Profiles.prof.get_profile(nickname, key)
+	iid = False
+	if profile_data:
+		iid = Sessions.session.add_session({"nickname":profile_data["nickname"],
+			"key":profile_data["key"]})
+	return json.dumps({"sessionId":iid})
+
 @app.route("/session<iid>")
 def session(iid):
+	data = Sessions.session.get_profile_data(iid)
 
-	return json.dumps(Sessions.session.get_profile_data(iid))
+	if data == False:
+		return json.dumps(False)
+	return json.dumps(Profiles.prof.get_profile(data["nickname"], data["key"]))
 
 @app.route("/profile_data<profile>")
 def profileData():

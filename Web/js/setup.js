@@ -1,5 +1,4 @@
 onload = function() {
-	console.log("Setup");
 	
 	if (false && window.location.href != "file:///C:/Users/juani/Desktop/projectoNavidad/index.html"){
 		document.getElementById("page_title").style.display = "none";
@@ -24,7 +23,6 @@ let isMouseOver = false;
 let modoFiesta = false;
 
 function bannerChangeColor() {
-	console.log("Setup");
 
 	new_color = getRandomColor();
 
