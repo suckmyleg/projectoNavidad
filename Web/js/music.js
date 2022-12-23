@@ -38,7 +38,7 @@ function continuePlaying(){
     	catch{playMusic(SONGS[0]);}
 	};
 	audioControll.onpaused = function() {
-    	document.getElementById("musicPlayerTitle").innerHTML = "Player: ";
+    	document.getElementById("musicPlayerTitle").innerHTML = "Player:";
 	};
 	audioControll.onplay = function() {
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
