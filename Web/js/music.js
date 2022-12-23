@@ -34,8 +34,15 @@ function continuePlaying(){
 	var audioControll = document.getElementById("audioControll")
 
 	audioControll.onended = function() {
-    	try{playMusic(SONGS[SONGS.indexOf(MUSICPLAYING)+1]);}
-    	catch{playMusic(SONGS[0]);}
+		var next = SONGS[SONGS.indexOf(MUSICPLAYING)+1];
+
+		if (next == undefined)
+		{
+			playMusic(SONGS[0]);
+		}
+		else{
+			playMusic(next);
+		}
 	};
 	audioControll.onpaused = function() {
     	document.getElementById("musicPlayerTitle").innerHTML = "Player:";
