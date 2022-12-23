@@ -4,7 +4,7 @@ let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
 
-var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells", "It's Beginning to Look a Lot like Christmas"];
+var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells", "Its Beginning to Look a Lot like Christmas"];
 
 function getTimestampInSeconds() {
   return Math.floor(Date.now() / 1000);
