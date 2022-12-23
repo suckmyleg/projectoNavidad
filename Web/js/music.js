@@ -1,9 +1,12 @@
+let LASTVISIT = getCookie("LASTVISIT");
 let MUSICPLAYING = getCookie("MUSICPLAYING");
 let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
 
-function getTimestampInSeconds () {
+var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells"];
+
+function getTimestampInSeconds() {
   return Math.floor(Date.now() / 1000);
 }
 
@@ -44,12 +47,16 @@ function setupAudioPlayer(){
 }
 
 function showPlayer(){
-	document.body.innerHTML += "<div id='musicPlayer'>"+
-	"<p id='musicPlayerTitle'>Player</p><ul>"+
-	"<a onclick='playMusic("+'"Carol of The Bells - EPIC VERSION"'+")'>Carol of The Bells</a>"+
-	"<a onclick='playMusic("+'"Carol of The Bells - EPIC VERSION"'+")'>Carol of The Bells</a>"+
-	"</ul>"+
-	"</div>";
+	var element = "<div id='musicPlayer'>"+
+	"<p id='musicPlayerTitle'>Player</p><ul>";
+
+	for(var songName of SONGS){
+		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
+	}
+
+	element += "</ul></div>";
+
+	document.body.innerHTML += element;
 }
 
 function setup(){
@@ -63,6 +70,11 @@ function musicStart(){
 
 	if (MUSICPLAYING){
 		continuePlaying();
+	}else{
+		if(LASTVISIT == false || getTimestampInSeconds()-LASTVISIT >= 1800)
+		{
+			playMusic(SONGS[0]);
+		}
 	}
 
 }
