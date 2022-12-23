@@ -55,8 +55,6 @@ function musicPlayingElement(){
 function continuePlaying(){
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
 
-	callOnPlaying(MUSICPLAYING);
-
 	var audioControll = document.getElementById("audioControll")
 
 	audioControll.onended = function() {
@@ -77,6 +75,7 @@ function continuePlaying(){
 
 	audioControll.onplay = function() {
 		document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
+		callOnPlaying(MUSICPLAYING);	
 	};
 
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;

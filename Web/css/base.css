@@ -133,7 +133,7 @@ audio::-webkit-media-controls-panel {
 	width: 25%;
 }
 
-#musicPlayer:active{
+#musicPlayer:hover{
 	bottom: 0px;
 	/*width: 35%;*/
 }
