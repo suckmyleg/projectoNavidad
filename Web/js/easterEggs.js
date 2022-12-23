@@ -76,5 +76,7 @@ autoRemoveSnow();
 function modoRoob(){
 	playMusic('Porta - Dragon Ball Rap (con Letra)');
 	SONGS = ['Porta - Dragon Ball Rap (con Letra)'];
+	changedBanner = true;
+	MODOFIESTA = true;	
 	displaySongs();
 }

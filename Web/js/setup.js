@@ -6,6 +6,7 @@ let MODOFIESTA = getCookie("MODOFIESTA");
 
 let LASTCOLOR = getCookie("lastBannerColor");
 
+let ONLOADS = [];
 
 onload = function() {
 	
@@ -23,6 +24,10 @@ onload = function() {
 	}
 
 	musicStart();
+
+	for(var fun of ONLOADS){
+		fun();
+	}
 
 	bannerChangeColor();
 }
