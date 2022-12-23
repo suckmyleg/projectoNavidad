@@ -76,7 +76,26 @@ footer{
 }
 
 #audioPlayer{
+}
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
 	display: none;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
+#audioControll{
+	display: inline-block;
+	padding: 0px;
+	width: 100%;
+}
+
+#musicPlayerTitle{
+	margin-top: -30px;
 }
 
 #musicPlayer ul{
@@ -103,7 +122,7 @@ footer{
 	padding: 10px;
 	display: flow;
 	position: fixed;
-	bottom: -90px;
+	bottom: -140px;
 	transition: bottom 0.2s;
 	right: 0px;
 	width: 30%;

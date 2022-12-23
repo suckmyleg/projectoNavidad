@@ -16,7 +16,7 @@ function musicPlayingElement(){
 
 	let add = new Date(totalPlaying * 1000).toISOString().substring(14, 19)
 
-	return "<audio controls autoplay>"+
+	return "<audio controls autoplay id='audioControll' controlsList='nodownload noplaybackrate'>"+
 	"<source src='Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
 	"<source src='../Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
 	"Your browser does not support the audio element"+
@@ -30,6 +30,11 @@ function showMusicPlaying(){
 function continuePlaying(){
 	showMusicPlaying();
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
+	document.getElementById("audioControll").onended = function() {
+    	try{playMusic(SONGS[SONGS.indexOf(MUSICPLAYING)+1]);}
+    	catch{playMusic(SONGS[0]);}
+	};
+
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
 }
 
@@ -42,6 +47,17 @@ function playMusic(song){
 	continuePlaying();
 }
 
+function checkStatusMusic() {
+	try{
+		if (document.getElementById("audioControll").paused){
+			document.getElementById("musicPlayerTitle").innerHTML = "Player: ";
+		}else{
+			document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
+		}
+	}
+	catch{}
+	setTimeout(function() {checkStatusMusic();}, 100);
+}
 
 function showPlayer(){
 	var element = "<div id='musicPlayer'>"+
@@ -70,3 +86,5 @@ function musicStart(){
 	}
 
 }
+
+checkStatusMusic();
