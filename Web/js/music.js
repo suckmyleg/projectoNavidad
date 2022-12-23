@@ -52,14 +52,17 @@ function showPlayer(){
 	"</div>";
 }
 
+function setup(){
+	showPlayer();
+	setupAudioPlayer();
+}
+
 function musicStart(){
 
-	setupAudioPlayer();
+	setup();
 
 	if (MUSICPLAYING){
 		continuePlaying();
-	}else{
-		showPlayer();
 	}
 
 }

@@ -104,6 +104,7 @@ footer{
 	display: flow;
 	position: fixed;
 	bottom: -90px;
+	transition: bottom 0.2s;
 	right: 0px;
 	width: 30%;
 }
