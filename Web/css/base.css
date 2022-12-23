@@ -69,7 +69,11 @@ footer{
 }
 
 
-
+#musicPlayer{
+	display: fixed;
+	top: 0px;
+	right: 0px;
+}
 
 
 
