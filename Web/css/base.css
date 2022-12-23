@@ -1,7 +1,7 @@
 body{
 	margin: 0px;
 	font-family: cursive;
-	padding-bottom: 25px;
+	padding-bottom: 150px;
 	font-size: 20px;
 }
 
@@ -69,7 +69,73 @@ footer{
 }
 
 
+#musicPlayerTitle{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
 
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #ff0000;
+  color: #a0276e;
+}
+
+#audioControll{
+	display: inline-block;
+	padding: 0px;
+	width: 100%;
+	color: red;
+}
+
+#musicPlayerTitle{
+	margin-top: -10px;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width:100%; /* some width */
+}
+
+#musicPlayer ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#musicPlayer ul a{
+	background-color: black;
+	color: white;
+	padding: 2px;
+	display: block;
+	margin-top: 10px;
+
+	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width:100%; /* some width */
+}
+
+#musicPlayer ul a:hover{
+	cursor: pointer;
+}
+
+#musicPlayer{
+	border-radius: 3px;
+	background-color: red;
+	padding: 10px;
+	display: flow;
+	position: fixed;
+	bottom: -350px;
+	transition: bottom 0.2s, width 0.5s;
+	right: 0px;
+	width: 25%;
+}
+
+#musicPlayer:hover{
+	bottom: 0px;
+	/*width: 35%;*/
+}
 
 
 
@@ -223,7 +289,14 @@ footer{
 }
 
 
-
+@media(max-width: 500px){
+	#musicPlayer{
+		width: 25%;
+	}
+	#musicPlayer:hover{
+		width: 95%;
+	}
+}
 
 
 

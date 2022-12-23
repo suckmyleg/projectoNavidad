@@ -17,6 +17,8 @@ onload = function() {
 		document.getElementById("page_title").style.backgroundColor = LASTCOLOR;
 	}
 
+	musicStart();
+
 	bannerChangeColor();
 }
 
