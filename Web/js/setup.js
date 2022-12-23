@@ -17,9 +17,9 @@ onload = function() {
 		document.getElementById("page_title").style.backgroundColor = LASTCOLOR;
 	}
 
-	bannerChangeColor();
-
 	musicStart();
+
+	bannerChangeColor();
 }
 
 function getRandomNumber(limit){
