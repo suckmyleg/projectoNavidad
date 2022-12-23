@@ -14,7 +14,7 @@ let onPlayings = [];
 
 var SONGS = ["All I Want for Christmas Is You",  
 	"Its Beginning to Look a Lot like Christmas", 
-	"Mi cancion ;D",
+	"Navidad",
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
 	"Yo he peleado",
