@@ -10,6 +10,8 @@ if(VOLUME == false){
 	VOLUME = 20;
 }
 
+let onPlayings = {};
+
 var SONGS = ["All I Want for Christmas Is You", 
 	"Carol of The Bells", 
 	"Its Beginning to Look a Lot like Christmas", 
@@ -18,6 +20,24 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Navidad dulce navidad",
 	"Yo he peleado",
 	"Porta - Dragon Ball Rap (con Letra)"];
+
+
+function onPlaying(songName, fun){
+	try{
+		onPlayings[songName].push(fun);
+	}
+	catch{
+		onPlayings[songName] = [fun];
+	}
+}
+
+function callOnPlaying(songName){
+	try{
+
+	}catch(){
+		
+	}
+}
 
 function getTimestampInSeconds() {
   return Math.floor(Date.now() / 100)/10;
