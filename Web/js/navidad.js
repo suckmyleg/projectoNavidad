@@ -2,7 +2,7 @@
 
 onPlaying("*", function(songName){
 	var title = document.getElementById("page_title");
-	title.innerHTML = songName;
+	//title.innerHTML = songName;
 	title.style.backgroundImage = "none";})
 
 function navidad() {

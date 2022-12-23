@@ -16,8 +16,7 @@ header h1{
 	margin: 0px;
 	text-align: center;
 	transition: color 2s, background-color 0.1s;
-	color: white;
-	filter: invert(100%);
+	color: black;
 }
 
 
