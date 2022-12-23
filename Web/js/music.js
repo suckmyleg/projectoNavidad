@@ -10,7 +10,8 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Mi cancion ;D",
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
-	"Yo he peleado"];
+	"Yo he peleado",
+	"Porta - Dragon Ball Rap (con Letra)"];
 
 function getTimestampInSeconds() {
   return Math.floor(Date.now() / 1000);
