@@ -10,10 +10,9 @@ if(VOLUME == false){
 	VOLUME = 20;
 }
 
-let onPlayings = {};
+let onPlayings = [];
 
-var SONGS = ["All I Want for Christmas Is You", 
-	"Carol of The Bells", 
+var SONGS = ["All I Want for Christmas Is You",  
 	"Its Beginning to Look a Lot like Christmas", 
 	"Mi cancion ;D",
 	"I Really Want to Stay at Your House",
@@ -23,23 +22,17 @@ var SONGS = ["All I Want for Christmas Is You",
 
 
 function onPlaying(songName, fun){
-	try{
-		onPlayings[songName].push(fun);
-	}
-	catch{
-		onPlayings[songName] = [fun];
-	}
+	onPlayings.push([songName, fun]);
 }
 
 function callOnPlaying(songName){
-	try{
-		for(var fun of onPlayings[songName]){
-			fun(songName);
+	for(var data of onPlayings){
+		if (data[0] == songName || data[0] == "*")
+		{
+			console.log(songName, data[1]);
+			data[1](songName);
 		}
-	}catch{
-
 	}
-	if (songName != "*") callOnPlaying("*");
 }
 
 function getTimestampInSeconds() {

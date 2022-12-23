@@ -3,6 +3,8 @@ body{
 	font-family: cursive;
 	padding-bottom: 150px;
 	font-size: 20px;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 header{
