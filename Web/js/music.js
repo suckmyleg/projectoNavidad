@@ -9,11 +9,10 @@ function getTimestampInSeconds () {
 function musicPlayingElement(){
 	totalPlaying = getTimestampInSeconds() - SINCEPLAYING;
 
-	let MINUTE = "01";
-	let SECOND = "00";
+	let add = new Date(SINCEPLAYING * 1000).toISOString().substring(14, 19)
 
 	return "<audio controls autoplay>"+
-	"<source src='Music/"+MUSICPLAYING+".mp3#t=00:"+MINUTE+":"+SECOND+"' type='audio/mpeg'>"+
+	"<source src='Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
 	"Your browser does not support the audio element"+
 	"</audio>";
 }
