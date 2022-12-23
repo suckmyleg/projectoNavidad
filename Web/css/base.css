@@ -134,7 +134,7 @@ audio::-webkit-media-controls-panel {
 
 #musicPlayer:hover{
 	bottom: 0px;
-	width: 35%;
+	/*width: 35%;*/
 }
 
 
