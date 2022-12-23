@@ -30,9 +30,18 @@ function showMusicPlaying(){
 function continuePlaying(){
 	showMusicPlaying();
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
-	document.getElementById("audioControll").onended = function() {
+
+	var audioControll = document.getElementById("audioControll")
+
+	audioControll.onended = function() {
     	try{playMusic(SONGS[SONGS.indexOf(MUSICPLAYING)+1]);}
     	catch{playMusic(SONGS[0]);}
+	};
+	audioControll.onpaused = function() {
+    	document.getElementById("musicPlayerTitle").innerHTML = "Player: ";
+	};
+	audioControll.onplay = function() {
+	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
 	};
 
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
@@ -47,17 +56,6 @@ function playMusic(song){
 	continuePlaying();
 }
 
-function checkStatusMusic() {
-	try{
-		if (document.getElementById("audioControll").paused){
-			document.getElementById("musicPlayerTitle").innerHTML = "Player: ";
-		}else{
-			document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
-		}
-	}
-	catch{}
-	setTimeout(function() {checkStatusMusic();}, 100);
-}
 
 function showPlayer(){
 	var element = "<div id='musicPlayer'>"+
@@ -86,5 +84,3 @@ function musicStart(){
 	}
 
 }
-
-checkStatusMusic();

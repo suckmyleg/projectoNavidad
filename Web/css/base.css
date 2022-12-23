@@ -77,7 +77,7 @@ footer{
 
 #audioPlayer{
 }
-
+/*
 audio::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline {
 	display: none;
@@ -86,12 +86,19 @@ video::-webkit-media-controls-timeline {
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
     display: none;
+}*/
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #ff0000;
+  color: #a0276e;
 }
 
 #audioControll{
 	display: inline-block;
 	padding: 0px;
 	width: 100%;
+	color: red;
 }
 
 #musicPlayerTitle{
