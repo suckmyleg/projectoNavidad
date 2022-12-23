@@ -18,7 +18,7 @@ function musicPlayingElement(){
 }
 
 function showMusicPlaying(){
-	alert("Playing" + MUSICPLAYING);
+	//alert("Playing" + MUSICPLAYING);
 }
 
 function continuePlaying(){
