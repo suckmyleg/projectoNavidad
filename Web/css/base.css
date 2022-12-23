@@ -1,7 +1,7 @@
 body{
 	margin: 0px;
 	font-family: cursive;
-	padding-bottom: 25px;
+	padding-bottom: 150px;
 	font-size: 20px;
 }
 
@@ -75,18 +75,6 @@ footer{
 	padding: 0px;
 }
 
-#audioPlayer{
-}
-/*
-audio::-webkit-media-controls-timeline,
-video::-webkit-media-controls-timeline {
-	display: none;
-}
-
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    display: none;
-}*/
 
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-panel {
@@ -139,13 +127,14 @@ audio::-webkit-media-controls-panel {
 	display: flow;
 	position: fixed;
 	bottom: -140px;
-	transition: bottom 0.2s;
+	transition: bottom 0.2s, width 0.5s;
 	right: 0px;
-	width: 30%;
+	width: 25%;
 }
 
 #musicPlayer:hover{
 	bottom: 0px;
+	width: 35%;
 }
 
 
@@ -300,7 +289,14 @@ audio::-webkit-media-controls-panel {
 }
 
 
-
+@media(max-width: 500px){
+	#musicPlayer{
+		width: 25%;
+	}
+	#musicPlayer:hover{
+		width: 95%;
+	}
+}
 
 
 
