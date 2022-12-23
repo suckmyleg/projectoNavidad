@@ -4,7 +4,7 @@ let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
 
-var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells"];
+var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells", "It's Beginning to Look a Lot like Christmas"];
 
 function getTimestampInSeconds() {
   return Math.floor(Date.now() / 1000);
@@ -42,13 +42,10 @@ function playMusic(song){
 	continuePlaying();
 }
 
-function setupAudioPlayer(){
-	document.body.innerHTML += "<div id='audioPlayer'></div>";
-}
 
 function showPlayer(){
 	var element = "<div id='musicPlayer'>"+
-	"<p id='musicPlayerTitle'>Player</p><ul>";
+	"<p id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul>";
 
 	for(var songName of SONGS){
 		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
@@ -59,14 +56,9 @@ function showPlayer(){
 	document.body.innerHTML += element;
 }
 
-function setup(){
-	showPlayer();
-	setupAudioPlayer();
-}
-
 function musicStart(){
 
-	setup();
+	showPlayer();
 
 	if (MUSICPLAYING){
 		continuePlaying();
