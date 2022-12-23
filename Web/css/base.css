@@ -69,10 +69,47 @@ footer{
 }
 
 
+#musicPlayerTitle{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#audioPlayer{
+	display: none;
+}
+
+#musicPlayer ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#musicPlayer ul a{
+	background-color: black;
+	color: white;
+	padding: 2px;
+	display: block;
+	margin-top: 10px;
+}
+
+#musicPlayer ul a:hover{
+	cursor: pointer;
+}
+
 #musicPlayer{
-	display: fixed;
-	top: 0px;
+	border-radius: 3px;
+	background-color: red;
+	padding: 10px;
+	display: flow;
+	position: fixed;
+	bottom: -90px;
 	right: 0px;
+	width: 30%;
+}
+
+#musicPlayer:hover{
+	bottom: 0px;
 }
 
 
