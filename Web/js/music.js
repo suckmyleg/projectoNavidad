@@ -4,7 +4,13 @@ let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
 
-var SONGS = ["All I Want for Christmas Is You", "Carol of The Bells", "Its Beginning to Look a Lot like Christmas"];
+var SONGS = ["All I Want for Christmas Is You", 
+	"Carol of The Bells", 
+	"Its Beginning to Look a Lot like Christmas", 
+	"Mi cancion ;D",
+	"I Really Want to Stay at Your House",
+	"Navidad dulce navidad",
+	"Yo he peleado"];
 
 function getTimestampInSeconds() {
   return Math.floor(Date.now() / 1000);
@@ -65,7 +71,7 @@ function playMusic(song){
 
 
 function showPlayer(){
-	var element = "<div id='musicPlayer'>"+
+	var element = "<div class='prevent-select' id='musicPlayer'>"+
 	"<p id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul>";
 
 	for(var songName of SONGS){
