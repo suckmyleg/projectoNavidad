@@ -68,6 +68,15 @@ onPlaying("Navidad dulce navidad", function(songName){
 
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
 	document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
+	changedBanner = true;
+	startModoFiesta(600);
+})
+
+onPlaying("Yo he peleado", function(songName){
+	//document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
+	changedBanner = true;
+	startModoFiesta(800);
+	navidad();
 })
 
 autoRemoveSnow();
@@ -76,7 +85,11 @@ autoRemoveSnow();
 function modoRoob(){
 	SONGS = ['Porta - Dragon Ball Rap (con Letra)'];
 	displaySongs();
-	changedBanner = true;
-	MODOFIESTA = true;	
 	playMusic('Porta - Dragon Ball Rap (con Letra)');
+}
+
+function modoJuan(){
+	SONGS = ["Yo he peleado"];
+	displaySongs();
+	playMusic("Yo he peleado");
 }

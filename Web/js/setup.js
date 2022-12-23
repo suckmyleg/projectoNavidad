@@ -8,6 +8,8 @@ let LASTCOLOR = getCookie("lastBannerColor");
 
 let ONLOADS = [];
 
+let MODOFIESTADELAY = 100;
+
 onload = function() {
 	
 	if (false && window.location.href != "file:///C:/Users/juani/Desktop/projectoNavidad/index.html"){
@@ -61,7 +63,7 @@ function bannerChangeColor() {
 		setCookie("lastBannerColor", new_color, 1);
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}
-	setTimeout(function() {bannerChangeColor();}, 100);
+	setTimeout(function() {bannerChangeColor();}, MODOFIESTADELAY);
 }
 
 function switchModoFiest() {
@@ -77,3 +79,8 @@ function onMouseOutBanner(){
 	isMouseOver = false;
 }
 
+
+function startModoFiesta(delay=100){
+	MODOFIESTADELAY = delay;
+	MODOFIESTA = true;
+}

@@ -16,8 +16,7 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Its Beginning to Look a Lot like Christmas", 
 	"Navidad",
 	"I Really Want to Stay at Your House",
-	"Navidad dulce navidad",
-	"Yo he peleado"];/*,
+	"Navidad dulce navidad"];/*,
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
 
@@ -119,7 +118,7 @@ function showPlayer(){
 	var element = "<div onmouseleave='showPlayerSongs(true);' class='prevent-select' id='musicPlayer'>"+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
-	document.body.innerHTML += element;
+	document.getElementById("spawnableField").innerHTML += element;
 
 	displaySongs();
 }

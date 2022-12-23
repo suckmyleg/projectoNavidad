@@ -15,7 +15,7 @@ header h1{
 	padding: 10px;
 	margin: 0px;
 	text-align: center;
-	transition: color 0.1s, background-color 0.1s;
+	transition: color 0.3s, background-color 0.3s;
 	color: black;
 }
 
@@ -149,6 +149,7 @@ audio::-webkit-media-controls-panel {
 	transition: bottom 0.2s, width 0.5s;
 	right: 0px;
 	width: 25%;
+	z-index: 10000;
 }
 
 #musicPlayer:hover{
@@ -156,7 +157,9 @@ audio::-webkit-media-controls-panel {
 }
 
 
-
+.easterEgg:hover{
+	cursor: cell;
+}
 
 
 

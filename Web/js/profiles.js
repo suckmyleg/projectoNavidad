@@ -33,5 +33,5 @@ function displayForm(){
 				'<input id="formNickname" type="text">'+
 			'<br><button onclick="formSign();">Registrarme</button></div></div>';
 
-	document.getElementById("loggableField").innerHTML += form;
+	document.getElementById("spawnableField").innerHTML += form;
 }
