@@ -24,7 +24,9 @@ var SONGS = ["All I Want for Christmas Is You",
 
 function onPlaying(songName, fun){
 	try{
+
 		onPlayings[songName].push(fun);
+
 	}
 	catch{
 		onPlayings[songName] = [fun];
@@ -33,10 +35,13 @@ function onPlaying(songName, fun){
 
 function callOnPlaying(songName){
 	try{
+		for(var fun of onPlayings[songName]){
+			fun(songName);
+		}
+	}catch{
 
-	}catch(){
-		
 	}
+	if (songName != "*") callOnPlaying("*");
 }
 
 function getTimestampInSeconds() {
@@ -59,6 +64,8 @@ function musicPlayingElement(){
 
 function continuePlaying(){
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
+
+	callOnPlaying(MUSICPLAYING);
 
 	var audioControll = document.getElementById("audioControll")
 
