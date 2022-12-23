@@ -3,10 +3,18 @@
 onPlaying("*", function(songName){
 	var title = document.getElementById("page_title");
 	//title.innerHTML = songName;
+	$(document).snowfall().stop()
+	try{
+		for(var i = 0; i < 300; i++){
+			document.getElementById("flake-"+i).remove();
+		}
+	}
+	catch{}
 	title.style.backgroundImage = "none";})
 
+
 function navidad() {
-	$(document).snowfall({deviceorientation : true, round : true, minSize: 1, maxSize:8,  flakeCount : 100});
+	$(document).snowfall({deviceorientation : true, round : true, minSize: 0.5, maxSize:8,  flakeCount : 150});
 }
 
 onPlaying("Navidad dulce navidad", function(songName){
