@@ -46,7 +46,6 @@ function musicPlayingElement(){
 	let add = new Date(totalPlaying * 1000).toISOString().substring(14, 19)
 
 	return "<audio controls autoplay id='audioControll' controlsList='nodownload noplaybackrate'>"+
-	"<source src='Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
 	"<source src='../Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
 	"Your browser does not support the audio element"+
 	"</audio>";
