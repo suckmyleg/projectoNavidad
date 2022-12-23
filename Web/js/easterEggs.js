@@ -2,7 +2,7 @@
 
 let autoRemoveSnowDelay = 500;
 let autoRemoveSnowRange = 100;
-let changedBanner = false;
+let changedBanner = false; 
 
 function autoRemoveSnow(){
 	
@@ -37,6 +37,13 @@ onPlaying("*", function(songName){
 	}
 })
 
+function changeBanner(){
+	if(!MODOFIESTA)
+	{
+		changedBanner = true;
+		MODOFIESTA = true;
+	}
+}
 
 function navidad() {
 	clearSnow();
@@ -46,8 +53,7 @@ function navidad() {
 
 onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
-	changedBanner = true;
-	MODOFIESTA = true;
+	changeBanner();
 })
 
 onPlaying("All I Want for Christmas Is You", function(songName){
@@ -68,13 +74,13 @@ onPlaying("Navidad dulce navidad", function(songName){
 
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
 	document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
-	changedBanner = true;
+	if(!MODOFIESTA)changedBanner = true;
 	startModoFiesta(600);
 })
 
 onPlaying("Yo he peleado", function(songName){
 	//document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
-	changedBanner = true;
+	if(!MODOFIESTA)changedBanner = true;
 	startModoFiesta(800);
 	navidad();
 })
