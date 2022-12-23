@@ -17,8 +17,8 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Navidad",
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
-	"Yo he peleado",
-	"Porta - Dragon Ball Rap (con Letra)"];
+	"Yo he peleado"];/*,
+	"Porta - Dragon Ball Rap (con Letra)"];*/
 
 
 function onPlaying(songName, fun){
@@ -113,8 +113,6 @@ function displaySongs(){
 	list.innerHTML = element;
 
 	document.getElementById("musicPlayer").style.bottom = -27-(41*SONGS.length)+"px";
-
-	console.log(-20-(60*SONGS.length)+"px");
 }
 
 function showPlayer(){
