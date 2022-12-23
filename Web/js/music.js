@@ -44,7 +44,7 @@ function showPlayer(){
 	")'>Play music</a>";
 }
 
-onload = function(){
+function musicStart(){
 
 	if (MUSICPLAYING){
 		continuePlaying();

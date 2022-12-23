@@ -18,6 +18,8 @@ onload = function() {
 	}
 
 	bannerChangeColor();
+
+	musicStart();
 }
 
 function getRandomNumber(limit){
