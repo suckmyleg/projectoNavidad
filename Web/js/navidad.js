@@ -30,6 +30,6 @@ onPlaying("Navidad dulce navidad", function(songName){
 })
 
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
-	document.body.style.backgroundImage = "url('Images/Ruben.png')";
+	document.body.style.backgroundImage = "url('../Images/Ruben.png')";
 })
 
