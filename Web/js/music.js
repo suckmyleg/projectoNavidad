@@ -24,9 +24,7 @@ var SONGS = ["All I Want for Christmas Is You",
 
 function onPlaying(songName, fun){
 	try{
-
 		onPlayings[songName].push(fun);
-
 	}
 	catch{
 		onPlayings[songName] = [fun];
