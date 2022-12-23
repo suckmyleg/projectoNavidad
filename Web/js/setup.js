@@ -14,7 +14,12 @@ onload = function() {
 	}
 
 	if(LASTCOLOR){
-		document.getElementById("page_title").style.backgroundColor = LASTCOLOR;
+		var pageTitle = document.getElementById("page_title");
+		if(pageTitle.style.backgroundImage == "none" || pageTitle.style.backgroundImage == ""){
+			pageTitle.style.backgroundColor = LASTCOLOR;
+		}else{
+			pageTitle.style.color = LASTCOLOR;	
+		}
 	}
 
 	musicStart();
@@ -41,7 +46,13 @@ function bannerChangeColor() {
 	pageTitle = document.getElementById('page_title');
 
 	if(MODOFIESTA){
-		pageTitle.style.backgroundColor = new_color;
+		console.log(pageTitle.style.backgroundImage);
+		if(pageTitle.style.backgroundImage == "none" || pageTitle.style.backgroundImage == ""){
+			pageTitle.style.backgroundColor = new_color;
+		}
+		else{
+			pageTitle.style.color = new_color;
+		}
 		setCookie("lastBannerColor", new_color, 1);
 		//pageTitle.innerHTML = "SuckMyLeg ("+new_color+")";
 	}

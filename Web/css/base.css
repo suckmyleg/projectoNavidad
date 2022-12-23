@@ -15,7 +15,7 @@ header h1{
 	padding: 10px;
 	margin: 0px;
 	text-align: center;
-	transition: color 2s, background-color 0.1s;
+	transition: color 0.1s, background-color 0.1s;
 	color: black;
 }
 

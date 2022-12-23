@@ -26,7 +26,6 @@ function clearSnow(){
 
 onPlaying("*", function(songName){
 	var title = document.getElementById("page_title");
-	//title.innerHTML = songName;
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
 	title.style.backgroundImage = "none";
