@@ -36,7 +36,7 @@ function callOnPlaying(songName){
 }
 
 function getTimestampInSeconds() {
-  return Math.floor(Date.now() / 100)/10;
+  return Math.floor(Date.now() / 10)/100;
 }
 
 
