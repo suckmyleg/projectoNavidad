@@ -1,8 +1,14 @@
+
 let LASTVISIT = getCookie("LASTVISIT");
 let MUSICPLAYING = getCookie("MUSICPLAYING");
 let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
+let VOLUME = getCookie("PAUSEDAT");
+
+if(VOLUME == false){
+	VOLUME = 20;
+}
 
 var SONGS = ["All I Want for Christmas Is You", 
 	"Carol of The Bells", 
@@ -14,7 +20,7 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Porta - Dragon Ball Rap (con Letra)"];
 
 function getTimestampInSeconds() {
-  return Math.floor(Date.now() / 1000);
+  return Math.floor(Date.now() / 100)/10;
 }
 
 
