@@ -2,6 +2,7 @@
 
 let autoRemoveSnowDelay = 500;
 let autoRemoveSnowRange = 100;
+let changedBanner = false;
 
 function autoRemoveSnow(){
 	
@@ -29,6 +30,11 @@ onPlaying("*", function(songName){
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
 	title.style.backgroundImage = "none";
+	title.style.color = "black";
+	if(changedBanner){
+		changedBanner = false;
+		MODOFIESTA = false;
+	}
 })
 
 
@@ -40,6 +46,7 @@ function navidad() {
 
 onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
+	changedBanner = true;
 	MODOFIESTA = true;
 })
 
@@ -64,3 +71,10 @@ onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
 })
 
 autoRemoveSnow();
+
+
+function modoRoob(){
+	playMusic('Porta - Dragon Ball Rap (con Letra)');
+	SONGS = ['Porta - Dragon Ball Rap (con Letra)'];
+	displaySongs();
+}

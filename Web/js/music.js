@@ -91,17 +91,39 @@ function playMusic(song){
 }
 
 
-function showPlayer(){
-	var element = "<div class='prevent-select' id='musicPlayer'>"+
-	"<p id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul>";
+function showPlayerSongs(status) {
+	var player = document.getElementById("musicPlayer");
+	if(player.style.bottom == "0px" || status)
+	{
+		player.style.bottom = -27-(41*SONGS.length)+"px";
+	}else{
+		player.style.bottom = "0px";
+
+	}
+}
+
+function displaySongs(){
+	var list = document.getElementById("listOfSongs");
+	var element = "";
 
 	for(var songName of SONGS){
 		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
 	}
 
-	element += "</ul></div>";
+	list.innerHTML = element;
+
+	document.getElementById("musicPlayer").style.bottom = -27-(41*SONGS.length)+"px";
+
+	console.log(-20-(60*SONGS.length)+"px");
+}
+
+function showPlayer(){
+	var element = "<div onmouseleave='showPlayerSongs(true);' class='prevent-select' id='musicPlayer'>"+
+	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
 	document.body.innerHTML += element;
+
+	displaySongs();
 }
 
 function musicStart(){
