@@ -127,13 +127,13 @@ audio::-webkit-media-controls-panel {
 	padding: 10px;
 	display: flow;
 	position: fixed;
-	bottom: -350px;
+	bottom: -300px;
 	transition: bottom 0.2s, width 0.5s;
 	right: 0px;
 	width: 25%;
 }
 
-#musicPlayer:hover{
+#musicPlayer:active{
 	bottom: 0px;
 	/*width: 35%;*/
 }
