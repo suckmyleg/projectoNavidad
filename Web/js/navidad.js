@@ -15,21 +15,33 @@ function autoRemoveSnow(){
 	setTimeout(function(){autoRemoveSnow();}, autoRemoveSnowDelay);
 }
 
+function clearSnow(){
+	for(var i = 0; i < 500; i++){
+		try{
+			document.getElementById("flake-"+i).remove();
+		}
+		catch{}
+	}
+}
+
 onPlaying("*", function(songName){
 	var title = document.getElementById("page_title");
 	//title.innerHTML = songName;
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
-	title.style.backgroundImage = "none";})
+	title.style.backgroundImage = "none";
+})
 
 
 function navidad() {
+	clearSnow();
 	autoRemoveSnowRange = 0;
 	$(document).snowfall({deviceorientation : true, round : true, minSize: 0.5, maxSize:8,  flakeCount : 150});
 }
 
 onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
+	MODOFIESTA = true;
 })
 
 onPlaying("All I Want for Christmas Is You", function(songName){

@@ -60,3 +60,4 @@ function onMouseOverBanner() {
 function onMouseOutBanner(){
 	isMouseOver = false;
 }
+
