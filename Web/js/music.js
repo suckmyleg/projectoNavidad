@@ -30,12 +30,8 @@ function musicPlayingElement(){
 	"</audio>";
 }
 
-function showMusicPlaying(){
-	//alert("Playing" + MUSICPLAYING);
-}
 
 function continuePlaying(){
-	showMusicPlaying();
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
 
 	var audioControll = document.getElementById("audioControll")
@@ -51,14 +47,16 @@ function continuePlaying(){
 			playMusic(next);
 		}
 	};
+	
 	audioControll.onpaused = function() {
     	document.getElementById("musicPlayerTitle").innerHTML = "Player:";
 	};
+
 	audioControll.onplay = function() {
-	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
+		document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
 	};
 
-	document.getElementById("musicPlayerTitle").innerHTML = "Playing: "+MUSICPLAYING;
+	document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
 }
 
 function playMusic(song){
