@@ -9,8 +9,8 @@ function getTimestampInSeconds () {
 function musicPlayingElement(){
 	totalPlaying = getTimestampInSeconds() - SINCEPLAYING;
 
-	let MINUTE = 1;
-	let SECOND = 0;
+	let MINUTE = "01";
+	let SECOND = "00";
 
 	return "<audio controls autoplay>"+
 	"<source src='Music/"+MUSICPLAYING+".mp3#t=00:"+MINUTE+":"+SECOND+"' type='audio/mpeg'>"+
