@@ -20,3 +20,5 @@ function change(setting, value){
 	setCookie(setting, value, 30);
 	SETTINGS[setting] = value;
 }
+
+loadSettings();
