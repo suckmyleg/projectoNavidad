@@ -207,7 +207,7 @@ function switchDisplayModes(){
 
 function getSettings() {
 	function makeChange(n, v){
-		return "change('"+n+"','"+v+"');reloadBackgroundVideo();";
+		return "change('"+n+"','"+v+"');reloadCinemaHeight();";
 	}
 
 	return "<div id='musicSettings'>"+
