@@ -106,7 +106,7 @@ function showPlayerSongs(status) {
 	var player = document.getElementById("musicPlayer");
 	if(player.style.bottom == "0px" || status)
 	{
-		player.style.bottom = -27-(41*(SONGS.length+1))+"px";
+		player.style.bottom = -27-(41*(SONGS.length+2))+"px";
 	}else{
 		player.style.bottom = "0px";
 
@@ -125,7 +125,7 @@ function displaySongs(){
 
 	list.innerHTML = element;
 
-	document.getElementById("musicPlayer").style.bottom = -27-(41*(SONGS.length+1))+"px";
+	document.getElementById("musicPlayer").style.bottom = -27-(41*(SONGS.length+2))+"px";
 }
 
 function showPlayer(){
