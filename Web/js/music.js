@@ -20,9 +20,7 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Navidad",
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
-	"CHAINSAW MAN",
-	"SPIT IN MY FACE",
-	"webi wabo  letra"];/*,
+	"SPIT IN MY FACE"];/*,
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
 
