@@ -198,6 +198,7 @@ function switchDisplaySettings(){
 	var modes = document.getElementById('musicSettings');
 	if(modes.style.display == "none" || modes.style.display == ""){
 		modes.style.display = "block";
+		hideDisplayModes();
 	}else{
 		hideDisplaySettings();
 	}
@@ -214,6 +215,7 @@ function switchDisplayModes(){
 	if(modes.style.display == "none" || modes.style.display == ""){
 		modes.style.display = "block";
 		document.getElementById('moreModes').innerHTML = "---";
+		hideDisplaySettings();
 	}else{
 		hideDisplayModes();
 	}
