@@ -129,6 +129,18 @@ onPlaying("Zoolander Yally - Party Party", function(songName){
 	setVolume(80);
 })
 
+onPlaying("Fiesta del administrador del grupo", function(songName){
+	backgroundVideo("Fiesta del administrador del grupo.mp4");
+	cinemaMode('200px');
+})
+
+onPlaying("Jose Luis Torrente Todas Putas", function(songName){
+	backgroundVideo("Jose Luis Torrente Todas Putas.mp4");
+	cinemaMode('200px');
+})
+
+
+
 autoRemoveSnow();
 
 function modoRoob(){
@@ -138,7 +150,8 @@ function modoRoob(){
 }
 
 function modoJuan(){
-	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado", "Zoolander Yally - Party Party"];
+	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado", "Zoolander Yally - Party Party",
+		"Todas Putas", "Jose Luis Torrente Todas Putas"];
 	displaySongs();
 	playMusic("CANELITA  JUANITO JUAN");
 }
@@ -149,3 +162,5 @@ addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", 
 addModeSongs("Phonk", ["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 	"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
 	"Kordhell  Live Another Day", "KNIGHT"]);
+
+addModeSongs("😎", ["Los Viernes de la Jungla", "Todas Putas"]);
