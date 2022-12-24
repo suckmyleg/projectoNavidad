@@ -121,7 +121,7 @@ function displaySongs(){
 		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
 	}
 	element += "<a id='moreModes' onclick='switchDisplayModes();'>+++</a>";
-	element += "<a id='moreModes' onclick='switchDisplaySettings();'>Ajustes</a>";
+	element += "<a id='moreSettings' onclick='switchDisplaySettings();'>Ajustes</a>";
 
 	list.innerHTML = element;
 
@@ -199,7 +199,7 @@ function switchDisplaySettings(){
 	if(modes.style.display == "none" || modes.style.display == ""){
 		modes.style.display = "block";
 	}else{
-		hideDisplayModes();
+		hideDisplaySettings();
 	}
 }	
 
@@ -231,6 +231,7 @@ function getSettings() {
 	'<a onclick="'+makeChange("cinemaheight", "600px")+'">Medium</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "1000px")+'">Full</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "100%")+'">Background</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "false")+'">Auto</a>'+
 	"</div>";
 }
 
