@@ -205,7 +205,7 @@ function switchDisplayModes(status=true){
 function getDisplayModes(){
 	var form = 	'<div id="musicModes"><ul>';
 	for(var mode of MODES){
-		form += "<a onclick='"+'executeMode("'+mode[0]+'")'+"' class='link web'>"+mode[0]+"</a>";
+		form += "<a onclick='"+'executeMode("'+mode[0]+'");switchDisplayModes();'+"' class='link web'>"+mode[0]+"</a>";
 	}
 	form += '</ul>'+
 	'</div>';
