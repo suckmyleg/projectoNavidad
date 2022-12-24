@@ -123,8 +123,13 @@ onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 	cinemaMode('1000px');
 })
 
-autoRemoveSnow();
+onPlaying("Zoolander Yally - Party Party", function(songName){
+	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
+	cinemaMode('1000px');
+	setVolume(80);
+})
 
+autoRemoveSnow();
 
 function modoRoob(){
 	SONGS = ['Porta - Dragon Ball Rap (con Letra)'];
@@ -133,7 +138,7 @@ function modoRoob(){
 }
 
 function modoJuan(){
-	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado"];
+	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado", "Zoolander Yally - Party Party"];
 	displaySongs();
 	playMusic("CANELITA  JUANITO JUAN");
 }
