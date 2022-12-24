@@ -117,11 +117,15 @@ function backgroundVideo(videoName, muted=true){
 
 	var video = document.getElementById('bannerBackgroundVideo');
 
+
 	try{
-		video.pause()
-		video.stop()
+		video.pause();
+		video.removeAttribute('src'); // empty source
+		video.load();
 		video.currentTime = 0;
+		video.innerHTML = "";
 	}catch{}
+
 
 	var source = document.createElement('source');
 
