@@ -8,11 +8,11 @@ LOGROS = {
 		"snow_day.gif"]
 };
 
-function logroHtml(name, comment, gif, date){
-		return '<div onclick="executeLogroFun();" class="logros">'+
+function logroHtml(name, comment, gif, date, id="logro"){
+		return '<div onclick="executeLogroFun();" id="'+id+'" class="logros">'+
 		'<div class="logros_header">'+
 		'<div>'+
-		'<img class="loguito" src="Gifs/'+gif+'">'+
+		'<img class="loguito" src="../Gifs/'+gif+'">'+
 		'</div>'+
 		'<div>'+
 		'<h1 class="prevent-select">'+
@@ -35,16 +35,26 @@ function logroHtml(name, comment, gif, date){
 function displayFloatingLogro(name, date){
 	var data = LOGROS[name];
 
-	var element = logroHtml(data[0], data[1], data[2], date);
+	var element = logroHtml(data[0], data[1], data[2], date, "logroFloat");
+	
+	document.getElementById("spawnableField").innerHTML += element;
+
+	document.getElementById("logroFloat").style.right = "0px";
+
+	setTimeout(function(){document.getElementById("logroFloat").style.top = "000px";}, 1000);
+	setTimeout(function(){document.getElementById("logroFloat").style.top = "-200px";}, 7000);
+	setTimeout(function(){document.getElementById("logroFloat").remove();}, 10000);
 }
 
 function showLogros() {
-	var content = document.getElementById("logrosContent");
-	for(var logro of getLogrosDone()){
-		var data = LOGROS[logro[0]];
+	try{
+		var content = document.getElementById("logrosContent");
+		for(var logro of getLogrosDone()){
+			var data = LOGROS[logro[0]];
 
-		content.innerHTML += logroHtml(data[0], data[1], data[2], logro[1]);
-	}
+			content.innerHTML += logroHtml(data[0], data[1], data[2], logro[1]);
+		}
+	}catch{}
 }
 
 function getLogrosDone(){

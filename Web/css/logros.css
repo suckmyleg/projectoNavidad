@@ -5,6 +5,14 @@
     black: mythic
 */
 
+#logroFloat{
+	display: flow;
+	position: fixed;
+	top: -200px;
+	transition: top 1s;
+	width: 40%;
+}
+
 .logros:hover{
 	cursor: pointer;
 }
