@@ -1,0 +1,85 @@
+/*
+    green: easy
+    blue: rare
+    yellow: legendary
+    black: mythic
+*/
+
+.logros{
+	display: block;
+	background-color: rgb(205, 239, 250);
+	border: 2px solid green;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.loguito{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid green;
+}
+
+.logros h1{
+	margin: 0px;
+}
+
+.logros_header{
+	text-align: left;
+	margin-left: 0px;
+	display: grid;
+	grid-template-columns: 130px 350px auto;
+}
+
+.logros_content{
+	margin-left: 50px;
+}
+
+.logros_title{
+	
+}
+.logros_date{
+	text-align: right;
+}
+
+.logros hr{
+	color: black;
+	width: 100%;
+	margin-top: 13px;
+	margin-bottom: 5px;
+}
+
+span{
+    font-size: 80%;
+    font-style: italic;
+    color: gray;
+    float: right;
+}
+
+
+
+
+@media (max-width: 700px){
+
+	.logros_date{
+		grid-row-start: 3;
+		grid-column-start: 1;
+		text-align: left;
+		font-size: 65%;
+	}
+}
+
+@media (max-width: 700px){
+
+	.logros{
+		height: 230px;
+	}
+}
+
+@media (max-width: 955px){
+
+	.logros{
+		height: 230px;
+	}
+}
