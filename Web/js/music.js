@@ -5,6 +5,9 @@ let SINCEPLAYING = getCookie("SINCEPLAYING");
 let PAUSED = getCookie("PAUSED");
 let PAUSEDAT = getCookie("PAUSEDAT");
 let VOLUME = getCookie("PAUSEDAT");
+let MODE = getCookie("MODE");
+
+let MODES = [];
 
 if(VOLUME == false){
 	VOLUME = 20;
@@ -103,7 +106,7 @@ function showPlayerSongs(status) {
 	var player = document.getElementById("musicPlayer");
 	if(player.style.bottom == "0px" || status)
 	{
-		player.style.bottom = -27-(41*SONGS.length)+"px";
+		player.style.bottom = -27-(41*(SONGS.length+1))+"px";
 	}else{
 		player.style.bottom = "0px";
 
@@ -118,13 +121,16 @@ function displaySongs(){
 		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
 	}
 
+	element += "<a id='moreModes' onclick='switchDisplayModes();'>+++</a>";
+
 	list.innerHTML = element;
 
-	document.getElementById("musicPlayer").style.bottom = -27-(41*SONGS.length)+"px";
+	document.getElementById("musicPlayer").style.bottom = -27-(41*(SONGS.length+1))+"px";
 }
 
 function showPlayer(){
 	var element = "<div onmouseleave='showPlayerSongs(true);' class='prevent-select' id='musicPlayer'>"+
+	getDisplayModes()+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
 	document.getElementById("spawnableField").innerHTML += element;
@@ -136,13 +142,76 @@ function musicStart(){
 
 	showPlayer();
 
-	if (MUSICPLAYING){
-		continuePlaying();
-	}else{
-		if(LASTVISIT == false || getTimestampInSeconds()-LASTVISIT >= 1800)
-		{
-			playMusic(SONGS[0]);
+	if(MODE){
+		executeMode(MODE);
+	}
+	else{
+		if (MUSICPLAYING){
+			continuePlaying();
+		}else{
+			if(LASTVISIT == false || getTimestampInSeconds()-LASTVISIT >= 1800)
+			{
+				playMusic(SONGS[0]);
+			}
 		}
+		displayModes();
+		
 	}
 
 }
+
+function executeMode(name){
+	for(var mode of MODES){
+		if(mode[0] == name){
+			setCookie("MODE", mode[0], 1);
+			mode[1]();
+			return null;
+		}
+	}
+}
+
+function formModes(){
+	var nickname = document.getElementById("formNickname").value;
+	var key = document.getElementById("formKey").value;
+
+	logIn(nickname, key);
+}
+
+
+
+function switchDisplayModes(status=true){
+	var modes = document.getElementById('musicModes');
+	if(modes.style.display == "none" || modes.style.display == "" || !status){
+		modes.style.display = "block";
+		document.getElementById('moreModes').innerHTML = "---";
+	}else{
+		modes.style.display = "none";
+		document.getElementById('moreModes').innerHTML = "+++";
+	}
+}	
+
+function getDisplayModes(){
+	var form = 	'<div id="musicModes"><ul>';
+	for(var mode of MODES){
+		form += "<a onclick='"+'executeMode("'+mode[0]+'")'+"' class='link web'>"+mode[0]+"</a>";
+	}
+	form += '</ul>'+
+	'</div>';
+
+	return form;
+}
+
+function addModeSongs(name, songs, play=0){
+	addMode(name, function(){
+		SONGS = songs;
+		displaySongs();
+		playMusic(songs[play]);
+	});
+
+}
+
+function addMode(name, fun){
+	MODES.push([name, fun]);
+}
+
+addModeSongs("Navidad", SONGS);
