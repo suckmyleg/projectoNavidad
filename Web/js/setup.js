@@ -100,7 +100,7 @@ function cinemaMode(height="600px"){
 	if(SETTINGS.cinemaheight && SETTINGS.cinemaheight != "false"){height = SETTINGS.cinemaheight;}
 	document.getElementById("pageBanner").style.height = height;
 	document.getElementById('bannerBackgroundVideo').style.height = height;
-	document.getElementById('page_title').style.fontSize = "20px";
+	document.getElementById('page_title').style.fontSize = "0px";
 }
 
 function uncinemaMode(){
