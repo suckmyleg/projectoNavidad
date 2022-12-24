@@ -5,6 +5,10 @@
     black: mythic
 */
 
+.logro:hover{
+	cursor: pointer;
+}
+
 .logros{
 	display: block;
 	background-color: rgb(205, 239, 250);

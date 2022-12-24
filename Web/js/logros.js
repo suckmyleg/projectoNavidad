@@ -5,7 +5,7 @@ LOGROS = {
 };
 
 function logroHtml(name, comment, gif, date){
-		return '<div id="logro" class="logros">'+
+		return '<div class="logro" class="logros">'+
 		'<div class="logros_header">'+
 		'<div>'+
 		'<img class="loguito" src="Gifs/'+gif+'">'+
@@ -35,7 +35,7 @@ function displayFloatingLogro(name, date){
 }
 
 function showLogros() {
-	var content = document.getElementById("content");
+	var content = document.getElementById("logrosContent");
 	for(var logro of getLogrosDone()){
 		var data = LOGROS[logro[0]];
 
@@ -64,6 +64,8 @@ function runLogro(name){
 			JSON.stringify(logros)
 			);
 		displayFloatingLogro(name, date);
+
+		showLogros();
 	}
 }
 
