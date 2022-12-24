@@ -52,7 +52,8 @@ function checkLogroRunned(name){
 
 function runLogro(name){
 	if(!checkLogroRunned(name)){
-		change("logros", JSON.parse(JSON.parse(SETTINGS.logros).push([name, new Date(98, 1)])));
+		var date = new Date(98, 1);
+		change("logros", JSON.parse(JSON.parse(SETTINGS.logros).push([name, date])));
 		displayFloatingLogro(name, date);
 	}
 }
