@@ -146,7 +146,13 @@ function musicStart(){
 		executeMode(MODE);
 	}
 	else{
-		if (MUSICPLAYING){
+
+	}
+
+}
+
+function playSongs(){
+	if (MUSICPLAYING){
 			continuePlaying();
 		}else{
 			if(LASTVISIT == false || getTimestampInSeconds()-LASTVISIT >= 1800)
@@ -155,9 +161,6 @@ function musicStart(){
 			}
 		}
 		displayModes();
-		
-	}
-
 }
 
 function executeMode(name){
@@ -205,7 +208,7 @@ function addModeSongs(name, songs, play=0){
 	addMode(name, function(){
 		SONGS = songs;
 		displaySongs();
-		playMusic(songs[play]);
+		playSongs();
 	});
 
 }
