@@ -125,7 +125,7 @@ onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 
 onPlaying("Zoolander Yally - Party Party", function(songName){
 	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
-	cinemaMode('1000px');
+	cinemaMode('200px');
 	setVolume(80);
 })
 
