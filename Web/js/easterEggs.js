@@ -275,6 +275,16 @@ onPlaying("Los Viernes de la Jungla", function(songName){
 
 
 
+
+
+
+
+
+
+
+
+
+
 function setupSongModes(){
 	let MODES = [];
 
@@ -289,17 +299,11 @@ function setupSongModes(){
 		"Kordhell  Live Another Day", "KNIGHT"]);
 
 	addModeSongs("😎", ["Los Viernes de la Jungla", "Todas Putas"]);
+
+	if(checkLogroRunned("ROOBCRACK")) modoRoob();
+
+	if(checkLogroRunned("SUCKMYLEG")) modoJuan();
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -309,12 +313,14 @@ function setupSongModes(){
 autoRemoveSnow();
 
 function modoRoob(){
+	runLogro("ROOBCRACK");
 	SONGS = ['Porta - Dragon Ball Rap (con Letra)', "Carajo paiaso"];
 	displaySongs();
 	playMusic('Porta - Dragon Ball Rap (con Letra)');
 }
 
 function modoJuan(){
+	runLogro("SUCKMYLEG");
 	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado", "Zoolander Yally - Party Party",
 		"Todas Putas", "Jose Luis Torrente Todas Putas"];
 	displaySongs();

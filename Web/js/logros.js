@@ -9,6 +9,14 @@ LOGROS = {
 
 	"GAY":["Eri gay?", 
 		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
+		"snow_day.gif"],
+
+	"ROOBCRACK":["Ruben Martinez Martinez", 
+		"Eres un seguidor afaz del verdadero alphasnipper",
+		"snow_day.gif"],
+
+	"SUCKMYLEG":["Juan Ageitos Bonaldi", 
+		"Seguidor del volumen",
 		"snow_day.gif"]
 };
 
