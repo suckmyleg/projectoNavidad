@@ -175,6 +175,7 @@ function playMusicIfSameBefore(){
 }
 
 function executeMode(name){
+	hideDisplayModes();
 	for(var mode of MODES){
 		if(mode[0] == name){
 			setCookie("MODE", mode[0], 1);

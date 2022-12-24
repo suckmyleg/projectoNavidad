@@ -107,9 +107,11 @@ onPlaying("All I Want for Christmas Is You", function(songName){
 	if(!getCookie("FIRSTTIME")){cinemaMode("1000px");setCookie("FIRSTTIME", true, 31);}
 })
 
+
 onPlaying("Carol of The Bells", function(songName){
 	navidad();
 })
+
 
 onPlaying("Its Beginning to Look a Lot like Christmas", function(songName){
 	navidad();
@@ -120,6 +122,7 @@ onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
 })
 
+
 onPlaying("Navidad", function(songName){
 	setVolume(100);
 	window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -127,11 +130,13 @@ onPlaying("Navidad", function(songName){
 	cinemaMode("1000px");
 })
 
+
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
 	document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
 	if(!MODOFIESTA)changedBanner = true;
 	startModoFiesta(600);
 })
+
 
 onPlaying("Yo he peleado", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
@@ -139,11 +144,13 @@ onPlaying("Yo he peleado", function(songName){
 	navidad();
 })
 
+
 onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
 	cinemaMode("400px");
 	backgroundVideo("hentai3.mp4");
 })
+
 
 onPlaying("NYA! ARIGATO Tokyo", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
@@ -157,11 +164,13 @@ onPlaying("SPIT IN MY FACE", function(songName){
 	startModoFiesta();
 })
 
+
 onPlaying("GayEchoSoundEffect", function(songName){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundImage('gay.png');
 	cinemaMode('1000px');
 })
+
 
 onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -169,26 +178,31 @@ onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 	cinemaMode('1000px');
 })
 
+
 onPlaying("Zoolander Yally - Party Party", function(songName){
 	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
 	cinemaMode('200px');
 	setVolume(80);
 })
 
+
 onPlaying("Fiesta del administrador del grupo", function(songName){
 	backgroundVideo("Fiesta del administrador del grupo.mp4");
 	cinemaMode('200px');
 })
+
 
 onPlaying("Jose Luis Torrente Todas Putas", function(songName){
 	backgroundVideo("Jose Luis Torrente Todas Putas.mp4");
 	cinemaMode('1000px');
 })
 
+
 onPlaying("Plants vs Zombies Music Video", function(songName){
 	backgroundVideo("Plants vs Zombies Music Video.mp4");
 	cinemaMode('1000px');
 })
+
 
 onPlayingSongs(["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 	"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
@@ -197,10 +211,12 @@ onPlayingSongs(["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 	cinemaMode('200px');
 })
 
+
 onPlaying("CANELITA  JUANITO JUAN", function(songName){
 	backgroundVideo("JuanBaile.mp4");
 	cinemaMode('1000px');
 })
+
 
 onPlaying("Carajo paiaso", function(songName){
 	backgroundVideo("RubenShaco2.mp4");
@@ -216,8 +232,9 @@ onPlaying("Todas Putas", function(songName){
 	setVolume(40);
 })
 
+
 onPlaying("Meme", function(songName){
-	clearAll()
+	clearAll();
 	cinemaMode('600px');
 	setVolume(40);
 	var DELAY = 2500;
@@ -235,7 +252,6 @@ onPlaying("Meme", function(songName){
 	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+11+'.png');}}, (DELAY*11));
 	setTimeout(function(){if(MUSICPLAYING == songName){cinemaMode('76px');}}, (DELAY*12));
 	setTimeout(function(){if(MUSICPLAYING == songName){clearAll();}}, (DELAY*12.5));
-	
 })
 
 
