@@ -264,4 +264,3 @@ function addMode(name, fun){
 	MODES.push([name, fun]);
 }
 
-addModeSongs("Navidad", SONGS);

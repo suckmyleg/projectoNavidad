@@ -276,6 +276,10 @@ onPlaying("Los Viernes de la Jungla", function(songName){
 
 
 function setupSongModes(){
+	let MODES = [];
+
+	if(checkLogroRunned("PRIMERAVEZ")) addModeSongs("Navidad", SONGS);
+
 	if(checkLogroRunned("GAY")) {addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme", "webi wabo  letra", "Plants vs Zombies Music Video"]);}
 
 	addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", "CHAINSAW MAN"]);
@@ -317,4 +321,3 @@ function modoJuan(){
 	playMusic("CANELITA  JUANITO JUAN");
 }
 
-setupSongModes();

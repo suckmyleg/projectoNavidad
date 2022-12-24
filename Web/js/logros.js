@@ -1,6 +1,10 @@
 LOGROS = {
-	"DIANIEVE":["!DIA DE NIEVE!", 
+	"PRIMERAVEZ":["!PRIMERA VEZ AQUI!", 
 		"¡Has desbloqueado la nieve en la pantalla!",
+		"snow_day.gif"],
+
+	"DIANIEVE":["!DIA DE NIEVE!", 
+		"¡CORRIDA ANCESTRAL!",
 		"snow_day.gif"],
 
 	"GAY":["Eri gay?", 
@@ -81,6 +85,8 @@ function runLogro(name){
 		displayFloatingLogro(name, date);
 
 		showLogros();
+
+		musicStart();	
 
 		setupSongModes();
 	}
