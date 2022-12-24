@@ -49,6 +49,7 @@ function displayFloatingLogro(name, date){
 function showLogros() {
 	try{
 		var content = document.getElementById("logrosContent");
+		content.innerHTML = "";
 		for(var logro of getLogrosDone()){
 			var data = LOGROS[logro[0]];
 
