@@ -111,7 +111,7 @@ function backgroundImage(imageName){
 
 
 function reloadBackgroundVideo(){
-	var video = getCookie("BACKGROUNDVIDEO", videoName);
+	var video = getCookie("BACKGROUNDVIDEO");
 	if(video)backgroundVideo(video);
 }
 
