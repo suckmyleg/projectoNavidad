@@ -111,6 +111,19 @@ function cinemaMode(height="600px"){
 	document.getElementById('footerAutores').style.display = "none";
 }
 
+function clearAll(){
+	uncinemaMode();
+	removeVideoPlaying();
+	removeBannerImage();
+	bannerLastColor();
+}
+
+
+function removeBannerImage(){
+	document.getElementById("page_title").style.color = "black";
+	document.getElementById("pageBanner").style.backgroundImage = "none";
+}
+
 function uncinemaMode(){
 	MODOCINEMA = false;
 	document.getElementById("pageBanner").style.height = "76px";

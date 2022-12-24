@@ -74,14 +74,12 @@ function navidad() {
 
 onPlaying("*", function(songName){
 	unBackgroundVideoIfNotPlaying();
-	var title = document.getElementById("page_title");
+	removeBannerImage()
 	uncinemaMode();
 	bannerLastColor();
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
-	title.style.backgroundImage = "none";
 	document.getElementById("pageBanner").style.backgroundImage = "none";
-	title.style.color = "black";
 	if(changedBanner){
 		changedBanner = false;
 		MODOFIESTA = false;
@@ -209,28 +207,35 @@ onPlaying("Carajo paiaso", function(songName){
 	cinemaMode('1000px');
 })
 
-/*
+
 onPlaying("Todas Putas", function(songName){
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 1000);
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(500, false);}, 15700);
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 26000);
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(550, false);}, 31000);
 	setVolume(40);
-})*/
+})
 
-onPlaying("Todas Putas", function(songName){
-	cinemaMode('1000px');
-	for(var i = 0; i < 11; i++)
-	{
-		setTimeout(function(){
-			if(MUSICPLAYING == songName){
-				startModoFiesta((700*i), false);
-				backgroundImage("Memes/"+i+'.png');
-			}
-
-		}, (700*i));
-	}
+onPlaying("Meme", function(songName){
+	clearAll()
+	cinemaMode('600px');
 	setVolume(40);
+	var DELAY = 2500;
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+0+'.png');}}, (DELAY*0));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+1+'.png');}}, (DELAY*1));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+2+'.png');}}, (DELAY*2));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+3+'.png');}}, (DELAY*3));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+4+'.png');}}, (DELAY*4));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+5+'.png');}}, (DELAY*5));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+6+'.png');}}, (DELAY*6));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+7+'.png');}}, (DELAY*7));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+8+'.png');}}, (DELAY*8));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+9+'.png');}}, (DELAY*9));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+10+'.png');}}, (DELAY*10));
+	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+11+'.png');}}, (DELAY*11));
+	setTimeout(function(){if(MUSICPLAYING == songName){cinemaMode('76px');}}, (DELAY*12));
+	setTimeout(function(){if(MUSICPLAYING == songName){clearAll();}}, (DELAY*12.5));
+	
 })
 
 
