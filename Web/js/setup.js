@@ -91,10 +91,12 @@ function onMouseOutBanner(){
 function startModoFiesta(delay=100){
 	MODOFIESTADELAY = delay;
 	MODOFIESTA = true;
+	uncinemaMode();
 }
 
 function cinemaMode(height="600px"){
 	MODOCINEMA = true;
+	MODOFIESTA = false;
 	if(SETTINGS.cinemaheight && SETTINGS.cinemaheight != "false"){height = SETTINGS.cinemaheight;}
 	document.getElementById("pageBanner").style.height = height;
 	document.getElementById('bannerBackgroundVideo').style.height = height;
