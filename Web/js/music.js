@@ -129,7 +129,7 @@ function displaySongs(){
 }
 
 function showPlayer(){
-	var element = "<div onmouseleave='showPlayerSongs(true);' class='prevent-select' id='musicPlayer'>"+
+	var element = "<div onmouseleave='showPlayerSongs(true);hideDisplayModes();' class='prevent-select' id='musicPlayer'>"+
 	getDisplayModes()+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
@@ -146,7 +146,7 @@ function musicStart(){
 		executeMode(MODE);
 	}
 	else{
-
+		playMusicIfSameBefore();
 	}
 
 }
@@ -160,7 +160,6 @@ function playMusicIfSame(song){
 				playMusic(SONGS[0]);
 			}
 		}
-		displayModes();
 }
 
 function playMusicIfSameBefore(){
@@ -189,23 +188,26 @@ function formModes(){
 	logIn(nickname, key);
 }
 
+function hideDisplayModes(){
+		document.getElementById('musicModes').style.display = "none";
+		document.getElementById('moreModes').innerHTML = "+++";
 
+}
 
-function switchDisplayModes(status=true){
+function switchDisplayModes(){
 	var modes = document.getElementById('musicModes');
-	if((modes.style.display == "none" || modes.style.display == "") && !status){
+	if(modes.style.display == "none" || modes.style.display == ""){
 		modes.style.display = "block";
 		document.getElementById('moreModes').innerHTML = "---";
 	}else{
-		modes.style.display = "none";
-		document.getElementById('moreModes').innerHTML = "+++";
+		hideDisplayModes();
 	}
 }	
 
 function getDisplayModes(){
 	var form = 	'<div id="musicModes"><ul>';
 	for(var mode of MODES){
-		form += "<a onclick='"+'executeMode("'+mode[0]+'");switchDisplayModes(false);'+"' class='link web'>"+mode[0]+"</a>";
+		form += "<a onclick='"+'executeMode("'+mode[0]+'");'+"' class='link web'>"+mode[0]+"</a>";
 	}
 	form += '</ul>'+
 	'</div>';

@@ -97,8 +97,14 @@ onPlaying("Yo he peleado", function(songName){
 
 onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	cinemaMode("1000px");
+	cinemaMode("200px");
 	backgroundVideo("hentai3.mp4");
+})
+
+onPlaying("NYA! ARIGATO Tokyo", function(songName){
+	if(!MODOFIESTA)changedBanner = true;
+	cinemaMode("200px");
+	backgroundVideo("nya.mp4");
 })
 
 
@@ -127,8 +133,10 @@ function modoRoob(){
 }
 
 function modoJuan(){
-	SONGS = ["Yo he peleado", "S3RL HentaiExtreme Bass Boosted"];
+	SONGS = ["Yo he peleado"];
 	displaySongs();
 	playMusic("Yo he peleado");
 }
 addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme"]);
+
+addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo"]);
