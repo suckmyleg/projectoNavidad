@@ -215,8 +215,8 @@ function getSettings() {
 	'<a onclick="'+makeChange("cinemaheight", "76px")+'">Normal</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "200px")+'">Short</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "600px")+'">Medium</a>'+
-	'<a onclick="'+makeChange("cinemaheight", "1000px")+'">Big</a>'+
-	'<a onclick="'+makeChange("cinemaheight", "100%")+'">Full</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "1000px")+'">Full</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "100%")+'">Background</a>'+
 	"</div>";
 }
 
