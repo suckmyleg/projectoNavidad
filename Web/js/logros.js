@@ -42,7 +42,7 @@ function displayFloatingLogro(name, date){
 	document.getElementById("logroFloat").style.right = "0px";
 
 	setTimeout(function(){document.getElementById("logroFloat").style.top = "000px";}, 1000);
-	setTimeout(function(){document.getElementById("logroFloat").style.top = "-200px";}, 7000);
+	setTimeout(function(){document.getElementById("logroFloat").style.top = "-300px";}, 7000);
 	setTimeout(function(){document.getElementById("logroFloat").remove();}, 10000);
 }
 
