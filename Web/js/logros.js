@@ -81,6 +81,8 @@ function runLogro(name){
 		displayFloatingLogro(name, date);
 
 		showLogros();
+
+		setupSongModes();
 	}
 }
 
