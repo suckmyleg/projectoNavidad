@@ -140,3 +140,7 @@ function modoJuan(){
 addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme"]);
 
 addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo"]);
+
+addModeSongs("Phonk", ["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
+	"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
+	"Kordhell  Live Another Day", "KNIGHT"]);
