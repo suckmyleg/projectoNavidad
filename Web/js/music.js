@@ -120,8 +120,8 @@ function displaySongs(){
 	for(var songName of SONGS){
 		element += "<a onclick='playMusic("+'"'+songName+'"'+")'>"+songName+"</a>";
 	}
-
 	element += "<a id='moreModes' onclick='switchDisplayModes();'>+++</a>";
+	element += "<a id='moreModes' onclick='switchDisplaySettings();'>Ajustes</a>";
 
 	list.innerHTML = element;
 
@@ -129,7 +129,7 @@ function displaySongs(){
 }
 
 function showPlayer(){
-	var element = "<div onmouseleave='showPlayerSongs(true);hideDisplayModes();' class='prevent-select' id='musicPlayer'>"+
+	var element = "<div onmouseleave='showPlayerSongs(true);hideDisplayModes();hideDisplaySettings();' class='prevent-select' id='musicPlayer'>"+
 	getSettings()+
 	getDisplayModes()+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
@@ -188,6 +188,20 @@ function formModes(){
 
 	logIn(nickname, key);
 }
+
+function hideDisplaySettings(){
+		document.getElementById('musicSettings').style.display = "none";
+
+}
+
+function switchDisplaySettings(){
+	var modes = document.getElementById('musicSettings');
+	if(modes.style.display == "none" || modes.style.display == ""){
+		modes.style.display = "block";
+	}else{
+		hideDisplayModes();
+	}
+}	
 
 function hideDisplayModes(){
 		document.getElementById('musicModes').style.display = "none";
