@@ -118,7 +118,7 @@ onPlaying("GayEchoSoundEffect", function(songName){
 	cinemaMode('1000px');
 })
 
-onPlaying("webi wabo  letra", function(songName){
+onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 	backgroundVideo("guySpeaksPVZ.mp4", false);
 	cinemaMode('1000px');
 })
