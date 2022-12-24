@@ -193,7 +193,7 @@ function formModes(){
 
 function switchDisplayModes(status=true){
 	var modes = document.getElementById('musicModes');
-	if(modes.style.display == "none" || modes.style.display == "" || !status){
+	if((modes.style.display == "none" || modes.style.display == "") && !status){
 		modes.style.display = "block";
 		document.getElementById('moreModes').innerHTML = "---";
 	}else{
