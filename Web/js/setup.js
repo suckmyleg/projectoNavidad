@@ -4,6 +4,8 @@ let isMouseOver = false;
 
 let MODOFIESTA = getCookie("MODOFIESTA");
 
+let	MODOCINEMA = false;
+
 let LASTCOLOR = getCookie("lastBannerColor");
 
 let ONLOADS = [];
@@ -92,12 +94,14 @@ function startModoFiesta(delay=100){
 }
 
 function cinemaMode(height="600px"){
+	MODOCINEMA = true;
 	document.getElementById("pageBanner").style.height = height;
 	document.getElementById('bannerBackgroundVideo').style.height = height;
 	document.getElementById('page_title').style.fontSize = "20px";
 }
 
 function uncinemaMode(){
+	MODOCINEMA = false;
 	document.getElementById("pageBanner").style.height = "76px";
 	document.getElementById('bannerBackgroundVideo').style.height = "76px";
 	document.getElementById('page_title').style.fontSize = "2em";
@@ -110,9 +114,8 @@ function backgroundImage(imageName){
 }
 
 
-function reloadBackgroundVideo(){
-	var video = getCookie("BACKGROUNDVIDEO");
-	if(video)backgroundVideo(video);
+function reloadCinemaHeight(){
+	if(MODOCINEMA) cinemaMode(SETTINGS.cinemaheight);
 }
 
 function backgroundVideo(videoName, muted=true){
