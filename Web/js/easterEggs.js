@@ -119,7 +119,7 @@ onPlaying("GayEchoSoundEffect", function(songName){
 })
 
 onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
-	backgroundVideo("guySpeaksPVZ.mp4", false);
+	backgroundVideo("guySpeaksPVZ.mp4");
 	cinemaMode('1000px');
 })
 
