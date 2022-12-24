@@ -131,7 +131,4 @@ function modoJuan(){
 	displaySongs();
 	playMusic("Yo he peleado");
 }
-
-addMode("Roobcrack", modoRoob);
-addMode("SuckMyleg", modoJuan);
 addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme"]);
