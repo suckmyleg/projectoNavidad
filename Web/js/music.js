@@ -130,6 +130,7 @@ function displaySongs(){
 
 function showPlayer(){
 	var element = "<div onmouseleave='showPlayerSongs(true);hideDisplayModes();' class='prevent-select' id='musicPlayer'>"+
+	getSettings()+
 	getDisplayModes()+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
@@ -203,6 +204,17 @@ function switchDisplayModes(){
 		hideDisplayModes();
 	}
 }	
+
+function getSettings() {
+	return "<div id='musicSettings'>"+
+	"<h3>Cinema:</h3>"+
+	"<a onclick='change("+'"cinemaheight"'+'"76px"'+")'>Normal</a>"+
+	"<a onclick='change("+'"cinemaheight"'+'"200px"'+")'>Short</a>"+
+	"<a onclick='change("+'"cinemaheight"'+'"600pxpx"'+")'>Medium</a>"+
+	"<a onclick='change("+'"cinemaheight"'+'"900px"'+")'>Big</a>"+
+	"<a onclick='change("+'"cinemaheight"'+'"100%"'+")'>Full</a>"+
+	"</div>";
+}
 
 function getDisplayModes(){
 	var form = 	'<div id="musicModes"><ul>';
