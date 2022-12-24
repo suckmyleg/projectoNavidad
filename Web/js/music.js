@@ -206,13 +206,17 @@ function switchDisplayModes(){
 }	
 
 function getSettings() {
+	function makeChange(n, v){
+		return "change('"+n+"','"+v+"');";
+	}
+
 	return "<div id='musicSettings'>"+
 	"<h3>Cinema:</h3>"+
-	'<a onclick="change("cinemaheight",76px")">Normal</a>'+
-	'<a onclick="change("cinemaheight","200px")">Short</a>'+
-	'<a onclick="change("cinemaheight","600pxpx")">Medium</a>'+
-	'<a onclick="change("cinemaheight","900px")">Big</a>'+
-	'<a onclick="change("cinemaheight","100%")">Full</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "76px")+'">Normal</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "200px")+'">Short</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "600px")+'">Medium</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "900px")+'">Big</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "100")+'">Full</a>'+
 	"</div>";
 }
 
