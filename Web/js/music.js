@@ -163,6 +163,15 @@ function playMusicIfSame(song){
 		displayModes();
 }
 
+function playMusicIfSameBefore(){
+	if(MUSICPLAYING){
+		playMusicIfSameBefore(SONGS[SONGS.indexOf(MUSICPLAYING)])
+	}
+	else{
+		playMusic(SONGS[0]);
+	}
+}
+
 function executeMode(name){
 	for(var mode of MODES){
 		if(mode[0] == name){
@@ -208,7 +217,7 @@ function addModeSongs(name, songs, play=0){
 	addMode(name, function(){
 		SONGS = songs;
 		displaySongs();
-		playMusicIfSame(SONGS[0]);
+		playMusicIfSameBefore();
 	});
 
 }
