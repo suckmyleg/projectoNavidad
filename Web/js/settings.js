@@ -3,8 +3,8 @@ let SETTINGS = {
 };
 
 let settingsKeys = [
-	["cinemaheight", "false"]
-	];
+	["cinemaheight", "false"],
+	["logros", '[["DIANIEVE", "ayer"]]']];
 
 function loadSettings(){
 	for(var setting of settingsKeys){
