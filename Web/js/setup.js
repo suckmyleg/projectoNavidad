@@ -95,7 +95,7 @@ function startModoFiesta(delay=100){
 
 function cinemaMode(height="600px"){
 	MODOCINEMA = true;
-	if(SETTINGS.cinemaheight){height = SETTINGS.cinemaheight;}
+	if(SETTINGS.cinemaheight && SETTINGS.cinemaheight != "false"){height = SETTINGS.cinemaheight;}
 	document.getElementById("pageBanner").style.height = height;
 	document.getElementById('bannerBackgroundVideo').style.height = height;
 	document.getElementById('page_title').style.fontSize = "20px";
