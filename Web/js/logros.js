@@ -5,7 +5,7 @@ LOGROS = {
 };
 
 function logroHtml(name, comment, gif, date){
-		return '<div class="logro" onclick="executeLogroFun();" class="logros">'+
+		return '<div onclick="executeLogroFun();" class="logros">'+
 		'<div class="logros_header">'+
 		'<div>'+
 		'<img class="loguito" src="Gifs/'+gif+'">'+
