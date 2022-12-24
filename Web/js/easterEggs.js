@@ -26,10 +26,14 @@ function clearSnow(){
 }
 
 onPlaying("*", function(songName){
+	backgroundVideo("", true);
 	var title = document.getElementById("page_title");
+	uncinemaMode();
+	bannerLastColor();
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
 	title.style.backgroundImage = "none";
+	document.getElementById("pageBanner").style.backgroundImage = "none";
 	title.style.color = "black";
 	if(changedBanner){
 		changedBanner = false;
@@ -68,8 +72,15 @@ onPlaying("Its Beginning to Look a Lot like Christmas", function(songName){
 	navidad();
 })
 
+
 onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
+})
+
+onPlaying("Navidad", function(songName){
+	setVolume(100);
+	backgroundVideo("vende.mkv");
+	cinemaMode("1000px");
 })
 
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
@@ -79,10 +90,31 @@ onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
 })
 
 onPlaying("Yo he peleado", function(songName){
-	//document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
 	if(!MODOFIESTA)changedBanner = true;
 	startModoFiesta(800);
 	navidad();
+})
+
+onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
+	if(!MODOFIESTA)changedBanner = true;
+	cinemaMode("1000px");
+	backgroundVideo("hentai3.mp4");
+})
+
+
+onPlaying("SPIT IN MY FACE", function(songName){
+	if(!MODOFIESTA)changedBanner = true;
+	startModoFiesta();
+})
+
+onPlaying("GayEchoSoundEffect", function(songName){
+	backgroundImage('gay.png');
+	cinemaMode('1000px');
+})
+
+onPlaying("webi wabo  letra", function(songName){
+	backgroundVideo("guySpeaksPVZ.mp4", false);
+	cinemaMode('1000px');
 })
 
 autoRemoveSnow();
@@ -95,7 +127,7 @@ function modoRoob(){
 }
 
 function modoJuan(){
-	SONGS = ["Yo he peleado"];
+	SONGS = ["Yo he peleado", "S3RL HentaiExtreme Bass Boosted"];
 	displaySongs();
 	playMusic("Yo he peleado");
 }

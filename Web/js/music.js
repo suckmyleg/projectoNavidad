@@ -16,9 +16,16 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Its Beginning to Look a Lot like Christmas", 
 	"Navidad",
 	"I Really Want to Stay at Your House",
-	"Navidad dulce navidad"];/*,
+	"Navidad dulce navidad",
+	"CHAINSAW MAN",
+	"SPIT IN MY FACE",
+	"webi wabo  letra"];/*,
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
+
+function setVolume(lvl){
+	document.getElementById("audioControll").volume = lvl/100;
+}
 
 function onPlaying(songName, fun){
 	onPlayings.push([songName, fun]);
@@ -78,6 +85,8 @@ function continuePlaying(){
 	};
 
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
+
+	setVolume(VOLUME);
 }
 
 function playMusic(song){
