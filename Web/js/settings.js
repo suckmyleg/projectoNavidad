@@ -3,7 +3,7 @@ let SETTINGS = {
 };
 
 let settingsKeys = [
-	["cinemaheight", "1000px"]
+	["cinemaheight", "false"]
 	];
 
 function loadSettings(){

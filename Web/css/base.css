@@ -160,7 +160,7 @@ audio::-webkit-media-controls-panel {
 	bottom: -20px;
 	transition: bottom 0.2s, width 0.5s;
 	right: 0px;
-	width: 25%;
+	width: 500px;
 	z-index: 10000;
 }
 
@@ -379,7 +379,7 @@ audio::-webkit-media-controls-panel {
 }
 
 
-@media(max-width: 500px){
+@media(max-width: 600px){
 	#musicPlayer{
 		width: 25%;
 	}

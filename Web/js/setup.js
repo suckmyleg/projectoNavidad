@@ -8,6 +8,8 @@ let	MODOCINEMA = false;
 
 let LASTCOLOR = getCookie("lastBannerColor");
 
+let VIDEOPLAYING = false;
+
 let ONLOADS = [];
 
 let MODOFIESTADELAY = 100;
@@ -93,10 +95,10 @@ function onMouseOutBanner(){
 }
 
 
-function startModoFiesta(delay=100){
+function startModoFiesta(delay=100, disable=true){
 	MODOFIESTADELAY = delay;
 	MODOFIESTA = true;
-	uncinemaMode();
+	if(disable)uncinemaMode();
 }
 
 function cinemaMode(height="600px"){
@@ -106,6 +108,7 @@ function cinemaMode(height="600px"){
 	document.getElementById("pageBanner").style.height = height;
 	document.getElementById('bannerBackgroundVideo').style.height = height;
 	document.getElementById('page_title').style.fontSize = "0px";
+	document.getElementById('footerAutores').style.display = "none";
 }
 
 function uncinemaMode(){
@@ -113,6 +116,7 @@ function uncinemaMode(){
 	document.getElementById("pageBanner").style.height = "76px";
 	document.getElementById('bannerBackgroundVideo').style.height = "76px";
 	document.getElementById('page_title').style.fontSize = "2em";
+	document.getElementById('footerAutores').style.display = "block";
 }
 
 function backgroundImage(imageName){
@@ -126,11 +130,24 @@ function reloadCinemaHeight(){
 	if(MODOCINEMA) cinemaMode(SETTINGS.cinemaheight);
 }
 
-function backgroundVideo(videoName, muted=true){
-	MODOFIESTA = false;
+function unBackgroundVideoIfNotPlaying(){
+	videoPlayedBefore = VIDEOPLAYING;
 
-	document.getElementById("pageBanner").style.backgroundColor = "rgb(0,0,0,0)";
+	setTimeout(function(){if(((videoPlayedBefore != VIDEOPLAYING) && !VIDEOPLAYING) && videoPlayedBefore) removeVideoPlaying();}, 1000);
+}
 
+/*
+false false = true
+
+false true = false
+
+0 0 = false
+
+true false = true
+
+true true = false*/
+
+function removeVideoPlaying(){
 	var video = document.getElementById('bannerBackgroundVideo');
 
 	try{
@@ -140,6 +157,23 @@ function backgroundVideo(videoName, muted=true){
 		video.currentTime = 0;
 		video.innerHTML = "";
 	}catch{}
+}
+
+function backgroundVideo(videoName, muted=true){
+	MODOFIESTA = false;
+
+	document.getElementById("pageBanner").style.backgroundColor = "rgb(0,0,0,0)";
+
+	if(VIDEOPLAYING == videoName) {return false;}
+
+	if(videoName != "") {VIDEOPLAYING = videoName;}
+	else{
+		VIDEOPLAYING = false;
+	}
+
+	var video = document.getElementById('bannerBackgroundVideo');
+
+	removeVideoPlaying();
 
 
 	var source = document.createElement('source');

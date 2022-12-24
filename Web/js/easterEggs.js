@@ -4,6 +4,24 @@ let autoRemoveSnowDelay = 500;
 let autoRemoveSnowRange = 100;
 let changedBanner = false; 
 
+clicksRegister = {};
+
+
+
+start = clicks = frequency = 0 
+onclick = function() { 
+	if (!start) start = new Date 
+	frequency = ++clicks / (new Date - start) * 1000 
+}
+
+
+
+function startRegisterClicks(id){
+	clicksRegister[id] = [0, 0, 0];
+}
+
+
+
 function autoRemoveSnow(){
 	
 	for(var i = 0; i < autoRemoveSnowRange; i++){
@@ -25,21 +43,6 @@ function clearSnow(){
 	}
 }
 
-onPlaying("*", function(songName){
-	backgroundVideo("", true);
-	var title = document.getElementById("page_title");
-	uncinemaMode();
-	bannerLastColor();
-	$(document).snowfall().stop()
-	autoRemoveSnowRange = 500;
-	title.style.backgroundImage = "none";
-	document.getElementById("pageBanner").style.backgroundImage = "none";
-	title.style.color = "black";
-	if(changedBanner){
-		changedBanner = false;
-		MODOFIESTA = false;
-	}
-})
 
 function changeBanner(){
 	if(!MODOFIESTA)
@@ -55,24 +58,55 @@ function navidad() {
 	$(document).snowfall({deviceorientation : true, round : true, minSize: 0.5, maxSize:8,  flakeCount : 150});
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+onPlaying("*", function(songName){
+	unBackgroundVideoIfNotPlaying();
+	var title = document.getElementById("page_title");
+	uncinemaMode();
+	bannerLastColor();
+	$(document).snowfall().stop()
+	autoRemoveSnowRange = 500;
+	title.style.backgroundImage = "none";
+	document.getElementById("pageBanner").style.backgroundImage = "none";
+	title.style.color = "black";
+	if(changedBanner){
+		changedBanner = false;
+		MODOFIESTA = false;
+	}
+})
+
+
 onPlaying("Navidad dulce navidad", function(songName){
 	navidad();
 	changeBanner();
 })
 
 onPlaying("All I Want for Christmas Is You", function(songName){
-
-	setTimeout(function(){startModoFiesta(430);}, 3200);
-	setTimeout(function(){startModoFiesta(2000);}, 8400);
-	setTimeout(function(){startModoFiesta(5200);}, 10400);
-	setTimeout(function(){startModoFiesta(4000);}, 15700);
-	setTimeout(function(){startModoFiesta(1200);}, 19700);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(430, false);}, 3200);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2000, false);}, 8400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(5200, false);}, 10400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(4000, false);}, 15700);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1200, false);}, 19700);
 	//setTimeout(function(){startModoFiesta(3000);}, 22400);
-	setTimeout(function(){startModoFiesta(1000);}, 29400);
-	setTimeout(function(){startModoFiesta(2700);}, 30400);
-	setTimeout(function(){startModoFiesta(1600);}, 33400);
-	setTimeout(function(){startModoFiesta(1600);}, 35400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 29400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2700, false);}, 30400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1600, false);}, 33400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1600, false);}, 35400);
 	navidad();
+	if(!getCookie("FIRSTTIME")){cinemaMode("1000px");setCookie("FIRSTTIME", true, 31);}
 })
 
 onPlaying("Carol of The Bells", function(songName){
@@ -90,7 +124,8 @@ onPlaying("Navidad dulce navidad", function(songName){
 
 onPlaying("Navidad", function(songName){
 	setVolume(100);
-	backgroundVideo("vende.mkv");
+	window.scrollTo({ top: 0, behavior: 'smooth' });
+	backgroundVideo("Vende-1.mp4");
 	cinemaMode("1000px");
 })
 
@@ -125,11 +160,13 @@ onPlaying("SPIT IN MY FACE", function(songName){
 })
 
 onPlaying("GayEchoSoundEffect", function(songName){
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundImage('gay.png');
 	cinemaMode('1000px');
 })
 
 onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundVideo("guySpeaksPVZ.mp4");
 	cinemaMode('1000px');
 })
@@ -147,17 +184,86 @@ onPlaying("Fiesta del administrador del grupo", function(songName){
 
 onPlaying("Jose Luis Torrente Todas Putas", function(songName){
 	backgroundVideo("Jose Luis Torrente Todas Putas.mp4");
+	cinemaMode('1000px');
+})
+
+onPlaying("Plants vs Zombies Music Video", function(songName){
+	backgroundVideo("Plants vs Zombies Music Video.mp4");
+	cinemaMode('1000px');
+})
+
+onPlayingSongs(["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
+	"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
+	"Kordhell  Live Another Day", "KNIGHT"], function(songName){
+	backgroundVideo("Jdm drift Saint-Petersburg__Phonk.mp4");
 	cinemaMode('200px');
 })
 
+onPlaying("CANELITA  JUANITO JUAN", function(songName){
+	backgroundVideo("JuanBaile.mp4");
+	cinemaMode('1000px');
+})
+
+onPlaying("Carajo paiaso", function(songName){
+	backgroundVideo("RubenShaco2.mp4");
+	cinemaMode('1000px');
+})
+
+/*
+onPlaying("Todas Putas", function(songName){
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 1000);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(500, false);}, 15700);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 26000);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(550, false);}, 31000);
+	setVolume(40);
+})*/
 
 onPlaying("Todas Putas", function(songName){
-	setTimeout(function(){startModoFiesta(1050);}, 1000);
-	setTimeout(function(){startModoFiesta(500);}, 15700);
-	setTimeout(function(){startModoFiesta(1050);}, 26000);
-	setTimeout(function(){startModoFiesta(550);}, 31000);
+	cinemaMode('1000px');
+	for(var i = 0; i < 11; i++)
+	{
+		setTimeout(function(){
+			if(MUSICPLAYING == songName){
+				startModoFiesta((700*i), false);
+				backgroundImage("Memes/"+i+'.png');
+			}
+
+		}, (700*i));
+	}
 	setVolume(40);
 })
+
+
+onPlaying("Los Viernes de la Jungla", function(songName){
+	setVolume(60);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 900);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 1800);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 2800);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 3600);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(50, false);}, 4800);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2000, false);}, 9700);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 11000);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(460, false);}, 13400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(360, false);}, 14400);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(200, false);}, 20700);
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(150, false);}, 22000);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,7 +272,7 @@ onPlaying("Todas Putas", function(songName){
 autoRemoveSnow();
 
 function modoRoob(){
-	SONGS = ['Porta - Dragon Ball Rap (con Letra)'];
+	SONGS = ['Porta - Dragon Ball Rap (con Letra)', "Carajo paiaso"];
 	displaySongs();
 	playMusic('Porta - Dragon Ball Rap (con Letra)');
 }
@@ -177,7 +283,7 @@ function modoJuan(){
 	displaySongs();
 	playMusic("CANELITA  JUANITO JUAN");
 }
-addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme", "webi wabo  letra"]);
+addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme", "webi wabo  letra", "Plants vs Zombies Music Video"]);
 
 addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", "CHAINSAW MAN"]);
 

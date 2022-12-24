@@ -17,10 +17,10 @@ let onPlayings = [];
 
 var SONGS = ["All I Want for Christmas Is You",  
 	"Its Beginning to Look a Lot like Christmas", 
-	"Navidad",
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
-	"SPIT IN MY FACE"];/*,
+	"SPIT IN MY FACE",
+	"Navidad"];/*,
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
 
@@ -30,6 +30,10 @@ function setVolume(lvl){
 
 function onPlaying(songName, fun){
 	onPlayings.push([songName, fun]);
+}
+
+function onPlayingSongs(songs, fun){
+	for(var songName of songs){onPlayings.push([songName, fun]);}
 }
 
 function callOnPlaying(songName){
