@@ -1,13 +1,11 @@
 LOGROS = {
 	"DIANIEVE":["!DIA DE NIEVE!", 
 		"¡Has desbloqueado la nieve en la pantalla!",
-		"snow_day.gif",
+		"snow_day.gif"]
 
 	"GAY":["Eri gay?", 
 		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
-		"snow_day.gif"
-
-		]
+		"snow_day.gif"]
 };
 
 function logroHtml(name, comment, gif, date){
