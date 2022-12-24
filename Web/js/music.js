@@ -207,7 +207,7 @@ function switchDisplayModes(){
 
 function getSettings() {
 	function makeChange(n, v){
-		return "change('"+n+"','"+v+"');";
+		return "change('"+n+"','"+v+"');reloadBackgroundVideo();";
 	}
 
 	return "<div id='musicSettings'>"+
@@ -216,7 +216,7 @@ function getSettings() {
 	'<a onclick="'+makeChange("cinemaheight", "200px")+'">Short</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "600px")+'">Medium</a>'+
 	'<a onclick="'+makeChange("cinemaheight", "900px")+'">Big</a>'+
-	'<a onclick="'+makeChange("cinemaheight", "100")+'">Full</a>'+
+	'<a onclick="'+makeChange("cinemaheight", "100%")+'">Full</a>'+
 	"</div>";
 }
 

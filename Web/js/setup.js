@@ -110,13 +110,17 @@ function backgroundImage(imageName){
 }
 
 
+function reloadBackgroundVideo(){
+	var video = getCookie("BACKGROUNDVIDEO", videoName);
+	if(video)backgroundVideo(video);
+}
+
 function backgroundVideo(videoName, muted=true){
 	MODOFIESTA = false;
 
 	document.getElementById("pageBanner").style.backgroundColor = "rgb(0,0,0,0)";
 
 	var video = document.getElementById('bannerBackgroundVideo');
-
 
 	try{
 		video.pause();
