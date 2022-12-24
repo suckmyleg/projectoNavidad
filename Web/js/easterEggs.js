@@ -140,6 +140,17 @@ onPlaying("Jose Luis Torrente Todas Putas", function(songName){
 })
 
 
+onPlaying("Todas Putas", function(songName){
+	setTimeout(function(){startModoFiesta(1050);}, 1000);
+	setTimeout(function(){startModoFiesta(500);}, 15700);
+	setTimeout(function(){startModoFiesta(1050);}, 25000);
+	setTimeout(function(){startModoFiesta(550);}, 31000);
+	setVolume(40);
+})
+
+
+
+
 
 autoRemoveSnow();
 

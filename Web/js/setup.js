@@ -56,7 +56,12 @@ function getRandomColor(){
 
 function bannerChangeColor() {
 
-	new_color = getRandomColor();
+	var new_color = LASTCOLOR;
+
+	while(new_color == LASTCOLOR)
+	{
+		new_color = getRandomColor();
+	}
 
 	pageTitle = document.getElementById('pageBanner');
 
