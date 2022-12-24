@@ -61,6 +61,17 @@ onPlaying("Navidad dulce navidad", function(songName){
 })
 
 onPlaying("All I Want for Christmas Is You", function(songName){
+
+	setTimeout(function(){startModoFiesta(430);}, 3200);
+	setTimeout(function(){startModoFiesta(2000);}, 8400);
+	setTimeout(function(){startModoFiesta(5200);}, 10400);
+	setTimeout(function(){startModoFiesta(4000);}, 15700);
+	setTimeout(function(){startModoFiesta(1200);}, 19700);
+	//setTimeout(function(){startModoFiesta(3000);}, 22400);
+	setTimeout(function(){startModoFiesta(1000);}, 29400);
+	setTimeout(function(){startModoFiesta(2700);}, 30400);
+	setTimeout(function(){startModoFiesta(1600);}, 33400);
+	setTimeout(function(){startModoFiesta(1600);}, 35400);
 	navidad();
 })
 
@@ -143,7 +154,7 @@ onPlaying("Jose Luis Torrente Todas Putas", function(songName){
 onPlaying("Todas Putas", function(songName){
 	setTimeout(function(){startModoFiesta(1050);}, 1000);
 	setTimeout(function(){startModoFiesta(500);}, 15700);
-	setTimeout(function(){startModoFiesta(1050);}, 25000);
+	setTimeout(function(){startModoFiesta(1050);}, 26000);
 	setTimeout(function(){startModoFiesta(550);}, 31000);
 	setVolume(40);
 })
