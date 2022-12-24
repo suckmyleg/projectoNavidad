@@ -165,7 +165,7 @@ function playMusicIfSame(song){
 
 function playMusicIfSameBefore(){
 	if(MUSICPLAYING){
-		playMusicIfSameBefore(SONGS[SONGS.indexOf(MUSICPLAYING)])
+		playMusicIfSame(SONGS[SONGS.indexOf(MUSICPLAYING)])
 	}
 	else{
 		playMusic(SONGS[0]);
