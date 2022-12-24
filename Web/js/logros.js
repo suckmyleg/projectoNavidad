@@ -76,14 +76,15 @@ function getLogrosDone(){
 
 function checkLogroRunned(name){
 	for(var logro of getLogrosDone()){
-		if (logro[0] == name) return true;
+		console.log(logro, name);
+		if (logro[0] == name) {return true;}
 	}
 	return false;
 }
 
 function runLogro(name){
 	if(!checkLogroRunned(name)){
-		var date = new Date(98, 1);
+		var date = new Date().getTime();
 		var logros = getLogrosDone();
 		logros.push([name, date]);
 
@@ -94,9 +95,11 @@ function runLogro(name){
 
 		showLogros();
 
+		//musicStart();	
+
 		setupSongModes();
 
-		musicStart();	
+		reloadModes()();
 	}
 }
 

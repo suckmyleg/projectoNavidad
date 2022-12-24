@@ -136,6 +136,11 @@ function showPlayer(){
 	getDisplayModes()+
 	"<p onclick='showPlayerSongs();' id='musicPlayerTitle'>Player</p><div id='audioPlayer'></div><ul id='listOfSongs'></ul></div>";
 
+
+	try{document.getElementById("musicPlayer").remove();}catch{}
+	try{
+		document.getElementById("musicPlayer").remove();
+	}catch{}
 	document.getElementById("spawnableField").innerHTML += element;
 
 	displaySongs();
@@ -240,11 +245,21 @@ function getSettings() {
 	"</div>";
 }
 
-function getDisplayModes(){
-	var form = 	'<div id="musicModes"><ul>';
+function reloadModes(){
+	document.getElementById("musicModesList").innerHTML = getModes();
+}
+
+function getModes(){
+	var form = "";
 	for(var mode of MODES){
 		form += "<a onclick='"+'executeMode("'+mode[0]+'");'+"' class='link web'>"+mode[0]+"</a>";
 	}
+	return form;
+}
+
+function getDisplayModes(){
+	var form = 	'<div id="musicModes"><ul id="musicModesList">';
+	form +=getModes();
 	form += '</ul>'+
 	'</div>';
 
