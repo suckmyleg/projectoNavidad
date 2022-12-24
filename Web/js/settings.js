@@ -4,7 +4,7 @@ let SETTINGS = {
 
 let settingsKeys = [
 	["cinemaheight", "false"],
-	["logros", '[["DIANIEVE", "ayer"]]']];
+	["logros", '[]']];
 
 function loadSettings(){
 	for(var setting of settingsKeys){

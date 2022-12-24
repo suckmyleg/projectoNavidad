@@ -68,7 +68,6 @@ function bannerChangeColor() {
 	pageTitle = document.getElementById('pageBanner');
 
 	if(MODOFIESTA){
-		console.log(pageTitle.style.backgroundImage);
 		if(pageTitle.style.backgroundImage == "none" || pageTitle.style.backgroundImage == ""){
 			pageTitle.style.backgroundColor = new_color;
 		}
