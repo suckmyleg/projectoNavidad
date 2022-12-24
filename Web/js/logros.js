@@ -29,7 +29,9 @@ function logroHtml(name, comment, gif, date){
 }
 
 function displayFloatingLogro(name, date){
+	var data = LOGROS[name];
 
+	var element = logroHtml(data[0], data[1], data[2], date);
 }
 
 function showLogros() {
@@ -41,8 +43,18 @@ function showLogros() {
 	}
 }
 
+function checkLogroRunned(name){
+	for(var logro of JSON.parse(SETTINGS.logros)){
+		if (logro[0] == name) return true;
+	}
+	return false;
+}
+
 function runLogro(name){
-	change("logros", JSON.parse(JSON.parse(SETTINGS.logros).push([name, date])));
+	if(!checkLogroRunned(name)){
+		change("logros", JSON.parse(JSON.parse(SETTINGS.logros).push([name, new Date(98, 1)])));
+		displayFloatingLogro(name, date);
+	}
 }
 
 ONLOADS.push(function(){showLogros();});

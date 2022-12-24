@@ -55,6 +55,7 @@ function changeBanner(){
 function navidad() {
 	clearSnow();
 	autoRemoveSnowRange = 0;
+	runLogro("DIANIEVE");
 	$(document).snowfall({deviceorientation : true, round : true, minSize: 0.5, maxSize:8,  flakeCount : 150});
 }
 
