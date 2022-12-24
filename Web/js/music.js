@@ -151,8 +151,8 @@ function musicStart(){
 
 }
 
-function playSongs(){
-	if (MUSICPLAYING){
+function playMusicIfSame(song){
+	if (MUSICPLAYING == song){
 			continuePlaying();
 		}else{
 			if(LASTVISIT == false || getTimestampInSeconds()-LASTVISIT >= 1800)
@@ -208,7 +208,7 @@ function addModeSongs(name, songs, play=0){
 	addMode(name, function(){
 		SONGS = songs;
 		displaySongs();
-		playSongs();
+		playMusicIfSame(SONGS[0]);
 	});
 
 }
