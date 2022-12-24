@@ -133,9 +133,9 @@ function modoRoob(){
 }
 
 function modoJuan(){
-	SONGS = ["Yo he peleado"];
+	SONGS = ["CANELITA  JUANITO JUAN", "Yo he peleado"];
 	displaySongs();
-	playMusic("Yo he peleado");
+	playMusic("CANELITA  JUANITO JUAN");
 }
 addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme"]);
 
