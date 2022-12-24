@@ -108,6 +108,7 @@ function cinemaMode(height="600px"){
 	document.getElementById('bannerBackgroundVideo').style.height = height;
 	document.getElementById('page_title').style.fontSize = "0px";
 	document.getElementById('footerAutores').style.display = "none";
+	removeBannerImage();
 }
 
 function clearAll(){
