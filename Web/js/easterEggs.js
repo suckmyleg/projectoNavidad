@@ -97,13 +97,13 @@ onPlaying("Yo he peleado", function(songName){
 
 onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	cinemaMode("200px");
+	cinemaMode(SETTINGS.cinemaheight);
 	backgroundVideo("hentai3.mp4");
 })
 
 onPlaying("NYA! ARIGATO Tokyo", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	cinemaMode("200px");
+	cinemaMode(SETTINGS.cinemaheight);
 	backgroundVideo("nya.mp4");
 })
 
