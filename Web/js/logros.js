@@ -86,9 +86,9 @@ function runLogro(name){
 
 		showLogros();
 
-		musicStart();	
-
 		setupSongModes();
+
+		musicStart();	
 	}
 }
 
