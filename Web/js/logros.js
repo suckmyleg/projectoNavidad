@@ -47,7 +47,7 @@ LOGROS = {
 let LOGROSSHOWING = 0;
 
 function logroHtml(name, comment, gif, time, id="logro", clas=""){
-		var idd = id + new Date().getTime();
+		var idd = id + time;
 
 		setTimeout(function(){reloadTime(idd, time)}, 1000);
 

@@ -73,6 +73,10 @@ span{
 }
 
 
+#logrosContent{
+	display: grid;
+	grid-auto-columns: auto auto auto;
+}
 
 @media (max-width: 700px){
 
