@@ -1,8 +1,4 @@
 LOGROS = {
-	"PRIMERAVEZ":["!PRIMERA VEZ AQUI!", 
-		"¡Has desbloqueado la nieve en la pantalla!",
-		"snow_day.gif"],
-
 	"DIANIEVE":["!DIA DE NIEVE!", 
 		"¡CORRIDA ANCESTRAL!",
 		"snow_day.gif"],
@@ -65,6 +61,10 @@ LOGROS = {
 
 	"CLICK11":["El segundo click 💀💀", 
 		"No hace falta clickear tanto...",
+		"snow_day.gif"],
+
+	"VENDE":["Vendekebaps", 
+		"+15 cuentas del lol bloqueadas",
 		"snow_day.gif"]
 };
 

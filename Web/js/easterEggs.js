@@ -153,6 +153,7 @@ onPlaying("Navidad dulce navidad", function(songName){
 
 
 onPlaying("Navidad", function(songName){
+	runLogro('vende');
 	setVolume(100);
 	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundVideo("Vende-1.mp4");
