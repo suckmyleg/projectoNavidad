@@ -259,7 +259,7 @@ onPlaying("Meme", function(songName){
 
 onPlaying("Los Viernes de la Jungla", function(songName){
 	setVolume(60);
-	
+
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 900-playingFor());
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 1800-playingFor());
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 2800-playingFor());
@@ -331,5 +331,5 @@ function modoJuan(){
 }
 ONLOADS.push(function(){console.log("Running onloads");});
 ONLOADS.push(function(){setupSongModes();});
-ONLOADS.push(function(){reloadModes();});
+//ONLOADS.push(function(){reloadModes();});
 ONLOADS.push(function(){autoRemoveSnow();});
