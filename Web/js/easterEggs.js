@@ -12,7 +12,10 @@ clicksRegisterFun = [
 	["001", 9, function(){runLogro("CLICK03");backgroundVideo("speed moment.mp4");}],
 	["001", 10, function(){runLogro("CLICK04");backgroundVideo("speed moment.mp4");}],
 	["001", 11, function(){runLogro("CLICK05");backgroundVideo("speed moment.mp4");}],
-	["002", 1, function(){runLogro("CLICK10");}]
+	["002", 1, function(){
+		if(checkLogroRunned("CLICK10")){runLogro("CLICK11");}
+		else{runLogro("CLICK10");}}],
+	["002", 2, function(){runLogro("CLICK11");}]
 ];
 
 

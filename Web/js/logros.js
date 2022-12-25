@@ -60,7 +60,11 @@ LOGROS = {
 		"snow_day.gif"],
 
 	"CLICK10":["El principio...", 
-		"EL PRIMER CLICK EN LA WEB 🥳🥳🥳🥳🥳🥳🥳🥳'",
+		"EL PRIMER CLICK EN LA WEB 🥳🥳🥳🥳🥳🥳🥳🥳",
+		"snow_day.gif"],
+
+	"CLICK11":["El segundo click 💀💀", 
+		"No hace falta clickear tanto...",
 		"snow_day.gif"]
 };
 
