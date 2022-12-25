@@ -67,16 +67,20 @@ LOGROS = {
 		"+15 cuentas del lol bloqueadas",
 		"snow_day.gif"],
 
-	"JHONA":["Jonathan", 
+	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
 		"snow_day.gif"],
 
-	"MATEO":["Rive", 
+	"MATEO":["rive", 
 		"2 metros de altura + 90 armas",
 		"snow_day.gif"],
 
-	"GAMBA":["jorge", 
+	"GAMBA":["ᛟ Jσяgε ᛟ", 
 		"jorge, no quiero hablar de el",
+		"snow_day.gif"],
+
+	"ADRIAN":["我可以成為你的中國人", 
+		"Tocar los culos de tus amigos es tu afición",
 		"snow_day.gif"]
 };
 
