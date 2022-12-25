@@ -24,6 +24,11 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
 
+function playingFor(){
+	if(!SINCEPLAYING) {SINCEPLAYING = getTimestampInSeconds();}
+	return getTimestampInSeconds() - SINCEPLAYING;
+}
+
 function setVolume(lvl){
 	document.getElementById("audioControll").volume = lvl/100;
 }
@@ -52,9 +57,8 @@ function getTimestampInSeconds() {
 
 
 function musicPlayingElement(){
-	totalPlaying = getTimestampInSeconds() - SINCEPLAYING;
 
-	let add = new Date(totalPlaying * 1000).toISOString().substring(14, 19)
+	let add = new Date(playingFor() * 1000).toISOString().substring(14, 19)
 
 	return "<audio controls autoplay id='audioControll' controlsList='nodownload noplaybackrate'>"+
 	"<source src='../Music/"+MUSICPLAYING+".mp3#t=00:"+add+"' type='audio/mpeg'>"+
@@ -244,6 +248,7 @@ function getSettings() {
 	'<a onclick="'+makeChange("cinemaheight", false)+'">Auto</a>'+
 	"</div>";
 }
+
 
 function reloadModes(){
 	document.getElementById("musicModesList").innerHTML = getModes();

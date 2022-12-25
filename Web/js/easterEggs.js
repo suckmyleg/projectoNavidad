@@ -259,17 +259,18 @@ onPlaying("Meme", function(songName){
 
 onPlaying("Los Viernes de la Jungla", function(songName){
 	setVolume(60);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 900);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 1800);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 2800);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 3600);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(50, false);}, 4800);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2000, false);}, 9700);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 11000);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(460, false);}, 13400);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(360, false);}, 14400);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(200, false);}, 20700);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(150, false);}, 22000);
+	
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 900-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 1800-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 2800-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 3600-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(50, false);}, 4800-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2000, false);}, 9700-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 11000-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(460, false);}, 13400-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(360, false);}, 14400-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(200, false);}, 20700-playingFor());
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(150, false);}, 22000-playingFor());
 })
 
 
