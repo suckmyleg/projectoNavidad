@@ -41,6 +41,18 @@ LOGROS = {
 
 	"CLICK05":["Clickeador master fetichista de pies", 
 		"Clickea 11 veces pr segundo el 'Created by: '",
+		"snow_day.gif"],
+
+	"😎":["😎", 
+		"Clickea => 😎",
+		"snow_day.gif"],
+
+	"🍉":["🍉", 
+		"Clickea => 🍉",
+		"snow_day.gif"],
+
+	"otakus":["Otaku roberto, duchate", 
+		"Le has dado click a la palabra 'otakus'",
 		"snow_day.gif"]
 };
 

@@ -8,10 +8,10 @@ clicksRegister = {};
 clicksRegisterFun = [
 	["001", 5, function(){runLogro("CLICK00");}],
 	["001", 7, function(){runLogro("CLICK01");}],
-	["001", 8, function(){runLogro("CLICK02");}],
-	["001", 9, function(){runLogro("CLICK03");}],
-	["001", 10, function(){runLogro("CLICK04");}],
-	["001", 11, function(){runLogro("CLICK05");}]
+	["001", 8, function(){runLogro("CLICK02");backgroundVideo("speed moment.mp4");}],
+	["001", 9, function(){runLogro("CLICK03");backgroundVideo("speed moment.mp4");}],
+	["001", 10, function(){runLogro("CLICK04");backgroundVideo("speed moment.mp4");}],
+	["001", 11, function(){runLogro("CLICK05");backgroundVideo("speed moment.mp4");}]
 ];
 
 
@@ -249,6 +249,21 @@ onPlaying("Carajo paiaso", function(songName){
 	cinemaMode('1000px');
 })
 
+onPlaying("metroman", function(songName){
+	backgroundVideo("metroman.mp4");
+	cinemaMode('1000px');
+})
+
+onPlaying("Carajo paiaso", function(songName){
+	backgroundVideo("robertoBailando.mp4");
+	cinemaMode('1000px');
+})
+
+onPlaying("pato bailando 7w7", function(songName){
+	backgroundVideo("pato bailando 7w7.mp4");
+	cinemaMode('200px');
+})
+
 
 onPlaying("Todas Putas", function(songName){
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 1000);
@@ -314,17 +329,21 @@ function setupSongModes(){
 
 	MODES = [];
 
-	if(checkLogroRunned("PRIMERAVEZ")) addModeSongs("Navidad", SONGS);
+	addModeSongs("Navidad", SONGS);
 
 	if(checkLogroRunned("GAY")) {addModeSongs("Plantas vs Zombies", ["Guy Speaks Plants vs Zombies Victory Theme", "webi wabo  letra", "Plants vs Zombies Music Video"]);}
 
-	addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", "CHAINSAW MAN"]);
+	if(checkLogroRunned("otakus")) addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", "CHAINSAW MAN"]);
 
 	addModeSongs("Phonk", ["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 		"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
-		"Kordhell  Live Another Day", "KNIGHT"]);
+		"Kordhell  Live Another Day", "SPIT IN MY FACE", "KNIGHT"]);
 
-	addModeSongs("😎", ["Los Viernes de la Jungla", "Todas Putas"]);
+	if(checkLogroRunned("😎")) addModeSongs("😎", ["Los Viernes de la Jungla", "Todas Putas"]);
+
+	if(checkLogroRunned("🍉")) addModeSongs("🍉", ["Los Viernes de la Jungla", "Todas Putas"]);
+
+	addModeSongs("Dance", ["pato bailando 7w7", "metroman"]);
 
 	if(checkLogroRunned("ROOBCRACK")) addModeSongs("ROOBCRACK", ['Porta - Dragon Ball Rap (con Letra)', "Carajo paiaso"]);
 
@@ -335,9 +354,19 @@ function setupSongModes(){
 
 
 
+function otakus(){
+	runLogro('otakus');
+	SONGS = ["NYA! ARIGATO Tokyo", "S3RL HentaiExtreme Bass Boosted", "CHAINSAW MAN"];
+	displaySongs();
+	playMusic("NYA! ARIGATO Tokyo");
+}
 
-
-
+function water(){
+	runLogro('🍉');
+	SONGS = ['China lore'];
+	displaySongs();
+	playMusic('China lore');
+}
 
 function modoRoob(){
 	runLogro("ROOBCRACK");

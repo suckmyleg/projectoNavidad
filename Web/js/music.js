@@ -19,7 +19,6 @@ var SONGS = ["All I Want for Christmas Is You",
 	"Its Beginning to Look a Lot like Christmas", 
 	"I Really Want to Stay at Your House",
 	"Navidad dulce navidad",
-	"SPIT IN MY FACE",
 	"Navidad"];/*,
 	"Porta - Dragon Ball Rap (con Letra)"];*/
 
