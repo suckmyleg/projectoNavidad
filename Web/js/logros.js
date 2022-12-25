@@ -43,16 +43,24 @@ LOGROS = {
 		"Clickea 11 veces pr segundo el 'Created by: '",
 		"snow_day.gif"],
 
-	"😎":["😎", 
-		"Clickea => 😎",
+	"😎":["Clickea => 😎", 
+		"Has desbloqueado la playlist '😎'",
 		"snow_day.gif"],
 
-	"🍉":["🍉", 
-		"Clickea => 🍉",
+	"🍉":["Clickea => 🍉", 
+		"Has desbloqueado la playlist '🍉'",
+		"snow_day.gif"],
+
+	"🚗":["Clickea => 🚗", 
+		"Has desbloqueado la playlist '🚗'",
 		"snow_day.gif"],
 
 	"otakus":["Otaku roberto, duchate", 
 		"Le has dado click a la palabra 'otakus'",
+		"snow_day.gif"],
+
+	"CLICK10":["El principio...", 
+		"EL PRIMER CLICK EN LA WEB 🥳🥳🥳🥳🥳🥳🥳🥳'",
 		"snow_day.gif"]
 };
 

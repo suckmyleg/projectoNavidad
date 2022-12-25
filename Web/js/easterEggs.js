@@ -11,7 +11,8 @@ clicksRegisterFun = [
 	["001", 8, function(){runLogro("CLICK02");backgroundVideo("speed moment.mp4");}],
 	["001", 9, function(){runLogro("CLICK03");backgroundVideo("speed moment.mp4");}],
 	["001", 10, function(){runLogro("CLICK04");backgroundVideo("speed moment.mp4");}],
-	["001", 11, function(){runLogro("CLICK05");backgroundVideo("speed moment.mp4");}]
+	["001", 11, function(){runLogro("CLICK05");backgroundVideo("speed moment.mp4");}],
+	["002", 1, function(){runLogro("CLICK10");}]
 ];
 
 
@@ -329,7 +330,7 @@ function setupSongModes(){
 
 	if(checkLogroRunned("otakus")) addModeSongs("Otaku", ["S3RL HentaiExtreme Bass Boosted", "NYA! ARIGATO Tokyo", "CHAINSAW MAN"]);
 
-	addModeSongs("Phonk", ["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
+	if(checkLogroRunned("🚗")) addModeSongs("Phonk", ["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 		"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
 		"Kordhell  Live Another Day", "SPIT IN MY FACE", "KNIGHT"]);
 
@@ -337,7 +338,7 @@ function setupSongModes(){
 
 	if(checkLogroRunned("🍉")) addModeSongs("🍉", ["Los Viernes de la Jungla", "Todas Putas"]);
 
-	addModeSongs("Dance", ["pato bailando 7w7", "metroman"]);
+	if(checkLogroRunned("😎")) addModeSongs("Dance", ["pato bailando 7w7"]);
 
 	if(checkLogroRunned("ROOBCRACK")) addModeSongs("ROOBCRACK", ['Porta - Dragon Ball Rap (con Letra)', "Carajo paiaso"]);
 
