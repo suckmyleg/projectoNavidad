@@ -372,7 +372,7 @@ function otakus(){
 function water(){
 	runLogro('🍉');
 	cinemaMode('400px');
-	backgroundVideo("watermelon.mp4", false);
+	backgroundVideo("watermelon.mp4");
 }
 
 function modoRoob(){
