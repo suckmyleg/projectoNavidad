@@ -46,8 +46,12 @@ LOGROS = {
 
 let LOGROSSHOWING = 0;
 
-function logroHtml(name, comment, gif, date, id="logro", clas=""){
-		return '<div onclick="executeLogroFun();" id="'+id+'" class="logros '+clas+'">'+
+function logroHtml(name, comment, gif, time, id="logro", clas=""){
+		var idd = id + new Date().getTime();
+
+		setTimeout(function(){reloadTime(idd, time)}, 1000);
+
+		return '<div  onclick="executeLogroFun();" id="'+id+'" class="logros '+clas+'">'+
 		'<div class="logros_header">'+
 		'<div>'+
 		'<img class="loguito" src="../Gifs/'+gif+'">'+
@@ -57,9 +61,9 @@ function logroHtml(name, comment, gif, date, id="logro", clas=""){
 		name+
 		'</h2>'+
 		'</div>'+
-		'<div class="logros_date">'+
-		'<strong>'+
-		time_ago(date)+
+		'<div class="logros_date" >'+
+		'<strong id="'+idd+'">'+
+		time_ago(time)+
 		'</strong>'+
 		'</div>'+
 		'</div>'+
@@ -70,6 +74,8 @@ function logroHtml(name, comment, gif, date, id="logro", clas=""){
 		'</div>';
 }
 
+
+//https://stackoverflow.com/questions/3177836/how-to-format-time-since-xxx-e-g-4-minutes-ago-similar-to-stack-exchange-site?page=1&tab=scoredesc#tab-top
 function time_ago(time) {
 
   switch (typeof time) {
@@ -123,6 +129,14 @@ function time_ago(time) {
         return token + ' ' + Math.floor(seconds / format[2]) + ' ' + format[1] + ' ';
     }
   return time;
+}
+
+function reloadTime(id, time){
+	try{
+		console.log(id, time);
+		document.getElementById(id).innerHTML = time_ago(time);
+		setTimeout(function(){reloadTime(id, time);}, 1000);
+	}catch(error){console.log(error);}
 }
 
 function displayFloatingLogro(name, date){
