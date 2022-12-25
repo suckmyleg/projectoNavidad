@@ -254,16 +254,10 @@ onPlaying("metroman", function(songName){
 	cinemaMode('1000px');
 })
 
-onPlaying("Carajo paiaso", function(songName){
-	backgroundVideo("robertoBailando.mp4");
-	cinemaMode('1000px');
-})
-
 onPlaying("pato bailando 7w7", function(songName){
 	backgroundVideo("pato bailando 7w7.mp4");
 	cinemaMode('200px');
 })
-
 
 onPlaying("Todas Putas", function(songName){
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1050, false);}, 1000);
@@ -355,17 +349,26 @@ function setupSongModes(){
 
 
 function otakus(){
-	runLogro('otakus');
-	SONGS = ["NYA! ARIGATO Tokyo", "S3RL HentaiExtreme Bass Boosted", "CHAINSAW MAN"];
-	displaySongs();
-	playMusic("NYA! ARIGATO Tokyo");
+	backgroundVideo("robertoBailando.mp4");
+	cinemaMode('1000px');
+
+	setTimeout(function(){
+		runLogro('otakus');
+
+	}, 1000);
+
+	setTimeout(function(){
+		SONGS = ["NYA! ARIGATO Tokyo", "S3RL HentaiExtreme Bass Boosted", "CHAINSAW MAN"];
+		displaySongs();
+		playMusic("NYA! ARIGATO Tokyo");
+
+	}, 10000);
 }
 
 function water(){
 	runLogro('🍉');
-	SONGS = ['China lore'];
-	displaySongs();
-	playMusic('China lore');
+	cinemaMode('400px');
+	backgroundVideo("watermelon.mp4", false);
 }
 
 function modoRoob(){
