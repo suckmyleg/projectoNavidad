@@ -30,11 +30,10 @@
 .logros:hover{
 	cursor: pointer;
 }
-
 .logros{
 	display: inline-block;
 	background-color: rgb(205, 239, 250);
-	border: 2px solid green;
+	border: 5px solid green;
 	border-radius: 10px;
 	padding: 10px;
 	margin-top: 15px;
@@ -112,4 +111,28 @@ span{
 
 	.logros{
 	}
+}
+
+
+
+
+
+.facil{
+	border-color: gray;
+}
+
+.medio{
+	border-color: yellow;
+}
+
+.dificil{
+	border-color: orange;
+}
+
+.demoniaca{
+	border-color: red;
+}
+
+.imposible{
+	border-color: black;
 }

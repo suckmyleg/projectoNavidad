@@ -1,100 +1,121 @@
-LOGROS = {
+let LOGROS = {
 	"DIANIEVE":["!DIA DE NIEVE!", 
 		"¡CORRIDA ANCESTRAL!",
+		"facil",
 		"snow_day.gif"],
 
 	"GAY":["Eri gay?", 
 		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
+		"facil",
 		"snow_day.gif"],
 
 	"ROOBCRACK":["Ruben Martinez Martinez", 
 		"Eres un seguidor afaz del verdadero alphasnipper",
+		"facil",
 		"snow_day.gif"],
 
 	"SUCKMYLEG":["Juan Ageitos Bonaldi", 
 		"Seguidor del volumen",
+		"facil",
 		"snow_day.gif"],
 
 	"CLICK00":["Clickeador novato fetichista de pies", 
 		"Clickea 5 veces pr segundo el 'Creado por ...'",
+		"facil",
 		"snow_day.gif"],
 
 	"CLICK01":["Clickeador medio fetichista de pies", 
 		"Clickea 7 veces pr segundo el 'Created by: '",
+		"medio",
 		"snow_day.gif"],
 
 	"CLICK02":["Clickeador experto fetichista de pies", 
 		"Clickea 8 veces pr segundo el 'Created by: '",
+		"dificil",
 		"snow_day.gif"],
 
 	"CLICK03":["Clickeador pro fetichista de pies", 
 		"Clickea 9 veces pr segundo el 'Created by: '",
+		"demoniaca",
 		"snow_day.gif"],
 
 	"CLICK04":["Clickeador profesional fetichista de pies", 
 		"Clickea 10 veces pr segundo el 'Created by: '",
+		"demoniaca",
 		"snow_day.gif"],
 
 	"CLICK05":["Clickeador master fetichista de pies", 
 		"Clickea 11 veces pr segundo el 'Created by: '",
+		"demoniaca",
 		"snow_day.gif"],
 
 	"😎":["Clickea => 😎", 
 		"Has desbloqueado la playlist '😎'",
+		"facil",
 		"snow_day.gif"],
 
 	"🍉":["Clickea => 🍉", 
 		"Has desbloqueado la playlist '🍉'",
+		"facil",
 		"snow_day.gif"],
 
 	"🚗":["Clickea => 🚗", 
 		"Has desbloqueado la playlist '🚗'",
+		"facil",
 		"snow_day.gif"],
 
 	"otakus":["Otaku roberto, duchate", 
 		"Le has dado click a la palabra 'otakus'",
+		"facil",
 		"snow_day.gif"],
 
 	"CLICK10":["El principio...", 
 		"EL PRIMER CLICK EN LA WEB 🥳🥳🥳🥳🥳🥳🥳🥳",
+		"facil",
 		"snow_day.gif"],
 
 	"CLICK11":["El segundo click 💀💀", 
 		"No hace falta clickear tanto...",
+		"facil",
 		"snow_day.gif"],
 
 	"VENDE":["Vendekebaps", 
 		"+15 cuentas del lol bloqueadas",
+		"easy",
 		"snow_day.gif"],
 
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
+		"easy",
 		"snow_day.gif"],
 
 	"MATEO":["rive", 
 		"2 metros de altura + 90 armas",
+		"easy",
 		"snow_day.gif"],
 
 	"GAMBA":["ᛟ Jσяgε ᛟ", 
 		"jorge, no quiero hablar de el",
+		"easy",
 		"snow_day.gif"],
 
 	"ADRIAN":["我可以成為你的中國人", 
 		"Tocar los culos de tus amigos es tu afición",
+		"easy",
 		"snow_day.gif"]
 };
 
 let LOGROSSHOWING = 0;
 
-function logroHtml(name, comment, gif, time, id="logro", clas=""){
+function logroHtml(name, comment, diff, gif, time, id="logro", clas=""){
 		var idd = id + time;
 
 		setTimeout(function(){reloadTime(idd, time)}, 300);
 
-		return '<div  onclick="executeLogroFun();" id="'+id+'" class="logros '+clas+'">'+
+		return '<div title="Dificultad: '+diff+'" onclick="executeLogroFun();" id="'+id+'" class="'+diff+' logros '+clas+'">'+
 		'<div class="logros_header">'+
 		'<div>'+
-		'<img class="loguito" src="../Gifs/'+gif+'">'+
+		'<img class="loguito '+diff+'" src="../Gifs/'+gif+'">'+
 		'</div>'+
 		'<div>'+
 		'<h2 class="prevent-select">'+
@@ -187,7 +208,7 @@ function displayFloatingLogro(name, date){
 
 	var data = LOGROS[name];
 
-	var element = logroHtml(data[0], data[1], data[2], date, idd, "logroFloat");
+	var element = logroHtml(data[0], data[1], data[2], data[3], date, idd, "logroFloat");
 	
 	document.getElementById("spawnableField").innerHTML += element;
 
@@ -221,7 +242,7 @@ function showLogros() {
 		for(var logro of logrosDone){
 			var data = LOGROS[logro[0]];
 
-			content.innerHTML += logroHtml(data[0], data[1], data[2], logro[1]);
+			content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
 		}
 	}catch{}
 }
