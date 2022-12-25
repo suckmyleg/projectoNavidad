@@ -49,7 +49,7 @@ let LOGROSSHOWING = 0;
 function logroHtml(name, comment, gif, time, id="logro", clas=""){
 		var idd = id + time;
 
-		setTimeout(function(){reloadTime(idd, time)}, 1000);
+		setTimeout(function(){reloadTime(idd, time)}, 300);
 
 		return '<div  onclick="executeLogroFun();" id="'+id+'" class="logros '+clas+'">'+
 		'<div class="logros_header">'+
