@@ -8,10 +8,9 @@ clicksRegister = {};
 clicksRegisterFun = [
 	["001", 5, function(){runLogro("CLICK00");}],
 	["001", 7, function(){runLogro("CLICK01");}],
-	["001", 8, function(){runLogro("CLICK02");backgroundVideo("speed moment.mp4");}],
-	["001", 9, function(){runLogro("CLICK03");backgroundVideo("speed moment.mp4");}],
-	["001", 10, function(){runLogro("CLICK04");backgroundVideo("speed moment.mp4");}],
-	["001", 11, function(){runLogro("CLICK05");backgroundVideo("speed moment.mp4");}],
+	["001", 10, function(){runLogro("CLICK02");backgroundVideo("speed moment.mp4");}],
+	["001", 12, function(){runLogro("CLICK06");backgroundVideo("speed moment.mp4");}],
+	["001", 15, function(){runLogro("CLICK07");backgroundVideo("speed moment.mp4");}],
 	["002", 1, function(){
 		if(checkLogroRunned("CLICK10")){runLogro("CLICK11");}
 		else{runLogro("CLICK10");}}],
