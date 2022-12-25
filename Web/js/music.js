@@ -259,7 +259,7 @@ function getModes(){
 
 function getDisplayModes(){
 	var form = 	'<div id="musicModes"><ul id="musicModesList">';
-	form +=getModes();
+	form += getModes();
 	form += '</ul>'+
 	'</div>';
 

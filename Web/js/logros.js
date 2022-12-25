@@ -99,7 +99,7 @@ function runLogro(name){
 
 		setupSongModes();
 
-		reloadModes()();
+		reloadModes();
 	}
 }
 
