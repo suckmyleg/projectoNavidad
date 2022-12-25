@@ -22,6 +22,8 @@ onload = function() {
 
 	bannerLastColor();
 
+	setupSongModes();
+
 	musicStart();
 
 	for(var fun of ONLOADS){
