@@ -176,15 +176,15 @@ onPlaying("Yo he peleado", function(songName){
 
 onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	cinemaMode("400px");
 	backgroundVideo("hentai3.mp4");
+	cinemaMode("400px");
 })
 
 
 onPlaying("NYA! ARIGATO Tokyo", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	cinemaMode("200px");
 	backgroundVideo("nya.mp4");
+	cinemaMode("200px");
 })
 
 
@@ -197,6 +197,7 @@ onPlaying("SPIT IN MY FACE", function(songName){
 onPlaying("GayEchoSoundEffect", function(songName){
 	runLogro("GAY");
 	window.scrollTo({ top: 0, behavior: 'smooth' });
+	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
 	backgroundImage('gay.png');
 	cinemaMode('1000px');
 })
@@ -243,12 +244,14 @@ onPlayingSongs(["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 
 
 onPlaying("CANELITA  JUANITO JUAN", function(songName){
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundVideo("JuanBaile.mp4");
 	cinemaMode('1000px');
 })
 
 
 onPlaying("Carajo paiaso", function(songName){
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundVideo("RubenShaco2.mp4");
 	cinemaMode('1000px');
 })
@@ -353,6 +356,7 @@ function setupSongModes(){
 
 
 function otakus(){
+	window.scrollTo({ top: 0, behavior: 'smooth' });
 	backgroundVideo("robertoBailando.mp4");
 	cinemaMode('1000px');
 

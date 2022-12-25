@@ -157,7 +157,6 @@ function time_ago(time) {
 
 function reloadTime(id, time){
 	try{
-		console.log(id, time);
 		document.getElementById(id).innerHTML = time_ago(time);
 		setTimeout(function(){reloadTime(id, time);}, 1000);
 	}catch(error){console.log(error);}
@@ -209,7 +208,6 @@ function getLogrosDone(){
 
 function checkLogroRunned(name){
 	for(var logro of getLogrosDone()){
-		console.log(logro, name);
 		if (logro[0] == name) {return true;}
 	}
 	return false;
