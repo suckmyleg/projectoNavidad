@@ -194,7 +194,13 @@ function showLogros() {
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
-		document.getElementById("logrosProgress").innerHTML = logrosDone.length+"/"+Object.keys(LOGROS).length;
+		try{
+			var p = (logrosDone.length*100)/(Object.keys(LOGROS).length);
+			console.log(p);
+			document.getElementById("logrosProgressBar").innerHTML = Math.floor(p)+"%";
+			document.getElementById("logrosProgressBar").style.paddingRight = p+"%";
+
+		}catch(e){console.log(e);}
 		content.innerHTML = "";
 		for(var logro of logrosDone){
 			var data = LOGROS[logro[0]];

@@ -5,6 +5,20 @@
     black: mythic
 */
 
+#logrosProgress{
+	width: 100%;
+	background-color: black;
+	padding: 5px;
+	text-align: center;
+}
+
+#logrosProgressBar{
+	width: 0%;
+	text-align: center;
+	color: black;
+	background-color: white;
+}
+
 .logroFloat{
 	display: flow;
 	position: fixed;
