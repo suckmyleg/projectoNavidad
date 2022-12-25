@@ -331,5 +331,5 @@ function modoJuan(){
 }
 ONLOADS.push(function(){console.log("Running onloads");});
 ONLOADS.push(function(){setupSongModes();});
-//ONLOADS.push(function(){reloadModes();});
+ONLOADS.push(function(){reloadModes();});
 ONLOADS.push(function(){autoRemoveSnow();});
