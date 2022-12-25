@@ -5,10 +5,10 @@
     black: mythic
 */
 
-#logroFloat{
+.logroFloat{
 	display: flow;
 	position: fixed;
-	top: -200px;
+	top: -400px;
 	transition: top 1s;
 	width: 40%;
 }

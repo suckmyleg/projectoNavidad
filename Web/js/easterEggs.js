@@ -5,21 +5,43 @@ let autoRemoveSnowRange = 100;
 let changedBanner = false; 
 
 clicksRegister = {};
+clicksRegisterFun = [
+	["001", 5, function(){runLogro("CLICK00");}],
+	["001", 7, function(){runLogro("CLICK01");}],
+	["001", 8, function(){runLogro("CLICK02");}],
+	["001", 9, function(){runLogro("CLICK03");}],
+	["001", 10, function(){runLogro("CLICK04");}],
+	["001", 11, function(){runLogro("CLICK05");}]
+];
 
-
-
-start = clicks = frequency = 0 
-onclick = function() { 
-	if (!start) start = new Date 
-	frequency = ++clicks / (new Date - start) * 1000 
-}
 
 function fiestaSongDelay(songName, d, dd){
 	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(d, false);}, dd-playingFor()*100);
 }
 
-function startRegisterClicks(id){
-	clicksRegister[id] = [0, 0, 0];
+function runClickFun(id, clicks){
+	try{
+		for(var data of clicksRegisterFun){
+			if(data[0] == id && data[1] == clicks) data[2]();
+		}
+	}catch{}
+
+}
+
+function executeClick(id, t){
+	try{
+		var start = clicksRegister[id][0];
+		var clicks = clicksRegister[id][1];
+
+		if (!start || (new Date - start) >= t*1000) {start = new Date;clicks=0;}
+		++clicks;
+		clicksRegister[id] = [start, clicks];
+		runClickFun(id, clicks);
+	}
+	catch{
+		clicksRegister[id] = [0, 0, 0];
+		executeClick(id);
+	}
 }
 
 

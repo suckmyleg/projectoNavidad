@@ -17,11 +17,37 @@ LOGROS = {
 
 	"SUCKMYLEG":["Juan Ageitos Bonaldi", 
 		"Seguidor del volumen",
+		"snow_day.gif"],
+
+	"CLICK00":["Clickeador novato fetichista de pies", 
+		"Clickea 5 veces pr segundo el 'Creado por ...'",
+		"snow_day.gif"],
+
+	"CLICK01":["Clickeador medio fetichista de pies", 
+		"Clickea 7 veces pr segundo el 'Created by: '",
+		"snow_day.gif"],
+
+	"CLICK02":["Clickeador experto fetichista de pies", 
+		"Clickea 8 veces pr segundo el 'Created by: '",
+		"snow_day.gif"],
+
+	"CLICK03":["Clickeador pro fetichista de pies", 
+		"Clickea 9 veces pr segundo el 'Created by: '",
+		"snow_day.gif"],
+
+	"CLICK04":["Clickeador profesional fetichista de pies", 
+		"Clickea 10 veces pr segundo el 'Created by: '",
+		"snow_day.gif"],
+
+	"CLICK05":["Clickeador master fetichista de pies", 
+		"Clickea 11 veces pr segundo el 'Created by: '",
 		"snow_day.gif"]
 };
 
-function logroHtml(name, comment, gif, date, id="logro"){
-		return '<div onclick="executeLogroFun();" id="'+id+'" class="logros">'+
+let LOGROSSHOWING = 0;
+
+function logroHtml(name, comment, gif, date, id="logro", clas=""){
+		return '<div onclick="executeLogroFun();" id="'+id+'" class="logros '+clas+'">'+
 		'<div class="logros_header">'+
 		'<div>'+
 		'<img class="loguito" src="../Gifs/'+gif+'">'+
@@ -45,17 +71,31 @@ function logroHtml(name, comment, gif, date, id="logro"){
 }
 
 function displayFloatingLogro(name, date){
+	LOGROSSHOWING += 1;
+
+	let showing = LOGROSSHOWING;
+
+	let idd = "logroFloat"+LOGROSSHOWING;
+
 	var data = LOGROS[name];
 
-	var element = logroHtml(data[0], data[1], data[2], date, "logroFloat");
+	var element = logroHtml(data[0], data[1], data[2], date, idd, "logroFloat");
 	
 	document.getElementById("spawnableField").innerHTML += element;
 
-	document.getElementById("logroFloat").style.right = "0px";
+	document.getElementById(idd).style.right = "0px";
 
-	setTimeout(function(){document.getElementById("logroFloat").style.top = "000px";}, 1000);
-	setTimeout(function(){document.getElementById("logroFloat").style.top = "-300px";}, 7000);
-	setTimeout(function(){document.getElementById("logroFloat").remove();}, 10000);
+	setTimeout(function(){document.getElementById(idd).style.top = (186*(showing-1))+"px";}, 1000);
+
+	setTimeout(function(){document.getElementById(idd).style.top = "-300px";
+		try{
+			for(var i = showing; i <10; i++){document.getElementById("logroFloat"+i).style.top = (186*(i-2))+"px";}
+		}catch{}
+	LOGROSSHOWING -= 1;
+
+	}, 7000);
+	
+	setTimeout(function(){document.getElementById(idd).remove();}, 10000);
 }
 
 function showLogros() {
