@@ -191,10 +191,12 @@ function displayFloatingLogro(name, date){
 }
 
 function showLogros() {
-	try{
+	try{ 
 		var content = document.getElementById("logrosContent");
+		var logrosDone = getLogrosDone();
+		document.getElementById("logrosProgress").innerHTML = logrosDone.length+"7"+Object.keys(LOGROS).length;
 		content.innerHTML = "";
-		for(var logro of getLogrosDone()){
+		for(var logro of logrosDone){
 			var data = LOGROS[logro[0]];
 
 			content.innerHTML += logroHtml(data[0], data[1], data[2], logro[1]);
