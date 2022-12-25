@@ -51,7 +51,7 @@ function getRandomNumber(limit){
 function getRandomColor(){
 	var h = getRandomNumber(360);
 	var s = getRandomNumber(200);
-  	var l = getRandomNumber(50)+50;
+  	var l = getRandomNumber(40)+50;
 
 	return `hsl(${h}deg, ${s}%, ${l}%)`;
 }

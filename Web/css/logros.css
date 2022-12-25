@@ -33,7 +33,7 @@
     border: 3px solid green;
 }
 
-.logros h1{
+.logros .prevent-select{
 	margin: 0px;
 }
 

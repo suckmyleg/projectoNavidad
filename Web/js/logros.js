@@ -27,9 +27,9 @@ function logroHtml(name, comment, gif, date, id="logro"){
 		'<img class="loguito" src="../Gifs/'+gif+'">'+
 		'</div>'+
 		'<div>'+
-		'<h1 class="prevent-select">'+
+		'<h2 class="prevent-select">'+
 		name+
-		'</h1>'+
+		'</h2>'+
 		'</div>'+
 		'<div class="logros_date">'+
 		'<strong>'+
