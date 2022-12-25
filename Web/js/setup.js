@@ -137,7 +137,7 @@ function uncinemaMode(){
 
 function backgroundImage(imageName){
 	MODOFIESTA = false;
-	clearAll();
+	removeVideoPlaying();
 	document.getElementById("pageBanner").style.backgroundColor = "rgb(0,0,0,0)";
 	document.getElementById("pageBanner").style.backgroundImage = "url('../Images/"+imageName+"')";
 }
