@@ -120,7 +120,7 @@ function time_ago(time) {
       if (typeof format[2] == 'string')
         return format[list_choice];
       else
-        return token + Math.floor(seconds / format[2]) + ' ' + format[1] + ' ';
+        return token + ' ' + Math.floor(seconds / format[2]) + ' ' + format[1] + ' ';
     }
   return time;
 }
