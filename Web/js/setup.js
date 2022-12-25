@@ -50,8 +50,8 @@ function getRandomNumber(limit){
 
 function getRandomColor(){
 	var h = getRandomNumber(360);
-	var s = getRandomNumber(200);
-  	var l = getRandomNumber(40)+50;
+	var s = getRandomNumber(180);
+  	var l = getRandomNumber(20)+40;
 
 	return `hsl(${h}deg, ${s}%, ${l}%)`;
 }
