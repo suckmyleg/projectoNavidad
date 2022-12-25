@@ -14,7 +14,9 @@ onclick = function() {
 	frequency = ++clicks / (new Date - start) * 1000 
 }
 
-
+function fiestaSongDelay(songName, d, dd){
+	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(d, false);}, dd-playingFor()*100);
+}
 
 function startRegisterClicks(id){
 	clicksRegister[id] = [0, 0, 0];
@@ -260,17 +262,17 @@ onPlaying("Meme", function(songName){
 onPlaying("Los Viernes de la Jungla", function(songName){
 	setVolume(60);
 
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 900-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 1800-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(170, false);}, 2800-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 3600-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(50, false);}, 4800-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(2000, false);}, 9700-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(1000, false);}, 11000-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(460, false);}, 13400-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(360, false);}, 14400-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(200, false);}, 20700-playingFor()*10);
-	setTimeout(function(){if(MUSICPLAYING == songName)startModoFiesta(150, false);}, 22000-playingFor()*10);
+	fiestaSongDelay(songName, 170, 900);
+	fiestaSongDelay(songName, 1000, 1800);
+	fiestaSongDelay(songName, 170, 170);
+	fiestaSongDelay(songName, 1000, 3600);
+	fiestaSongDelay(songName, 50, 4800);
+	fiestaSongDelay(songName, 2000, 9700);
+	fiestaSongDelay(songName, 1000, 11000);
+	fiestaSongDelay(songName, 460, 13400);
+	fiestaSongDelay(songName, 360, 14400);
+	fiestaSongDelay(songName, 200, 20700);
+	fiestaSongDelay(songName, 150, 22000);
 })
 
 
