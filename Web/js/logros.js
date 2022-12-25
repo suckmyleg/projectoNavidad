@@ -20,27 +20,27 @@ let LOGROS = {
 		"snow_day.gif"],
 
 	"CLICK00":["Clickeador novato fetichista de pies", 
-		"Clickea 5 veces pr segundo el 'Creado por ...'",
+		"Clickea 5 veces por segundo el 'Creado por ...'",
 		"facil",
 		"snow_day.gif"],
 
 	"CLICK01":["Clickeador medio fetichista de pies", 
-		"Clickea 7 veces pr segundo el 'Created by: '",
+		"Clickea 7 veces por segundo el 'Created by: '",
 		"medio",
 		"snow_day.gif"],
 
 	"CLICK02":["Clickeador profesional fetichista de pies", 
-		"Clickea 10 veces pr segundo el 'Created by: '",
+		"Clickea 10 veces por segundo el 'Created by: '",
 		"demoniaca",
 		"snow_day.gif"],
 
 	"CLICK06":["Clickeador master fetichista de pies", 
-		"Clickea 12 veces pr segundo el 'Created by: '",
+		"Clickea 12 veces por segundo el 'Created by: '",
 		"demoniaca",
 		"snow_day.gif"],
 
 	"CLICK07":["Clickeador master fetichista de pies", 
-		"Clickea 15 veces pr segundo el 'Created by: '",
+		"Clickea 15 veces por segundo el 'Created by: '",
 		"demoniaca",
 		"snow_day.gif"],
 
