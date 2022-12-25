@@ -65,6 +65,18 @@ LOGROS = {
 
 	"VENDE":["Vendekebaps", 
 		"+15 cuentas del lol bloqueadas",
+		"snow_day.gif"],
+
+	"JHONA":["Jonathan", 
+		"Incremento de tetas",
+		"snow_day.gif"],
+
+	"MATEO":["Rive", 
+		"2 metros de altura + 90 armas",
+		"snow_day.gif"],
+
+	"GAMBA":["jorge", 
+		"jorge, no quiero hablar de el",
 		"snow_day.gif"]
 };
 
