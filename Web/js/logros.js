@@ -194,7 +194,7 @@ function showLogros() {
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
-		document.getElementById("logrosProgress").innerHTML = logrosDone.length+"7"+Object.keys(LOGROS).length;
+		document.getElementById("logrosProgress").innerHTML = logrosDone.length+"/"+Object.keys(LOGROS).length;
 		content.innerHTML = "";
 		for(var logro of logrosDone){
 			var data = LOGROS[logro[0]];
