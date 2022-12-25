@@ -68,6 +68,10 @@ function musicPlayingElement(){
 
 
 function continuePlaying(){
+
+
+	//executeMode(mode);
+
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
 
 	var audioControll = document.getElementById("audioControll")
@@ -157,9 +161,9 @@ function musicStart(){
 	if(MODE){
 		executeMode(MODE);
 	}
-	else{
-		playMusicIfSameBefore();
-	}
+
+	playMusicIfSameBefore();
+
 
 }
 
