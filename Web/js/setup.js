@@ -124,6 +124,7 @@ function clearAll(){
 function removeBannerImage(){
 	document.getElementById("page_title").style.color = "black";
 	document.getElementById("pageBanner").style.backgroundImage = "none";
+	document.getElementById("page_title").style.backgroundImage = "none";
 }
 
 function uncinemaMode(){
