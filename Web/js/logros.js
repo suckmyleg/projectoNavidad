@@ -76,27 +76,32 @@ let LOGROS = {
 
 	"VENDE":["Vendekebaps", 
 		"+15 cuentas del lol bloqueadas",
-		"easy",
+		"facil",
 		"snow_day.gif"],
 
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
-		"easy",
+		"facil",
 		"snow_day.gif"],
 
 	"MATEO":["rive",
 		"2 metros de altura + 90 armas",
-		"easy",
+		"facil",
 		"snow_day.gif"],
 
 	"GAMBA":["ᛟ Jσяgε ᛟ", 
 		"jorge, no quiero hablar de el",
-		"easy",
+		"facil",
 		"snow_day.gif"],
 
 	"ADRIAN":["我可以成為你的中國人", 
 		"Tocar los culos de tus amigos es tu afición",
-		"easy",
+		"facil",
+		"snow_day.gif"],
+
+	"TENERNOVIA":["El elegido", 
+		"Socializar, tocar hierba, tener novia.",
+		"imposible",
 		"snow_day.gif"]
 };
 
