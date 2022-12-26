@@ -21,11 +21,10 @@
 }
 
 
-
-
 .logros:hover{
 	cursor: pointer;
 }
+
 .logros{
 	background-color: #C0C0C0;
 	padding: 10px;
@@ -86,6 +85,26 @@ span{
 	margin: 7.5px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1700px){
 
 	.logros_date{
@@ -114,6 +133,46 @@ span{
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes rainbow2 {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow2 {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow2 {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow2 { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
 
 @keyframes rainbow-bg{
 		100%,0%{
@@ -194,6 +253,23 @@ span{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .todas{
 	border:  black;
 	background-color: white;}
@@ -218,12 +294,23 @@ span{
 	border-color: red;
 }
 
+.legendaria2{
+	animation: rainbow-bg-gradient 0.8s linear;
+	animation-iteration-count: infinite;
+}
+
+
 .legendaria{
 	background-color: black;
-	animation: rainbow-bg 0.8s linear;
-	animation-iteration-count: infinite;
 	padding: 15px;
-	border: none;
+	border: none; 
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+	background-size: 1800% 1800%;
+
+	-webkit-animation: rainbow2 10s ease infinite;
+	-z-animation: rainbow2 10s ease infinite;
+	-o-animation: rainbow2 10s ease infinite;
+	animation: rainbow2 10s ease infinite;
 }
 
 .imposible{
@@ -243,6 +330,11 @@ span{
 	width: auto;
 	border: 2px solid black;
 	box-shadow: 5px 10px #888888;
+}
+
+.legendaria img{
+	border: none;
+	background: none;
 }
 
 .type{

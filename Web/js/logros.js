@@ -252,10 +252,20 @@ function showLogros(type="*") {
 			}catch{}
 		}
 
+		var totalLogrosType = 0;
+
+		for(var logroName of Object.keys(LOGROS)){
+				var data = LOGROS[logroName];
+
+				if(type == "*" || LOGROS[logroName][2] == type){
+					totalLogrosType++;
+				}
+		}
 
 		try{
-			var p = (numberOfLogros*100)/(Object.keys(LOGROS).length);
-			document.getElementById("logrosProgressBar").innerHTML = Math.floor(p)+"%";
+			var p = 0;
+			if(totalLogrosType != 0) p = (numberOfLogros*100)/(totalLogrosType);
+			document.getElementById("logrosProgressStatus").innerHTML = Math.floor(p)+"%";
 			document.getElementById("logrosProgressBar").style.paddingRight = p+"%";
 
 		}catch(e){
