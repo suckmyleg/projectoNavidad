@@ -237,6 +237,8 @@ function showLogros() {
 		for(var logro of logrosDone){
 			var data = LOGROS[logro[0]];
 
+			console.log(data, LOGROS);
+
 			content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
 		}
 	}catch(e){console.log(e);}
