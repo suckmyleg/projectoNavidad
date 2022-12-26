@@ -6,6 +6,13 @@
 */
 
 
+#logrosProgressStatus{
+	color: white;
+}
+
+#logrosProgressContainer{
+	background-color: white;
+}
 #logrosProgress{
 	width: 99%;
 	background-color: black;
@@ -17,13 +24,16 @@
 	width: 0%;
 	text-align: center;
 	color: black;
-	background-color: white;
+	background-color: green;
+	color: rgb(0,0,0,0);
+
+	-webkit-animation: rainbow2 5s ease infinite;
+	-z-animation: rainbow2 5s ease infinite;
+	-o-animation: rainbow2 5s ease infinite;
+	animation: rainbow2 5s ease infinite;
 }
 
 
-.logros:hover{
-	cursor: pointer;
-}
 
 .logros{
 	background-color: #C0C0C0;
@@ -32,10 +42,6 @@
 	transition: margin-left 0s, margin-right 0s;
 }
 
-.logros:hover{
-	margin-left: 0px;
-	margin-right: 0px;
-}
 
 .loguito{
     width: 75px;
@@ -85,10 +91,15 @@ span{
 	margin: 7.5px;
 }
 
+.logros_content{
+}
 
 
-
-
+.logros:hover{
+	cursor: pointer;
+	margin-left: 0px;
+	margin-right: 0px;
+}
 
 
 
@@ -321,10 +332,10 @@ span{
 	background: linear-gradient(hsl(264, 100%, 50%), hsl(270, 100%, 40%), black, hsl(240, 100%, 20%), hsl(300, 100%, 20%));
 	background-size: 1800% 1800%;
 
-	-webkit-animation: rainbow2 10s ease infinite;
-	-z-animation: rainbow2 10s ease infinite;
-	-o-animation: rainbow2 10s ease infinite;
-	animation: rainbow2 10s ease infinite;
+	-webkit-animation: rainbow2 5s ease infinite;
+	-z-animation: rainbow2 5s ease infinite;
+	-o-animation: rainbow2 5s ease infinite;
+	animation: rainbow2 5s ease infinite;
 }
 
 
@@ -345,7 +356,7 @@ span{
 }
 
 .type{
-	padding: 5px;
+	padding: 6px;
 	display: inline-block;
 }
 

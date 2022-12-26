@@ -130,8 +130,8 @@ function logroHtml(name, comment, diff, gif, time, id="logro", clas=""){
 		'</strong>'+
 		'</div>'+
 		'</div>'+
-		'<hr>'+
 		'<div class="logros_content">'+
+		'<hr>'+
 		comment+
 		'</div>'+
 		'</div>';
@@ -237,8 +237,12 @@ function displayFloatingLogro(name, date){
 }
 
 function showLogros(type=false) {
+
+	// Remembers last type showed 
+	// If type saved, display it
 	if(!type) type = lastType;
 	else lastType = type;
+
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
@@ -269,9 +273,13 @@ function showLogros(type=false) {
 		try{
 			var p = 0;
 			if(totalLogrosType != 0) p = (numberOfLogros*100)/(totalLogrosType);
-			document.getElementById("logrosProgressStatus").innerHTML = Math.floor(p)+"%";
-			document.getElementById("logrosProgressBar").style.paddingRight = p+"%";
+			document.getElementById("logrosProgressStatus").innerHTML = "  "+Math.floor(p)+"% "+numberOfLogros+"/"+totalLogrosType;
+				
+			var bar = document.getElementById("logrosProgressBar");
 
+			bar.style.paddingRight = p+"%";
+			bar.style.background = "linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)";
+			bar.style.backgroundSize = "1800% 1800%";
 		}catch(e){
 			console.log(e);
 		}
