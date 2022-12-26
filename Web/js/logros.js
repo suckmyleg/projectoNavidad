@@ -39,11 +39,6 @@ let LOGROS = {
 		"legendaria",
 		"snow_day.gif"],
 
-	"CLICK07":["Clickeador clicker fetichista de pies", 
-		"Clickea 30 veces por segundo el 'Created by: '",
-		"imposible",
-		"snow_day.gif"],
-
 	"😎":["Clickea => 😎", 
 		"Has desbloqueado la playlist '😎'",
 		"facil",
@@ -81,11 +76,17 @@ let LOGROS = {
 };
 /*
 
+
+	"CLICK08":["Clickeador clicker fetichista de pies", 
+		"Clickea 30 veces por segundo el 'Created by: '",
+		"imposible",
+		"snow_day.gif"],
+		
 	"GAY":["Eri gay?", 
 		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
 		"facil",
 		"snow_day.gif"],
-		
+
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
 		"facil",
