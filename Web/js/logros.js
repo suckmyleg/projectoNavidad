@@ -235,11 +235,11 @@ function showLogros() {
 		}catch(e){console.log(e);}
 		content.innerHTML = "";
 		for(var logro of logrosDone){
-			var data = LOGROS[logro[0]];
+			try{
+				var data = LOGROS[logro[0]];
 
-			console.log(data, LOGROS);
-
-			content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
+				content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
+			}catch{}
 		}
 	}catch(e){console.log(e);}
 }
