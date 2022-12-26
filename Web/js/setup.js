@@ -14,23 +14,28 @@ let ONLOADS = [];
 
 let MODOFIESTADELAY = 100;
 
+let ONLOADED = false;
+
 onload = function() {
-	
-	if (false && window.location.href != "file:///C:/Users/juani/Desktop/projectoNavidad/index.html"){
-		document.getElementById("pageBanner").style.display = "none";
+	if(!ONLOADED)
+	{
+		if (false && window.location.href != "file:///C:/Users/juani/Desktop/projectoNavidad/index.html"){
+			document.getElementById("pageBanner").style.display = "none";
+		}
+
+		bannerLastColor();
+
+		setupSongModes();
+
+		musicStart();
+
+		for(var fun of ONLOADS){
+			fun();
+		}
+
+		bannerChangeColor();
+		ONLOADED = true;
 	}
-
-	bannerLastColor();
-
-	setupSongModes();
-
-	musicStart();
-
-	for(var fun of ONLOADS){
-		fun();
-	}
-
-	bannerChangeColor();
 }
 
 function bannerLastColor(){
