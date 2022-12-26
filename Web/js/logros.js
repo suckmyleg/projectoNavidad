@@ -238,7 +238,7 @@ function showLogros(type="*") {
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
-		var numberOfLogros = logrosDone.length;
+		var numberOfLogros = 0;
 		content.innerHTML = "";
 		for(var logro of logrosDone){
 			try{
@@ -247,6 +247,7 @@ function showLogros(type="*") {
 				if(type == "*" || data[2] == type)
 				{
 					content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
+					numberOfLogros++;
 				}else{
 					numberOfLogros--;
 				}
