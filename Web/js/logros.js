@@ -212,19 +212,26 @@ function displayFloatingLogro(name, date){
 	
 	document.getElementById("spawnableField").innerHTML += element;
 
-	document.getElementById(idd).style.right = "0px";
-
 	setTimeout(function(){document.getElementById(idd).style.top = (186*(showing-1))+"px";}, 1000);
 
-	setTimeout(function(){document.getElementById(idd).style.top = "-300px";
+	setTimeout(function(){
+		LOGROSSHOWING -= 1;
 		try{
-			for(var i = showing; i <10; i++){document.getElementById("logroFloat"+i).style.top = (186*(i-2))+"px";}
+			document.getElementById(idd).style.top = "-1000px";
 		}catch{}
-	LOGROSSHOWING -= 1;
+
+
+		for(var i = LOGROSSHOWING; i<10; i++){
+			try{
+
+				if("logroFloat"+i!=idd) document.getElementById("logroFloat"+i).style.top = (186*(i-2))+"px";
+			}catch{}
+		}
+
 
 	}, 7000);
 	
-	setTimeout(function(){document.getElementById(idd).remove();}, 10000);
+	setTimeout(function(){document.getElementById(idd).remove();}, 9000);
 }
 
 function showLogros() {

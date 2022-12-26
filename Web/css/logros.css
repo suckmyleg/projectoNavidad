@@ -234,6 +234,7 @@ span{
 	display: flow;
 	position: fixed;
 	top: -400px;
+	right: 0px;
 	transition: top 1s;
 	width: auto;
 	border: 2px solid black;
