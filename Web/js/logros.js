@@ -101,7 +101,7 @@ let LOGROS = {
 
 	"TENERNOVIA":["El elegido", 
 		"Socializar, tocar hierba, tener novia.",
-		"imposible",
+		"legendaria",
 		"snow_day.gif"]
 };
 
