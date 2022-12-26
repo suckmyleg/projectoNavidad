@@ -281,12 +281,14 @@ function showLogros(type=false) {
 
 			var addColors = "";
 
-			for(var i= 0; i<numberOfLogros; i++){
+			for(var i= 0; i < (p/10); i++){
 				addColors += ["124deg", "#ff2400", "#e81d1d", "#e8b71d", "#e3e81d", "#1de840", "#1ddde8", "#2b1de8", "#dd00f3", "#dd00f3"][i];
-				if(numberOfLogros != i) addColors+= ",";
+				if(((p/10)-i)>1) addColors += ",";
 			}
 
-			bar.style.background = "linear-gradient("+addColors+")";
+			console.log(addColors);
+
+			bar.style.background = "linear-gradient("+addColors+")";//"linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)";
 			bar.style.backgroundSize = "1800% 1800%";
 		}catch(e){
 			console.log(e);
