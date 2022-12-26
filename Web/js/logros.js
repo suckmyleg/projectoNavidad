@@ -82,8 +82,9 @@ let LOGROS = {
 	"VENDE":["Vendekebaps", 
 		"+15 cuentas del lol bloqueadas",
 		"facil",
-		"snow_day.gif"],
-
+		"snow_day.gif"]
+};
+/*
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
 		"facil",
@@ -108,8 +109,7 @@ let LOGROS = {
 		"Socializar, tocar hierba, tener novia.",
 		"legendaria",
 		"snow_day.gif"]
-};
-
+*/
 let LOGROSSHOWING = 0;
 
 let lastType = "*";
