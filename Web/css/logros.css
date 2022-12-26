@@ -318,6 +318,13 @@ span{
 	padding: 15px;
 	border: none;
 	color: white;
+	background: linear-gradient(hsl(264, 100%, 50%), hsl(270, 100%, 40%), black, hsl(240, 100%, 20%), hsl(300, 100%, 20%));
+	background-size: 1800% 1800%;
+
+	-webkit-animation: rainbow2 10s ease infinite;
+	-z-animation: rainbow2 10s ease infinite;
+	-o-animation: rainbow2 10s ease infinite;
+	animation: rainbow2 10s ease infinite;
 }
 
 

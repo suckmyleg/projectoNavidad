@@ -107,6 +107,8 @@ let LOGROS = {
 
 let LOGROSSHOWING = 0;
 
+let lastType = "*";
+
 function logroHtml(name, comment, diff, gif, time, id="logro", clas=""){
 		var idd = id + time;
 
@@ -234,7 +236,9 @@ function displayFloatingLogro(name, date){
 	setTimeout(function(){document.getElementById(idd).remove();}, 9000);
 }
 
-function showLogros(type="*") {
+function showLogros(type=false) {
+	if(!type) type = lastType;
+	else lastType = type;
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
