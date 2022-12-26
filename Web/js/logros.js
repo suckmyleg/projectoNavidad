@@ -4,11 +4,6 @@ let LOGROS = {
 		"facil",
 		"snow_day.gif"],
 
-	"GAY":["Eri gay?", 
-		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
-		"facil",
-		"snow_day.gif"],
-
 	"ROOBCRACK":["Ruben Martinez Martinez", 
 		"Eres un seguidor afaz del verdadero alphasnipper",
 		"facil",
@@ -85,6 +80,12 @@ let LOGROS = {
 		"snow_day.gif"]
 };
 /*
+
+	"GAY":["Eri gay?", 
+		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
+		"facil",
+		"snow_day.gif"],
+		
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
 		"facil",
