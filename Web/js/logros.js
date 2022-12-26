@@ -44,6 +44,11 @@ let LOGROS = {
 		"legendaria",
 		"snow_day.gif"],
 
+	"CLICK07":["Clickeador clicker fetichista de pies", 
+		"Clickea 30 veces por segundo el 'Created by: '",
+		"imposible",
+		"snow_day.gif"],
+
 	"😎":["Clickea => 😎", 
 		"Has desbloqueado la playlist '😎'",
 		"facil",
