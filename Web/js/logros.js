@@ -84,7 +84,7 @@ let LOGROS = {
 		"easy",
 		"snow_day.gif"],
 
-	"MATEO":["rive", 
+	"MATEO":["rive",
 		"2 metros de altura + 90 armas",
 		"easy",
 		"snow_day.gif"],
@@ -239,7 +239,7 @@ function showLogros() {
 
 			content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
 		}
-	}catch{}
+	}catch(e){console.log(e);}
 }
 
 function getLogrosDone(){
