@@ -112,7 +112,7 @@ function logroHtml(name, comment, diff, gif, time, id="logro", clas=""){
 
 		setTimeout(function(){reloadTime(idd, time)}, 300);
 
-		return '<div title="Dificultad: '+diff+'" onclick="executeLogroFun();" id="'+id+'" class="'+diff+' logros '+clas+'">'+
+		return '<div title="Dificultad: '+diff+'" onclick="executeLogroFun();" id="'+id+'" class="'+diff+' prevent-select logros '+clas+'">'+
 		'<div class="logros_header">'+
 		'<div>'+
 		'<img class="loguito '+diff+'" src="../Gifs/'+gif+'">'+
@@ -234,25 +234,36 @@ function displayFloatingLogro(name, date){
 	setTimeout(function(){document.getElementById(idd).remove();}, 9000);
 }
 
-function showLogros() {
+function showLogros(type="*") {
 	try{ 
 		var content = document.getElementById("logrosContent");
 		var logrosDone = getLogrosDone();
-		try{
-			var p = (logrosDone.length*100)/(Object.keys(LOGROS).length);
-			console.log(p);
-			document.getElementById("logrosProgressBar").innerHTML = Math.floor(p)+"%";
-			document.getElementById("logrosProgressBar").style.paddingRight = p+"%";
-
-		}catch(e){console.log(e);}
+		var numberOfLogros = logrosDone.length;
 		content.innerHTML = "";
 		for(var logro of logrosDone){
 			try{
 				var data = LOGROS[logro[0]];
 
-				content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
+				if(type == "*" || data[2] == type)
+				{
+					content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
+				}else{
+					numberOfLogros--;
+				}
+
 			}catch{}
 		}
+
+
+		try{
+			var p = (numberOfLogros*100)/(Object.keys(LOGROS).length);
+			document.getElementById("logrosProgressBar").innerHTML = Math.floor(p)+"%";
+			document.getElementById("logrosProgressBar").style.paddingRight = p+"%";
+
+		}catch(e){
+			console.log(e);
+		}
+
 	}catch(e){console.log(e);}
 }
 

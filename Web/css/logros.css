@@ -5,10 +5,11 @@
     black: mythic
 */
 
+
 #logrosProgress{
-	width: 100%;
+	width: 99%;
 	background-color: black;
-	padding: 5px;
+	padding: 0.5%;
 	text-align: center;
 }
 
@@ -193,6 +194,9 @@ span{
 }
 
 
+.todas{
+	border:  black;
+	background-color: white;}
 
 .facil{
 	border-color: black;
@@ -239,4 +243,18 @@ span{
 	width: auto;
 	border: 2px solid black;
 	box-shadow: 5px 10px #888888;
+}
+
+.type{
+	padding: 5px;
+	display: inline-block;
+}
+
+.type:hover{
+	cursor: pointer;
+}
+
+#logrosDificultades{
+	text-align: center;
+	align-content: center;
 }
