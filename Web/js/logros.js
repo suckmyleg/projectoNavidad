@@ -248,10 +248,7 @@ function showLogros(type="*") {
 				{
 					content.innerHTML += logroHtml(data[0], data[1], data[2], data[3], logro[1]);
 					numberOfLogros++;
-				}else{
-					numberOfLogros--;
 				}
-
 			}catch{}
 		}
 
