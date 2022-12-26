@@ -41,7 +41,7 @@ let LOGROS = {
 
 	"CLICK07":["Clickeador master fetichista de pies", 
 		"Clickea 15 veces por segundo el 'Created by: '",
-		"demoniaca",
+		"legendaria",
 		"snow_day.gif"],
 
 	"😎":["Clickea => 😎", 
