@@ -100,7 +100,7 @@ let LOGROS = {
 
 	"2023/01/02":["Octavo dia", 
 		"Como me entra un kebap la verdad",
-		"dificil",
+		"medio",
 		"snow_day.gif"],
 
 

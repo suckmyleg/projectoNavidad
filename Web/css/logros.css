@@ -59,7 +59,7 @@
 	text-align: left;
 	margin-left: 0px;
 	display: grid;
-	grid-template-columns: 130px 350px auto;
+	grid-template-columns: 110px auto auto;
 }
 
 .logros_title{

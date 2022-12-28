@@ -198,8 +198,8 @@ onPlaying("SPIT IN MY FACE", function(songName){
 onPlaying("GayEchoSoundEffect", function(songName){
 	runLogro("GAY");
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	showBannerImage('gay.png');
 	cinemaMode('1000px');
+	showBannerImage('gay.png');
 })
 
 
