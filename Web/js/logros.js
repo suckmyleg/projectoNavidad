@@ -72,7 +72,42 @@ let LOGROS = {
 	"VENDE":["Vendekebaps", 
 		"+15 cuentas del lol bloqueadas",
 		"facil",
+		"snow_day.gif"],
+
+	"2022/12/28":["Tercer dia", 
+		"Has visitado la web el tercer dia",
+		"facil",
+		"snow_day.gif"],
+
+	"2022/12/29":["Cuarto dia", 
+		"Has visitado la web el cuarto dia",
+		"facil",
+		"snow_day.gif"],
+
+
+	"2022/12/30":["Quinto dia", 
+		"Has visitado la web el quinto dia",
+		"medio",
+		"snow_day.gif"],
+
+
+	"2022/12/31":["Sexto dia", 
+		"El último dia del año, os quiero mucho",
+		"medio",
+		"snow_day.gif"],
+
+
+	"2023/01/01":["Septimo dia", 
+		"Lo has logrado, has llegado al 2023",
+		"dificil",
+		"snow_day.gif"],
+
+
+	"2023/01/02":["Octavo dia", 
+		"Como me entra un kebap la verdad",
+		"dificil",
 		"snow_day.gif"]
+
 };
 /*
 
