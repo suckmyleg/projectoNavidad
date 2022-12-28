@@ -12,6 +12,8 @@
 	<script src="../js/session.js"></script>
 	<script src="../js/setup.js"></script>
 	<script src="../js/base.js"></script>
+	<script src="../js/banner.js"></script>
+	<script src="../js/clips.js"></script>
 	<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
 	<script src='../js/snowfall.jquery.js'></script>
 	<script src='../js/logros.js'></script>
@@ -32,30 +34,12 @@
 			<a id="buttonDisplayer" onclick="displayNav();">+++</a>
 			<ul id="navegacion_list">
 				<a href="../Inicio/index.html">Inicio</a>
-				<a href="../Suckcrack/index.html">Suckcrack</a>
-				<a href="../Camara/index.html">Camara</a>
+				<a href="../Logros/index.html">Logros</a>
 			</ul>
 		</nav>
 	</header>
 	
-	<div id="content">
-		<div class="new_clip" onclick="window.location.href='Saved_clips/Replay_1.mp4'">
-			<video src="Saved_clips/Replay_1.mp4" type="video/mp4" loop muted class="clip"></video>
-			<a class="date">Fecha: 21/12/2022</a>
-			<p>Igor se folla que?</p> 		<!--Maximo de 22-->
-		</div>
-		<div class="new_clip" onclick="window.location.href='Saved_clips/Replay_2.mp4'">
-			<video src="Saved_clips/Replay_2.mp4" type="video/mp4" loop muted class="clip"></video>
-			<a class="date">Fecha: 21/12/2022</a>
-			<p>Momento Jona</p> 		<!--Maximo de 22-->
-		</div>
-		<div class="new_clip" onclick="window.location.href='Saved_clips/Replay_3.mp4'">
-			<video src="Saved_clips/Replay_3.mp4" type="video/mp4" loop muted class="clip"></video>
-			<a class="date">Fecha: 21/12/2022</a>
-			<p>Callate Jona</p> 		<!--Maximo de 22-->
-		</div>
-
-	</div>
+	<div id="clipsContent"></div>
 
 	<div id="spawnableField"></div>
 	
