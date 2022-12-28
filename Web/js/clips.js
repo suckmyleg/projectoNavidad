@@ -5,7 +5,7 @@ videos = [
 	["Vendekebaps cocinando speed up", "Vende.mp4", "28/12/2022", ["vendekebaps"]],
 	["Juan bailando en el baño del dominos", "JuanBaile.mp4", "28/12/2022", ["suckmyleg"]],
 	["Roberto bailando beat saber", "robertoBailando.mp4", "28/12/2022", ["suckmyleg", "roberto"]],
-	["Roobcrack shaco", "RubenShaco2.mp4", "28/12/2022", ["ruben"]],
+	["Roobcrack shaco", "RubenShaco2.mp4", "28/12/2022", ["roobcrack"]],
 	//["Ruben y joeri csgo spin", "RJCJH.mp4", "04/11/2019"],
 	["Roberto basadisimo", "robertoBasado.mp4", "07/06/2022", ["roberto", "cristian"]],
 	["Rive pistolero disco", "RiveDisco1.mp4", "28/04/2022", ["rive", "gamba", "morgan", "humano", "rico", "roberto", "jona"]],
@@ -21,7 +21,7 @@ function showVideo(loc){
 }
 
 function clipHtml(name, loc, date){
-	return '<div class="new_clip" onclick="showVideo('+"'../Videos/"+loc+"')"+'">'+
+	return '<div id='+loc+' class="new_clip" onclick="showVideo('+"'../Videos/"+loc+"')"+'">'+
 	'<video src="../Videos/'+loc+'" type="video/mp4" muted class="clip">'+
 	'</video>'+
 	'<a class="date">Fecha: '+date+'</a>'+
@@ -31,16 +31,35 @@ function clipHtml(name, loc, date){
 }
 
 function switchPersonFilter(name){
+	console.log("person_"+name);
 	if(peopleShowing.includes(name)){
-		document.getElementById("person_"+name).classList.add("selected")
-		peopleShowing.splice(peopleShowing.indexOf(name), 1);
-		setupClips();
-	}else{
 		document.getElementById("person_"+name).classList.remove("selected")
+		peopleShowing.splice(peopleShowing.indexOf(name), 1);
+		reDisplayClips();
+	}else{
+		document.getElementById("person_"+name).classList.add("selected")
 		peopleShowing.push(name);
-		setupClips();
+		reDisplayClips();
 
 	}
+}
+
+function reDisplayClips(){
+
+	for(var clipData of videos){
+		if(peopleShowing.length == 0) document.getElementById(clipData[1]).classList.remove("hide")
+		else{
+			var isSomeoneIn = true;
+			for(var a of peopleShowing){
+				if(!clipData[3].includes(a)) {isSomeoneIn = false;break;}
+			}
+			if(isSomeoneIn) document.getElementById(clipData[1]).classList.remove("hide")
+			else{
+				document.getElementById(clipData[1]).classList.add("hide")
+			}
+		}
+	}
+
 }
 
 function setupClips(aparece=[]){
