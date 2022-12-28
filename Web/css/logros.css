@@ -39,6 +39,7 @@
 	background-color: #C0C0C0;
 	padding: 10px;
 	margin: 7.5px;
+	font-size: 15px;
 	transition: margin-left 0s, margin-right 0s;
 }
 
@@ -348,6 +349,36 @@ span{
 	width: auto;
 	border: 2px solid black;
 	box-shadow: 5px 10px #888888;
+	width: 300px;	
+	border-radius: 20px;
+}
+
+.logroFloat .logros_header{
+	grid-template-columns: auto auto auto;
+}
+
+.logroFloat .logros_date{
+	display: none;
+}
+
+.logroFloat hr{
+	display: none;
+	grid-column-start: 1;
+}
+
+.logroFloat .logros_content{
+	display: none;
+}
+
+.logroFloat .logros_title{
+	padding-top: 50px;
+}
+
+
+.logroFloat img{
+	border-radius: 20px;
+	height: 50px;
+	width: 50px;
 }
 
 .legendaria img{

@@ -213,6 +213,8 @@ function displayFloatingLogro(name, date){
 
 	let showing = LOGROSSHOWING;
 
+	let id = LOGROSSHOWING;
+
 	let idd = "logroFloat"+LOGROSSHOWING;
 
 	var data = LOGROS[name];
@@ -221,7 +223,7 @@ function displayFloatingLogro(name, date){
 	
 	document.getElementById("spawnableField").innerHTML += element;
 
-	setTimeout(function(){document.getElementById(idd).style.top = (186*(showing-1))+"px";}, 1000);
+	setTimeout(function(){document.getElementById(idd).style.top = (88*(showing-1))+"px";}, 1000);
 
 	setTimeout(function(){
 		LOGROSSHOWING -= 1;
@@ -233,7 +235,7 @@ function displayFloatingLogro(name, date){
 		for(var i = LOGROSSHOWING; i<10; i++){
 			try{
 
-				if("logroFloat"+i!=idd) document.getElementById("logroFloat"+i).style.top = (186*(i-2))+"px";
+				if("logroFloat"+i!=idd) document.getElementById("logroFloat"+i).style.top = (88*(i-1-id))+"px";
 			}catch{}
 		}
 

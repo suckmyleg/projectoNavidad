@@ -144,7 +144,7 @@ function showBannerImage(imageName){
 	backgroundImage(imageName);
 }
 
-function showBannerVideo(videoName, muted=false){
+function showBannerVideo(videoName, muted=true){
 	console.log("showBannerVideo", videoName, muted);
 	removeImageShowing();
 	backgroundVideo(videoName, muted);
