@@ -5,7 +5,7 @@ videos = [
 	["Vendekebaps cocinando speed up", "Vende.mp4", "28/12/2022", ["vendekebaps"]],
 	["Juan bailando en el baño del dominos", "JuanBaile.mp4", "28/12/2022", ["suckmyleg"]],
 	["Roberto bailando beat saber", "robertoBailando.mp4", "28/12/2022", ["suckmyleg", "roberto"]],
-	["Roobcrack shaco", "RubenShaco2.mp4", "28/12/2022", ["roobcrack"]],
+	["Roobcrack shaco", "RubenShaco2.mp4", "28/12/2022", ["roobcrack", "jona"]],
 	//["Ruben y joeri csgo spin", "RJCJH.mp4", "04/11/2019"],
 	["Roberto basadisimo", "robertoBasado.mp4", "07/06/2022", ["roberto", "cristian"]],
 	["Rive pistolero disco", "RiveDisco1.mp4", "28/04/2022", ["rive", "gamba", "morgan", "humano", "rico", "roberto", "jona"]],
