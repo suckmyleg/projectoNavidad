@@ -2,7 +2,7 @@
 let LASTVISIT = getCookie("LASTVISIT");
 let MUSICPLAYING = getCookie("MUSICPLAYING");
 let SINCEPLAYING = getCookie("SINCEPLAYING");
-let PAUSED = getCookie("PAUSED");
+let PAUSED = getCookie("PAUSED", true);
 let PAUSEDAT = getCookie("PAUSEDAT");
 let VOLUME = getCookie("PAUSEDAT");
 let MODE = getCookie("MODE");
@@ -44,7 +44,7 @@ function callOnPlaying(songName){
 	for(var data of onPlayings){
 		if (data[0] == songName || data[0] == "*")
 		{
-			console.log(songName, data[1]);
+			//console.log(songName, data[1]);
 			data[1](songName);
 		}
 	}
@@ -67,14 +67,12 @@ function musicPlayingElement(){
 
 
 function continuePlaying(){
-
-
-	//executeMode(mode);
-
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
 
 	var audioControll = document.getElementById("audioControll")
 
+
+	// Make a function when the song ends, so it continues the playing the playlist
 	audioControll.onended = function() {
 		var next = SONGS[SONGS.indexOf(MUSICPLAYING)+1];
 
@@ -87,13 +85,28 @@ function continuePlaying(){
 		}
 	};
 	
-	audioControll.onpaused = function() {
-    	document.getElementById("musicPlayerTitle").innerHTML = "Player:";
+	var musicPlayingNow = MUSICPLAYING;
+
+	if(!PAUSED) {
+		audioControll.play();
+		callOnPlaying(MUSICPLAYING);
+	}
+	else{
+		audioControll.pause();
+	}
+
+	//Function when the user pauses the audio (doesnt work)
+	audioControll.onpause = function() {
+		console.log("Paused");
+		if(MUSICPLAYING == musicPlayingNow) PAUSED = true;
+    document.getElementById("musicPlayerTitle").innerHTML = "Paused";
 	};
 
+	//When user click the play button
 	audioControll.onplay = function() {
+		PAUSED = false;
 		document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
-		callOnPlaying(MUSICPLAYING);	
+		callOnPlaying(MUSICPLAYING);
 	};
 
 	document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
@@ -106,7 +119,7 @@ function playMusic(song){
 	setCookie("MUSICPLAYING", song, 1);
 	SINCEPLAYING = getTimestampInSeconds();
 	setCookie("SINCEPLAYING", SINCEPLAYING, 1);
-
+	PAUSED = false;
 	continuePlaying();
 }
 

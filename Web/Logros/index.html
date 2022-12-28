@@ -12,6 +12,7 @@
 	<script src="../js/session.js"></script>
 	<script src="../js/setup.js"></script>
 	<script src="../js/base.js"></script>
+	<script src="../js/banner.js"></script>
 	<script type="text/javascript" src="../js/jquery-latest.min.js"></script>
 	<script src='../js/snowfall.jquery.js'></script>
 	<script src='../js/logros.js'></script>
@@ -35,14 +36,14 @@
 		</nav>
 	</header>
 	
-	<div id="logrosProgress">
+	<div id="logrosProgress" class="prevent-select">
 		<div id="logrosProgressStatus">0%</div>
 		<div id="logrosProgressContainer">
 			<div id="logrosProgressBar">.</div>
 		</div>
 	</div>
 
-	<div id="logrosDificultades">
+	<div id="logrosDificultades" class="prevent-select">
 		<div onclick="showLogros('*');" class="todas type">Todas</div>
 		<div onclick="showLogros('facil');" class="facil type">Facil</div>
 		<div onclick="showLogros('medio');" class="medio type">Medio</div>

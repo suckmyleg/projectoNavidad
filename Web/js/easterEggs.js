@@ -8,9 +8,9 @@ clicksRegister = {};
 clicksRegisterFun = [
 	["001", 5, function(){runLogro("CLICK00");}],
 	["001", 7, function(){runLogro("CLICK01");}],
-	["001", 10, function(){runLogro("CLICK02");backgroundVideo("speed moment.mp4");}],
-	["001", 12, function(){runLogro("CLICK06");backgroundVideo("speed moment.mp4");}],
-	["001", 15, function(){runLogro("CLICK07");backgroundVideo("speed moment.mp4");}],
+	["001", 10, function(){runLogro("CLICK02");showBannerVideo("speed moment.mp4");}],
+	["001", 12, function(){runLogro("CLICK06");showBannerVideo("speed moment.mp4");}],
+	["001", 15, function(){runLogro("CLICK07");showBannerVideo("speed moment.mp4");}],
 	["002", 1, function(){
 		if(checkLogroRunned("CLICK10")){runLogro("CLICK11");}
 		else{runLogro("CLICK10");}}],
@@ -101,13 +101,14 @@ function navidad() {
 
 
 onPlaying("*", function(songName){
-	unBackgroundVideoIfNotPlaying();
+	console.log("Now playing:",songName);
+
+	/*unBackgroundVideoIfNotPlaying();
 	removeBannerImage()
 	uncinemaMode();
-	bannerLastColor();
+	bannerLastColor();*/
 	$(document).snowfall().stop()
 	autoRemoveSnowRange = 500;
-	document.getElementById("pageBanner").style.backgroundImage = "none";
 	if(changedBanner){
 		changedBanner = false;
 		MODOFIESTA = false;
@@ -155,13 +156,13 @@ onPlaying("Navidad", function(songName){
 	runLogro('VENDE');
 	setVolume(100);
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("Vende-1.mp4");
+	showBannerVideo("Vende-1.mp4");
 	cinemaMode("1000px");
 })
 
 
 onPlaying("Porta - Dragon Ball Rap (con Letra)", function(songName){
-	document.getElementById("page_title").style.backgroundImage = "url('../Images/Ruben.png')";
+	showBannerImage('../Images/Ruben.png');
 	if(!MODOFIESTA)changedBanner = true;
 	startModoFiesta(600);
 })
@@ -176,14 +177,14 @@ onPlaying("Yo he peleado", function(songName){
 
 onPlaying("S3RL HentaiExtreme Bass Boosted", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	backgroundVideo("hentai3.mp4");
+	showBannerVideo("hentai3.mp4");
 	cinemaMode("400px");
 })
 
 
 onPlaying("NYA! ARIGATO Tokyo", function(songName){
 	if(!MODOFIESTA)changedBanner = true;
-	backgroundVideo("nya.mp4");
+	showBannerVideo("nya.mp4");
 	cinemaMode("200px");
 })
 
@@ -197,40 +198,40 @@ onPlaying("SPIT IN MY FACE", function(songName){
 onPlaying("GayEchoSoundEffect", function(songName){
 	runLogro("GAY");
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
-	backgroundImage('gay.png');
+	showBannerVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
+	showBannerImage('gay.png');
 	cinemaMode('1000px');
 })
 
 
 onPlaying("Guy Speaks Plants vs Zombies Victory Theme", function(songName){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("guySpeaksPVZ.mp4");
+	showBannerVideo("guySpeaksPVZ.mp4");
 	cinemaMode('1000px');
 })
 
 
 onPlaying("Zoolander Yally - Party Party", function(songName){
-	backgroundVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
+	showBannerVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
 	cinemaMode('200px');
 	setVolume(80);
 })
 
 
 onPlaying("Fiesta del administrador del grupo", function(songName){
-	backgroundVideo("Fiesta del administrador del grupo.mp4");
+	showBannerVideo("Fiesta del administrador del grupo.mp4");
 	cinemaMode('200px');
 })
 
 
 onPlaying("Jose Luis Torrente Todas Putas", function(songName){
-	backgroundVideo("Jose Luis Torrente Todas Putas.mp4");
+	showBannerVideo("Jose Luis Torrente Todas Putas.mp4");
 	cinemaMode('1000px');
 })
 
 
 onPlaying("Plants vs Zombies Music Video", function(songName){
-	backgroundVideo("Plants vs Zombies Music Video.mp4");
+	showBannerVideo("Plants vs Zombies Music Video.mp4");
 	cinemaMode('1000px');
 })
 
@@ -238,31 +239,31 @@ onPlaying("Plants vs Zombies Music Video", function(songName){
 onPlayingSongs(["Dark Pact", "SADFRIENDD x KORDHELL  WTF",
 	"Sadfriendd x MUPP vendetta", "L19U1D x KORDHELL  I AM THE KING MUSIC VIDEO",
 	"Kordhell  Live Another Day", "KNIGHT"], function(songName){
-	backgroundVideo("Jdm drift Saint-Petersburg__Phonk.mp4");
+	showBannerVideo("Jdm drift Saint-Petersburg__Phonk.mp4");
 	cinemaMode('200px');
 })
 
 
 onPlaying("CANELITA  JUANITO JUAN", function(songName){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("JuanBaile.mp4");
+	showBannerVideo("JuanBaile.mp4");
 	cinemaMode('1000px');
 })
 
 
 onPlaying("Carajo paiaso", function(songName){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("RubenShaco2.mp4");
+	showBannerVideo("RubenShaco2.mp4");
 	cinemaMode('1000px');
 })
 
 onPlaying("metroman", function(songName){
-	backgroundVideo("metroman.mp4");
+	showBannerVideo("metroman.mp4");
 	cinemaMode('1000px');
 })
 
 onPlaying("pato bailando 7w7", function(songName){
-	backgroundVideo("pato bailando 7w7.mp4");
+	showBannerVideo("pato bailando 7w7.mp4");
 	cinemaMode('200px');
 })
 
@@ -280,18 +281,18 @@ onPlaying("Meme", function(songName){
 	cinemaMode('600px');
 	setVolume(40);
 	var DELAY = 2500;
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+0+'.png');}}, (DELAY*0));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+1+'.png');}}, (DELAY*1));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+2+'.png');}}, (DELAY*2));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+3+'.png');}}, (DELAY*3));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+4+'.png');}}, (DELAY*4));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+5+'.png');}}, (DELAY*5));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+6+'.png');}}, (DELAY*6));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+7+'.png');}}, (DELAY*7));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+8+'.png');}}, (DELAY*8));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+9+'.png');}}, (DELAY*9));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+10+'.png');}}, (DELAY*10));
-	setTimeout(function(){if(MUSICPLAYING == songName){backgroundImage("Meme/"+11+'.png');}}, (DELAY*11));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+0+'.png');}}, (DELAY*0));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+1+'.png');}}, (DELAY*1));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+2+'.png');}}, (DELAY*2));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+3+'.png');}}, (DELAY*3));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+4+'.png');}}, (DELAY*4));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+5+'.png');}}, (DELAY*5));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+6+'.png');}}, (DELAY*6));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+7+'.png');}}, (DELAY*7));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+8+'.png');}}, (DELAY*8));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+9+'.png');}}, (DELAY*9));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+10+'.png');}}, (DELAY*10));
+	setTimeout(function(){if(MUSICPLAYING == songName){showBannerImage("Meme/"+11+'.png');}}, (DELAY*11));
 	setTimeout(function(){if(MUSICPLAYING == songName){cinemaMode('76px');}}, (DELAY*12));
 	setTimeout(function(){if(MUSICPLAYING == songName){clearAll();}}, (DELAY*12.5));
 })
@@ -357,7 +358,7 @@ function setupSongModes(){
 
 function otakus(){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	backgroundVideo("robertoBailando.mp4");
+	showBannerVideo("robertoBailando.mp4");
 	cinemaMode('1000px');
 
 	setTimeout(function(){
@@ -376,7 +377,7 @@ function otakus(){
 function water(){
 	runLogro('🍉');
 	cinemaMode('400px');
-	backgroundVideo("watermelon.mp4");
+	showBannerVideo("watermelon.mp4");
 }
 
 function modoRoob(){

@@ -1,9 +1,9 @@
 //https://stackoverflow.com/questions/10730362/get-cookie-by-name
-function getCookie(name) {
+function getCookie(name, def=false) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
-  return false;
+  return def;
 }
 
 //https://stackoverflow.com/questions/14573223/set-cookie-and-get-cookie-with-javascript
