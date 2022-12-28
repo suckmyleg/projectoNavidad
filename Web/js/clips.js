@@ -6,9 +6,12 @@ videos = [
 	["Juan bailando en el baño del dominos", "JuanBaile.mp4", "28/12/2022"],
 	["Roberto bailando beat saber", "robertoBailando.mp4", "28/12/2022"],
 	["Roobcrack shaco", "RubenShaco2.mp4", "28/12/2022"],
-	["Ruben y joeri csgo spin", "RJCJH.mp4", "04/11/2019"],
+	//["Ruben y joeri csgo spin", "RJCJH.mp4", "04/11/2019"],
 	["Roberto basadisimo", "robertoBasado.mp4", "07/06/2022"],
-	["Rive pistolero disco", "RiveDisco1.mp4", "28/04/2022"]
+	["Rive pistolero disco", "RiveDisco1.mp4", "28/04/2022"],
+	["Rico 07", "RicoQueDice.mp4", "/04/2022"],
+	["Rico buen setup", "RicoScream.mp4", "16/02/2022"],
+	["Jonathan siendo jona", "Jonatan1.mp4", "16/02/2022"]
 ];
 
 function clipHtml(name, loc, date){
