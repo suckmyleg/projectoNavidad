@@ -1,5 +1,9 @@
 let modeServer = true;
 
+if(window.location.href.split(":")[0] == "http://192.168.1.104/"){
+    modeServer = false;
+}
+
 function getVideoSource(loc){
     if(modeServer){
         return 'src="https://maherahe.com/projectoNavidad/Web/Videos/'+loc+'"';
