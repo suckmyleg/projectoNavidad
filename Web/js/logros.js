@@ -213,6 +213,11 @@ let LOGROS = {
 	"CtrollGta":["Combinacion: Trolls gta5", 
 		"Mejores troleadores del gta roleplay",
 		"facil",
+		"snow_day.gif"],
+
+	"CEsquizo":["Combinacion: Los esquizofrenicos", 
+		"Esquizofrenicos de mierda",
+		"facil",
 		"snow_day.gif"]
 
 

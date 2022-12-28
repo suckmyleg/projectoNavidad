@@ -174,7 +174,7 @@ function removeVideoPlaying(){
 
 	try{
 		video.pause();
-		video.removeAttribute('src'); // empty source
+		video.removeAttribute(getVideoSourceType()); // empty source
 		video.load();
 		video.currentTime = 0;
 		video.innerHTML = "";
@@ -205,7 +205,7 @@ function setVideoPlaying(videoName, muted){
 
 	var source = document.createElement('source');
 
-	source.setAttribute('src', '../Videos/'+videoName);
+	source.setAttribute(getVideoSourceType(), getVideoSourceTypeLocation(videoName));
 	source.setAttribute('type', 'video/mp4');
 
 	video.appendChild(source);

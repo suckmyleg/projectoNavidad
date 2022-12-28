@@ -40,8 +40,8 @@ function hideVideo(){
 }
 
 function clipHtml(name, loc, date){
-	return '<div id='+loc+' class="new_clip" onclick="showVideo('+"'../Videos/"+loc+"')"+'">'+
-	'<video src="../Videos/'+loc+'" type="video/mp4" muted class="clip">'+
+	return '<div id='+loc+' class="new_clip" onclick="showVideo('+"'"+loc+"')"+'">'+
+	'<video '+getVideoSource(loc)+' type="video/mp4" muted class="clip">'+
 	'</video>'+
 	'<a class="date">Fecha: '+date+'</a>'+
 	'<p>'+name+'</p>'+
@@ -159,7 +159,7 @@ function setVideoPlaying(videoName, muted){
 
 	var source = document.createElement('source');
 
-	source.setAttribute('src', '../Videos/'+videoName);
+	source.setAttribute(getVideoSourceType(), getVideoSourceTypeLocation(videoName));
 	source.setAttribute('type', 'video/mp4');
 
 	video.appendChild(source);
@@ -199,8 +199,9 @@ let combinations = [
 
 	[["joel", "roobcrack"], "Crub"],
 
-	[["vendekebaps", "nacho"], "CtrollGta"]
+	[["vendekebaps", "nacho"], "CtrollGta"],
 
+	[["rive", "cristian"], "CEsquizo"]
 
 	]
 
