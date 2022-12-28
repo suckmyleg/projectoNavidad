@@ -37,3 +37,23 @@ video{
     float: right;
     bottom: 0;
 }
+
+#peopleFilter{
+    display: block;
+    padding: 5px;
+}
+
+.personFilter{
+    padding: 5px;
+}
+
+.personFilter:hover{
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 3px;
+}
+
+.selected{
+    background-color: black;
+    color:white;
+}
