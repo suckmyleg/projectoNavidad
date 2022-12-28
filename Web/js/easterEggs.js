@@ -8,9 +8,9 @@ clicksRegister = {};
 clicksRegisterFun = [
 	["001", 5, function(){runLogro("CLICK00");}],
 	["001", 7, function(){runLogro("CLICK01");}],
-	["001", 10, function(){runLogro("CLICK02");showBannerVideo("speed moment.mp4");}],
-	["001", 12, function(){runLogro("CLICK06");showBannerVideo("speed moment.mp4");}],
+	["001", 11, function(){runLogro("CLICK06");showBannerVideo("speed moment.mp4");}],
 	["001", 15, function(){runLogro("CLICK07");showBannerVideo("speed moment.mp4");}],
+	["001", 30, function(){runLogro("CLICK08");showBannerVideo("speed moment.mp4");}],
 	["002", 1, function(){
 		if(checkLogroRunned("CLICK10")){runLogro("CLICK11");}
 		else{runLogro("CLICK10");}}],
@@ -198,7 +198,6 @@ onPlaying("SPIT IN MY FACE", function(songName){
 onPlaying("GayEchoSoundEffect", function(songName){
 	runLogro("GAY");
 	window.scrollTo({ top: 0, behavior: 'smooth' });
-	showBannerVideo("Zoolander (Yally - Party Party) [Sub Espaol].mp4");
 	showBannerImage('gay.png');
 	cinemaMode('1000px');
 })

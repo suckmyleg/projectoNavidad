@@ -24,19 +24,14 @@ let LOGROS = {
 		"medio",
 		"snow_day.gif"],
 
-	"CLICK02":["Clickeador profesional fetichista de pies", 
-		"Clickea 10 veces por segundo el 'Created by: '",
-		"demoniaca",
-		"snow_day.gif"],
-
 	"CLICK06":["Clickeador master fetichista de pies", 
-		"Clickea 12 veces por segundo el 'Created by: '",
-		"demoniaca",
+		"Clickea 11 veces por segundo el 'Created by: '",
+		"dificil",
 		"snow_day.gif"],
 
 	"CLICK07":["Clickeador master fetichista de pies", 
 		"Clickea 15 veces por segundo el 'Created by: '",
-		"legendaria",
+		"demoniaca",
 		"snow_day.gif"],
 
 	"😎":["Clickea => 😎", 
@@ -79,14 +74,14 @@ let LOGROS = {
 		"facil",
 		"snow_day.gif"],
 
-	"2022/12/29":["Cuarto dia", 
-		"Has visitado la web el cuarto dia",
+	"2022/12/29":["Dia cuarto", 
+		"Me follo a tu hermana por el aparato",
 		"facil",
 		"snow_day.gif"],
 
 
 	"2022/12/30":["Quinto dia", 
-		"Has visitado la web el quinto dia",
+		"Por el culo te la inco",
 		"medio",
 		"snow_day.gif"],
 
@@ -106,21 +101,28 @@ let LOGROS = {
 	"2023/01/02":["Octavo dia", 
 		"Como me entra un kebap la verdad",
 		"dificil",
-		"snow_day.gif"]
+		"snow_day.gif"],
 
+
+	"2023/01/02":["Octavo dia", 
+		"Como me entra un kebap la verdad",
+		"dificil",
+		"snow_day.gif"],
+
+	"CLICK08":["Clickeador clicker fetichista de pies", 
+		"Clickea 30 veces por segundo el 'Created by: '",
+		"legendaria",
+		"snow_day.gif"],
+
+	"GAY":["Eri gay?", 
+		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
+		"facil",
+		"snow_day.gif"]
 };
 /*
 
 
-	"CLICK08":["Clickeador clicker fetichista de pies", 
-		"Clickea 30 veces por segundo el 'Created by: '",
-		"imposible",
-		"snow_day.gif"],
 		
-	"GAY":["Eri gay?", 
-		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
-		"facil",
-		"snow_day.gif"],
 
 	"JHONA":["kota (jona)", 
 		"Incremento de tetas",
