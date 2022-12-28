@@ -119,9 +119,19 @@ let LOGROS = {
 		"facil",
 		"snow_day.gif"],
 
-	"GAY":["Eri gay?", 
-		"Ahora en serio, eres gay? A ver, no me pasa nada con los gays, tengo amigos gays pero... ? sus",
+	"ROMPEBOLAS":["Subnormal", 
+		"Como sigas cliqueando te reviento los huevos",
 		"facil",
+		"snow_day.gif"],
+
+	"ROMPEBOLAS2":["Otro tonto", 
+		"A ti no te quieren en casa no?",
+		"medio",
+		"snow_day.gif"],
+
+	"ROM1":["Otaku muerto abono pa mi huerto", 
+		"Nah, quien no quiere a roberto?",
+		"medio",
 		"snow_day.gif"]
 };
 /*

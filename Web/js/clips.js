@@ -130,7 +130,6 @@ function setupClips(aparece=[]){
 
 
 
-
 function removeVideoPlaying(){
 	console.log("RemoveVideoPlaying");
 	var video = document.getElementById('videoToShow');
@@ -175,9 +174,17 @@ function setVideoPlaying(videoName, muted){
 
 
 
-combinations = [
+let combinations = [
 	[["suckmyleg", "roobcrack"], ]
 	]
+
+
+function easterEggs(){
+	peopleShowing
+}
+
+
+
 
 
 

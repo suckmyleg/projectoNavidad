@@ -14,7 +14,9 @@ clicksRegisterFun = [
 	["002", 1, function(){
 		if(checkLogroRunned("CLICK10")){runLogro("CLICK11");}
 		else{runLogro("CLICK10");}}],
-	["002", 2, function(){runLogro("CLICK11");}]
+	["002", 2, function(){runLogro("CLICK11");}],
+	["003", 5, function(){runLogro("ROMPEBOLAS");}],
+	["003", 15, function(){runLogro("ROMPEBOLAS2");}]
 ];
 
 
