@@ -67,13 +67,14 @@ function musicPlayingElement(){
 
 function pause(status){
 	PAUSED = status;
+	if(PAUSED) document.getElementById("audioControll").pause();
 	setCookie("PAUSED", status, 1);
 }
 
 function continuePlaying(){
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
 
-	var audioControll = document.getElementById("audioControll")
+	var audioControll = document.getElementById("audioControll");
 
 
 	// Make a function when the song ends, so it continues the playing the playlist

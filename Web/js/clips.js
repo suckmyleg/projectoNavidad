@@ -22,7 +22,21 @@ videos = [
 let peopleShowing = [];
 
 function showVideo(loc){
-	window.location.href = loc;
+	var box = document.getElementById("videoBox");
+
+	box.classList.remove("hide");
+
+	playVideo(loc);
+	//window.location.href = loc;
+}
+
+function hideVideo(){
+	var box = document.getElementById("videoBox");
+
+	box.classList.add("hide");
+
+	removeVideoPlaying();
+
 }
 
 function clipHtml(name, loc, date){
@@ -108,5 +122,61 @@ function setupClips(aparece=[]){
 
 
 }
+
+
+
+
+
+
+
+
+
+function removeVideoPlaying(){
+	console.log("RemoveVideoPlaying");
+	var video = document.getElementById('videoToShow');
+
+	try{
+		video.pause();
+		video.removeAttribute('src'); // empty source
+		video.load();
+		video.currentTime = 0;
+		video.innerHTML = "";
+	}catch{}
+}
+
+function playVideo(videoName, muted=false){
+	pause(true);
+
+	console.log("playVideo", videoName, muted)
+
+	removeVideoPlaying();
+
+	setVideoPlaying(videoName, muted);
+}
+
+function setVideoPlaying(videoName, muted){
+	var video = document.getElementById('videoToShow');
+
+	var source = document.createElement('source');
+
+	source.setAttribute('src', '../Videos/'+videoName);
+	source.setAttribute('type', 'video/mp4');
+
+	video.appendChild(source);
+
+	video.muted = muted;
+
+	try{
+		video.load();
+		video.play();
+	}catch{}
+
+}
+
+
+
+
+
+
 
 ONLOADS.push(function(){setupClips();});
