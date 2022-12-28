@@ -232,7 +232,7 @@ function displayFloatingLogro(name, date){
 		}catch{}
 
 
-		for(var i = LOGROSSHOWING; i<10; i++){
+		for(var i = 0; i<10; i++){
 			try{
 
 				if("logroFloat"+i!=idd) document.getElementById("logroFloat"+i).style.top = (88*(i-1-id))+"px";
