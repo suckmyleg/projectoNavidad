@@ -22,7 +22,10 @@ videos = [
 let peopleShowing = [];
 
 function showVideo(loc){
+	document.body.classList.add("blurEffect")
+	
 	var box = document.getElementById("videoBox");
+	document.getElementById("videoBoxOutside").classList.remove("hide");
 
 	box.classList.remove("hide");
 
@@ -31,7 +34,9 @@ function showVideo(loc){
 }
 
 function hideVideo(){
+	document.body.classList.remove("blurEffect")
 	var box = document.getElementById("videoBox");
+	document.getElementById("videoBoxOutside").classList.add("hide");
 
 	box.classList.add("hide");
 
@@ -185,6 +190,8 @@ let combinations = [
 	[["cristian", "joeri"], "CcrisJoeri"],
 	[["david", "joeri"], "CdavidJoeri"],
 	[["suckmyleg", "joeri"], "CsuckJoeri"],
+
+	[["jona", "roobcrack"], "Cjitano"],
 
 	[["jona", "roobcrack"], "Cjitano"],
 
