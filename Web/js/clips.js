@@ -85,6 +85,7 @@ function reDisplayClips(){
 		}
 	}
 
+	easterEggs();
 }
 
 function setupClips(aparece=[]){
@@ -175,12 +176,46 @@ function setVideoPlaying(videoName, muted){
 
 
 let combinations = [
-	[["suckmyleg", "roobcrack"], ]
+	[["suckmyleg", "roobcrack"], "Csuckcrack"],
+	[["suckmyleg", "chino"], "CchinoSuk"],
+	[["cristian", "chino"], "CchinoCris"],
+	[["rive", "chino"], "CchinoRiv"],
+	[["roberto", "chino"], "CchinoRom"],
+	[["jona", "chino"], "CchinoJon"],
+	[["cristian", "joeri"], "CcrisJoeri"],
+	[["david", "joeri"], "CdavidJoeri"],
+	[["suckmyleg", "joeri"], "CsuckJoeri"],
+
+	[["jona", "roobcrack"], "Cjitano"],
+
+
+
+
+
+	[["suckmyleg", "vendekebaps", "roobcrack", "roberto"], "Cow"],
+	[["suckmyleg", "vendekebaps", "roobcrack", "roberto", "chino"], "Cph"],
+
+	[["morgan", "roobcrack", "rive", "chino"], "Carmas"],
+
+	[["joel", "roobcrack"], "Crub"],
+
+	[["vendekebaps", "nacho"], "CtrollGta"]
+
+
 	]
 
 
 function easterEggs(){
-	peopleShowing
+	for(var c of combinations){
+		var valid = 0;
+		for(var p of peopleShowing){
+			if(c[0].includes(p)) valid++;
+		}
+		console.log(valid, c[0].length, peopleShowing.length);
+		if(valid == c[0].length && c[0].length == peopleShowing.length){
+			runLogro(c[1]);
+		}	
+	}
 }
 
 

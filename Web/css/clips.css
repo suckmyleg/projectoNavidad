@@ -13,6 +13,10 @@ video{
     width: 99%;
 }
 
+body{
+    padding-bottom: 300px;
+}
+
 .new_clip{
     border-radius: 10px;
     background-color: black;

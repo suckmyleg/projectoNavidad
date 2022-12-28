@@ -132,7 +132,92 @@ let LOGROS = {
 	"ROM1":["Otaku muerto abono pa mi huerto", 
 		"Nah, quien no quiere a roberto?",
 		"medio",
+		"snow_day.gif"],
+
+	"Csuckcrack":["Combinacion: Creadores", 
+		"Los putos amos ostiah",
+		"facil",
+		"snow_day.gif"],
+
+
+
+
+	"CchinoSuk":["Combinacion: Tocaculos 1", 
+		"Adrian le toca el culo a juan",
+		"facil",
+		"snow_day.gif"],
+
+	"CchinoCris":["Combinacion: Tocaculos 2", 
+		"Adrian le toca el culo a cristian",
+		"facil",
+		"snow_day.gif"],
+
+	"CchinoRiv":["Combinacion: Tocaculos 3", 
+		"Adrian le toca el culo a mateo",
+		"facil",
+		"snow_day.gif"],
+
+	"CchinoRom":["Combinacion: Tocaculos 4", 
+		"Adrian le toca el culo a roberto",
+		"facil",
+		"snow_day.gif"],
+
+	"CchinoJon":["Combinacion: Tocaculos 5", 
+		"Adrian le toca el culo a jonatan",
+		"facil",
+		"snow_day.gif"],
+
+
+
+
+	"CcrisJoeri":["Combinacion: Parejita", 
+		"Joeri y cristian son novios",
+		"facil",
+		"snow_day.gif"],
+
+	"CdavidJoeri":["Combinacion: Inglesa", 
+		"QUE DICEN? CASTELLANO CASTELLANO CASTELLANO",
+		"facil",
+		"snow_day.gif"],
+
+	"CsuckJoeri":["Combinacion: Filosofos", 
+		"Filosofeando a las 2am",
+		"facil",
+		"snow_day.gif"],
+
+	"Cow":["Combinacion: OW2", 
+		"Mejor cuarteto de overwatch",
+		"facil",
+		"snow_day.gif"],
+
+	"Cph":["Combinacion: Phasmophobia", 
+		"illo, FM5, pueeedees oirme???",
+		"facil",
+		"snow_day.gif"],
+
+	"Cjitano":["Combinacion: Jitanos", 
+		"La version barata de los rumanos",
+		"facil",
+		"snow_day.gif"],
+
+	"Carmas":["Combinacion: Armas", 
+		"Enfermos de las armas",
+		"facil",
+		"snow_day.gif"],
+
+	"Crub":["Combinacion: Rubick", 
+		"Os gusta ordenar colores en cuadrados",
+		"facil",
+		"snow_day.gif"],
+
+	"CtrollGta":["Combinacion: Trolls gta5", 
+		"Mejores troleadores del gta roleplay",
+		"facil",
 		"snow_day.gif"]
+
+
+
+
 };
 /*
 
