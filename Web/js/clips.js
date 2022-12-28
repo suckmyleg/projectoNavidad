@@ -11,7 +11,12 @@ videos = [
 	["Rive pistolero disco", "RiveDisco1.mp4", "28/04/2022", ["rive", "gamba", "morgan", "humano", "rico", "roberto", "jona"]],
 	["Rico 07", "RicoQueDice.mp4", "/04/2022", ["rico"]],
 	["Rico buen setup", "RicoScream.mp4", "16/02/2022", ["rico", "joeri", "roberto", "rive", "gamba"]],
-	["Jonathan siendo jona", "Jonatan1.mp4", "13/02/2022", ["bolli", "rive", "jona"]]
+	["Joeri siendo racista", "Clips/JoeriRacista.mp4", "13/08/2020", ["joeri", "david", "rive"]],
+	//["Rive tremendo tiro", "Clips/InGameReplay_2020.08.14-23.32.mp4", "14/08/2020", ["suckmyleg", "vendekebaps", "desi", "rive", "nacho"]],
+	//["No no no, me voy a hacer un colateral", "Clips/InGameReplay_2020.08.14-23.43.mp4", "14/08/2020", ["suckmyleg", "rive", "desi", "joeri", "morgan"]],
+	["Mas raro seria no comer pollas", "Clips/mas_raro_seria_no_comer_pollas.mp4", "15/08/2020", ["suckmyleg", "rive", "nacho"]], 
+	["Hablemos de comer pollas", "Clips/a1.mp4", "15/08/2020", ["rive", "suckmyleg", "roberto", "nacho"]],
+	["Nacho minimintu?", "Clips/a2.mp4", "17/08/2020", ["nacho", "humano", "suckmyleg"]]
 ];
 
 let peopleShowing = [];
@@ -42,6 +47,12 @@ function switchPersonFilter(name){
 		reDisplayClips();
 
 	}
+}
+
+function switchPersonFilterTemporal(name){
+	peopleShowing.push(name);
+	reDisplayClips();
+	peopleShowing.splice(peopleShowing.indexOf(name), 1);
 }
 
 function reDisplayClips(){
@@ -88,6 +99,7 @@ function setupClips(aparece=[]){
 	var peopleShownFilter = "";
 
 	for(var p of peopleSown){
+		//onmouseout='switchPersonFilterTemporal("+'"'+p+'"'+");' onmouseover='switchPersonFilterTemporal("+'"'+p+'"'+");'
 		peopleShownFilter += "<a id='person_"+p+"' class='personFilter' onclick='switchPersonFilter("+'"'+p+'"'+");'>"+p+"</a>";
 	}
 
