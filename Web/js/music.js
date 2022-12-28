@@ -65,6 +65,10 @@ function musicPlayingElement(){
 	"</audio>";
 }
 
+function pause(status){
+	PAUSED = status;
+	setCookie("PAUSED", status, 1);
+}
 
 function continuePlaying(){
 	document.getElementById("audioPlayer").innerHTML = musicPlayingElement();
@@ -98,13 +102,13 @@ function continuePlaying(){
 	//Function when the user pauses the audio (doesnt work)
 	audioControll.onpause = function() {
 		console.log("Paused");
-		if(MUSICPLAYING == musicPlayingNow) PAUSED = true;
+		if(MUSICPLAYING == musicPlayingNow) pause(true);
     document.getElementById("musicPlayerTitle").innerHTML = "Paused";
 	};
 
 	//When user click the play button
 	audioControll.onplay = function() {
-		PAUSED = false;
+		pause(false);
 		document.getElementById("musicPlayerTitle").innerHTML = "Playing: " + MUSICPLAYING;
 		callOnPlaying(MUSICPLAYING);
 	};
@@ -119,7 +123,7 @@ function playMusic(song){
 	setCookie("MUSICPLAYING", song, 1);
 	SINCEPLAYING = getTimestampInSeconds();
 	setCookie("SINCEPLAYING", SINCEPLAYING, 1);
-	PAUSED = false;
+	pause(false);
 	continuePlaying();
 }
 
