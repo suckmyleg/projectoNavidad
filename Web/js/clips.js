@@ -1,6 +1,6 @@
 videos = [
 	["Igor se folla que?", "Saved_clips/Replay_1.mp4", "28/12/2022", ["jona", "bolli", "rive", "igor", "vendekebaps"]],
-	["Momento Jona", "Saved_clips/Replay_2.mp4", "28/12/2022", ["chino", "roberto", "jona", "cristian"]],
+	["Momento Jona", "Saved_clips/Replay_2.mp4", "28/12/2022", ["chino",  "jona", "cristian", "roobcrack", "bolli", "joel", "prostata"]],
 	["Callate Jona", "Saved_clips/Replay_3.mp4", "28/12/2022", ["roobcrack", "vendekebaps", "jona", "chino", "gamba", "prostata"]],
 	["Vendekebaps cocinando speed up", "Vende.mp4", "28/12/2022", ["vendekebaps"]],
 	["Juan bailando en el baño del dominos", "JuanBaile.mp4", "28/12/2022", ["suckmyleg"]],
