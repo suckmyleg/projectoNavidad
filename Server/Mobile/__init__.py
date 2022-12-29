@@ -12,6 +12,7 @@ import time
 
 class Mobile:
 	def __init__(self, ip):
+		self.ip = ip
 		self.flash = False
 		self.frames = []
 		self.lastFrame = b""
@@ -28,7 +29,7 @@ class Mobile:
 	def connectToCamera(self):
 		try:
 			print("Connecting to camera")
-			self.camera = cv2.VideoCapture(f'http://{ip}:4747/mjpegfeed')
+			self.camera = cv2.VideoCapture(f'http://{self.ip}:4747/mjpegfeed')
 			self.connected = True
 			threading.Thread(target=self.mainGetFrames).start()
 			print("Connected")
