@@ -74,13 +74,13 @@ def video_feed():
     return Response(Mobile.mobile.gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/videoConnect')
-def video_feed():
+def connect():
 	Mobile.mobile.connectToCamera()
-    return json.dumps(True)
+	return json.dumps(True)
 
 @app.route('/videoDisconnect')
-def video_feed():
+def disconnect():
 	Mobile.mobile.disconnectCamera()
-    return json.dumps(True)
+	return json.dumps(True)
 
 app.run(host="192.168.1.104", debug=True)
