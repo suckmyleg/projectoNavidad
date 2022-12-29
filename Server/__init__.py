@@ -73,4 +73,4 @@ def mobileSwitchFlash():
 def video_feed():
     return Response(Mobile.mobile.gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-app.run(host="192.168.1.208", debug=True)
+app.run(host="192.168.1.104", debug=True)
