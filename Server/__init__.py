@@ -1,13 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template, Response
 import json
 
 app = Flask(__name__)
 
+print("IMPORTING News")
 import News
+print("IMPORTING Clips")
 import Clips
+print("IMPORTING Profiles")
 import Profiles
+print("IMPORTING Sessions")
 import Sessions
+print("IMPORTING Suckcrack")
 import Suckcrack
+print("IMPORTING Mobile")
+import Mobile
 
 @app.route("/newsList")
 def news_available():
@@ -39,6 +46,10 @@ def session(iid):
 def profileData():
 	return json.dumps(News.news.get_news())
 
+
+
+
+
 @app.route("/suckcrackMatch<matchid>")
 def suckcrack(matchid):
 	return json.dumps(Suckcrack.p.match_data(matchid))
@@ -49,5 +60,17 @@ def suckcrack2(matchid):
 
 
 
+@app.route("/MobileFlash")
+def mobileFlash():
+	return json.dumps(Mobile.mobile.flash)
 
-app.run()
+@app.route("/MobileSwitchFlash")
+def mobileSwitchFlash():
+	Mobile.mobile.switchFlash()
+	return json.dumps(Mobile.mobile.flash)
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(Mobile.mobile.gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+app.run(host="192.168.1.208", debug=True)
