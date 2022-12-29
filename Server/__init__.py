@@ -73,4 +73,14 @@ def mobileSwitchFlash():
 def video_feed():
     return Response(Mobile.mobile.gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/videoConnect')
+def video_feed():
+	Mobile.mobile.connectToCamera()
+    return json.dumps(True)
+
+@app.route('/videoDisconnect')
+def video_feed():
+	Mobile.mobile.disconnectCamera()
+    return json.dumps(True)
+
 app.run(host="192.168.1.104", debug=True)

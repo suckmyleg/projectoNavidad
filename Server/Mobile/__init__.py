@@ -16,31 +16,46 @@ class Mobile:
 		self.frames = []
 		self.lastFrame = b""
 
-		print("Connecting to camera")
-		self.camera = cv2.VideoCapture(f'http://{ip}:4747/mjpegfeed')
-		print("Connected")
+		self.connected = False
 
-		threading.Thread(target=self.mainGetFrames).start()
+		self.connectToCamera()
+
+	def disconnectCamera(self):
+		self.connected = False
+		self.camera = False
+		print("Camera disconnected")
+
+	def connectToCamera(self):
+		try:
+			print("Connecting to camera")
+			self.camera = cv2.VideoCapture(f'http://{ip}:4747/mjpegfeed')
+			self.connected = True
+			threading.Thread(target=self.mainGetFrames).start()
+			print("Connected")
+		except:
+			self.connected = False
+			print("Error trying to connect to camera")
 
 	def changeFlash(self, status):
 		if(self.flash != status):
 			self.switchFlash()
 
 	def switchFlash(self):
-		self.flash = self.flash==False
+		self.flash = self.flash == False
 
 		requests.get("http://192.168.1.115:4747/cam/1/led_toggle")
 
 	def mainGetFrames(self):
-		while True:
-			success, frame = self.camera.read()  # read the camera frame
+		print("Started grabbing frames")
+		while self.connected:
+			success, frame = self.camera.read()
 			if not success:
 				break
 			else:
 				ret, buffer = cv2.imencode('.jpg', frame)
 				frame = buffer.tobytes()
 				self.lastFrame = b'--frame\r\n'+b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n'
-				#self.frames.append(self.lastFrame)
+		print("Stopped grabbing frames")
 
 
 	def gen_frames(self):
