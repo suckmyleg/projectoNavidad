@@ -5,7 +5,7 @@ function switchFlash(){
 	makeCallFalse("http://"+HOST+":5000/MobileSwitchFlash");
 }
 
-function makeCallFalse(){
+function makeCallFalse(src){
 	document.getElementById("spawnableField").innerHTML = "<iframe class='hidden' src='"+src+"'></iframe>";
 }
 
