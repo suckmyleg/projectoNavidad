@@ -68,8 +68,8 @@ class Mobile:
 			if not frame == lastFrame:
 				lastFrame = frame
 				yield(frame)
-				time.sleep(0.1)
+				time.sleep(0.2)
 			else:
-				time.sleep(0.01)
+				time.sleep(0.1)
 
 mobile = Mobile("192.168.1.115")

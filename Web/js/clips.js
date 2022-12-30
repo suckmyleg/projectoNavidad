@@ -1,3 +1,5 @@
+let page = "clips";
+
 videos = [
 	["Igor se folla que?", "Saved_clips/Replay_1.mp4", "28/12/2022", ["jona", "bolli", "rive", "igor", "vendekebaps"]],
 	["Momento Jona", "Saved_clips/Replay_2.mp4", "28/12/2022", ["chino",  "jona", "cristian", "roobcrack", "bolli", "joel", "prostata"]],
