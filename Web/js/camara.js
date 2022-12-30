@@ -6,7 +6,10 @@ function switchFlash(){
 }
 
 function makeCallFalse(src){
-	document.getElementById("spawnableField").innerHTML = "<iframe class='hidden' src='"+src+"'></iframe>";
+	try{
+		document.getElementById("lastRequest").remove();
+	}catch{}
+	document.getElementById("spawnableField").innerHTML += "<iframe id='lastRequest' class='hidden' src='"+src+"'></iframe>";
 }
 
 ONLOADS.push(function(){
