@@ -11,9 +11,18 @@ onload = function() {
 			hideBanner();
 		}
 
-		setupSongModes();
+		let valid = true;
 
-		musicStart();
+		try{
+			if(page == "camara") valid = false;
+		}catch{}
+
+		if(valid)
+		{
+			setupSongModes();
+
+			musicStart();	
+		}
 
 		for(var fun of ONLOADS){
 			fun();

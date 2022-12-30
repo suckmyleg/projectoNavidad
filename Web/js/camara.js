@@ -1,6 +1,8 @@
 
 let HOST = window.location.host.split(":")[0];
 
+let page = "camara";
+
 function switchFlash(){
 	makeCallFalse("http://"+HOST+":5000/MobileSwitchFlash");
 }
@@ -9,6 +11,7 @@ function makeCallFalse(src){
 	try{
 		document.getElementById("lastRequest").remove();
 	}catch{}
+
 	document.getElementById("spawnableField").innerHTML += "<iframe id='lastRequest' class='hidden' src='"+src+"'></iframe>";
 }
 
