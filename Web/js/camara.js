@@ -13,7 +13,7 @@ ONLOADS.push(function(){
 
 document.getElementById("camera").innerHTML = "<img id='image' src='http://"+HOST+":5000/video_feed' width='100%'>";
 
-const img = document.getElementById("image")
+let img = document.getElementById("image")
 img.addEventListener("error", function(event) {
   event.target.src = "../Images/disconnected.png";
   event.onerror = null
