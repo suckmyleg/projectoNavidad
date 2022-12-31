@@ -1,5 +1,3 @@
-let page = "logros";
-
 let LOGROS = {
 	"DIANIEVE":["!DIA DE NIEVE!", 
 		"¡CORRIDA ANCESTRAL!",
